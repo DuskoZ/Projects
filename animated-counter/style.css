@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    background: url("img/acme.png") no-repeat center center / cover; 
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Acme', 'Work Sans', sans-serif;
+    color: #000;
+    font-size: 4rem;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.container-h {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+header {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counters {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.85) 25%, rgba(121,9,15,0.8) 53%);
+    padding: 2.5rem 1.25rem;
+}
+
+.container-social {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(6rem, 1fr));
+    gap: 1rem;
+    text-align: center;
+} 
+
+.counters i {
+    color: #0077b5;
+    margin-bottom: 0.5rem;
+}
+
+.counters .counter {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0.625rem 0;
+}
+
+@media (max-width: 700px) {
+
+    .container-social {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-social > div:nth-of-type(1),
+    .container-social > div:nth-of-type(2) {
+        border-bottom: 1px #0077b5 solid;
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+}
