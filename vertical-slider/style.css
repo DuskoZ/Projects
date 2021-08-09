@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    height: 100vh;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Left side of the container */
+
+.left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.left-slide h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 0.25em;
+    margin-top: -1em;
+}
+
+/* Right side of the container */
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /* transition: 0.5s; */
+}
+
+/* Buttons */
+
+.btn {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 10;
+    background-color: #fff;
+    color: #aaa;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1em;
+}
+
+.btn:hover {
+    color: #222;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.down-btn {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.up-btn {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Slides */
+
+.ls-01 {
+    background-color: #FD3555;
+}
+
+.ls-02 {
+    background-color: #2A86BA;
+}
+
+.ls-03 {
+    background-color: #252E33;
+}
+
+.ls-04 {
+    background-color: #FFB866;
+}
+
+.rs-01 {
+    background-image: url("./img/sunset.jpg");
+}
+
+.rs-02 {
+    background-image: url("./img/castle.jpg");
+}
+
+.rs-03 {
+    background-image: url("./img/mountains.jpg");
+}
+
+.rs-04 {
+    background-image: url("./img/flower.jpg");
+}
