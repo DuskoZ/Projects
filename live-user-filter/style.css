@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #f8f9fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    border-radius: 0.375em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 300px;
+}
+
+.title {
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    display: inline-block;
+    margin: 0.375em 0 1.25em;
+    opacity: 0.8;
+}
+
+.header {
+    background-color: #3e57db;
+    color: #fff;
+    padding: 2em 1.25em;
+}
+
+.header input {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: 0;
+    border-radius: 3em;
+    font-size: 0.875rem;
+    padding: 0.75em 1em;
+    width: 100%;
+}
+
+.header input:focus {
+    outline: none;
+}
+  
+.user-list {
+    background-color: #fff;
+    list-style-type: none;
+    /* margin: 0; */
+    /* padding: 0; */
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.user-list li {
+    display: flex;
+    padding: 1.25em;
+}
+  
+.user-list img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.user-list .user-info {
+    margin-left: 10px;
+}
+  
+.user-list .user-info h4 {
+    margin: 0 0 0.625em;
+}
+  
+.user-list .user-info p {
+    font-size: 0.75rem;
+}
+  
+.user-list li:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+  
+.user-list li.hide {
+    display: none;
+}
