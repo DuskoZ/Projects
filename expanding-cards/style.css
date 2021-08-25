@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Photos */
+
+.card:first-of-type {
+    background-image: url(./img/vienna.jpg);
+}
+
+.card:nth-of-type(2) {
+    background-image: url(./img/prague.jpg);
+}
+
+.card:nth-of-type(3) {
+    background-image: url(./img/moscow.jpg);
+}
+
+.card:nth-of-type(4) {
+    background-image: url(./img/belgrade.jpg);
+}
+
+.card:nth-of-type(5) {
+    background-image: url(./img/paris.jpg);
+}
+
+/* Layout */
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.card {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    cursor: pointer;
+    margin: 0.75em;
+    flex: 0.5;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+    -moz-transition: all 700ms ease-in;
+    transition: all 700ms ease-in;
+}
+
+.city-name {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    opacity: 0;
+    margin: 0;
+}
+
+.card.active {
+    flex: 5;
+    border-radius: 1em;
+}
+
+.card.active .city-name {
+    opacity: 1;
+    transition: opacity 300ms ease-in 400ms;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95vw;
+        height: 95vh;
+        flex-direction: column;
+    }
+    
+}
