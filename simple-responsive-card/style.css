@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Popins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     line-height: 1.3;
     min-height: 100vh;
     /* display: grid;
@@ -28,6 +28,7 @@ body {
     color: #333;
     text-align: center;
     padding: 2em;
+    margin: 3em auto;
 }
 
 .profile-img {
@@ -66,7 +67,7 @@ body {
 }
 
 .profile-body {
-    font-weight: 400;
+    font-weight: 500;
     opacity: 0.8;
     margin-bottom: 1em;
 }
