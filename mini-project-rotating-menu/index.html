@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="DuskoZ">
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+    <title>Rotating menu</title>
+</head>
+
+<body>
+
+    <div class="navbar-wrapper">
+        <div class="navbar">
+            <a href="#" class="navbar-link">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="#" class="navbar-link">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#" class="navbar-link">
+                <i class="fas fa-phone-square"></i>
+            </a>
+
+            <a href="#" class="navbar-link">
+                <i class="fab fa-discord"></i>
+            </a>
+
+            <a href="#" class="navbar-link">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="#" class="navbar-link">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+  
+        <div class="navbar-btn">
+            <i class="fas fa-plus"></i>
+        </div>
+    </div>
+  
+    <script id="rendered-js" >
+        document.querySelector(".navbar-btn").addEventListener("click", () => {
+        document.querySelector(".navbar-wrapper").classList.toggle("change");
+    });
+    </script>
+</body>
+</html>
