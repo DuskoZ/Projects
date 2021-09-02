@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     min-height: 100vh;
     display: grid;
     place-items: center;
@@ -89,6 +89,7 @@ img {
 
     .name {
         margin: 0.75em 0;
+        letter-spacing: 1px;
     }
 
     .stats {
