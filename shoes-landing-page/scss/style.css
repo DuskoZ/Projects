@@ -1,0 +1,244 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --clr-text: #fff;
+  --clr-subtitle: #17353d;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 7em 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+}
+
+.split > * {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  min-width: 15em;
+}
+
+.spacing > * + * {
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  color: var(--clr-text);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em 1.25em;
+  background: var(--clr-accent, #4747ac);
+  border-radius: 0.25em;
+  -webkit-transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+  transition: transform 250ms ease-in-out, opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4.5rem);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1.1;
+  color: var(--clr-subtitle, #17353d);
+  margin-bottom: 5rem;
+}
+
+.hero {
+  color: var(--clr-text, #fff);
+  text-align: center;
+  padding: 15em 0;
+  background-image: url(../img/shoe-3.png), radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured-item {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.featured-item:hover, .featured-item:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.featured-item:hover .featured-details, .featured-item:focus .featured-details {
+  opacity: 1;
+  text-shadow: 0 0 2em white;
+}
+
+.featured-item::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 75% 75% 0 0;
+  border-radius: 50%;
+  background: #2193b0;
+  z-index: -1;
+}
+
+.featured-details {
+  opacity: 0;
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+}
+
+.featured-details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.our-products {
+  padding-bottom: 0;
+}
+
+.product {
+  background: radial-gradient(var(--clr-inner, #6057ac), var(--clr-outer, #6f794b));
+  padding: 3em;
+  border-radius: 1em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--clr-text, #fff);
+  text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+  margin: -5em 0 0 0;
+}
+
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+    margin-bottom: 9em;
+  }
+  .product-title {
+    margin: 0;
+  }
+  .product-img {
+    float: right;
+    width: 65%;
+    shape-outside: url(../img/shoe-1.png);
+    shape-margin: 2em;
+    margin: -2em -5em 0 0;
+  }
+  .product.shoe-left .product-img {
+    float: left;
+    shape-outside: url(../img/shoe-2.png);
+    margin: 0 0 0 -5em;
+    shape-margin: 2em;
+  }
+}
+
+@media (min-width: 60em) {
+  .product-img {
+    max-width: 50%;
+    margin-top: -5em;
+    shape-margin: 3em;
+  }
+  .product.shoe-left .product-img {
+    margin-top: -4em;
+    shape-margin: 5em;
+  }
+}
+
+.hero {
+  --clr-accent: #faa700;
+}
+
+.shoe-red {
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #671325;
+}
+
+.shoe-blue {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
+}
+
+.shoe-white {
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
+}
+/*# sourceMappingURL=style.css.map */
