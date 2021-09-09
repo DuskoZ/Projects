@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d3d3d3;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 2em;
+    font-weight: 700;
+    background: linear-gradient(40deg, rgb(201, 76, 18) 40%, rgb(68, 0, 255) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25em;
+    height: 12em;
+    border-radius: 1em;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    transform: translateX(400%);
+    transition: transform 500ms ease;
+}
+
+.box + .box {
+    margin-top: 2em;
+}
+
+.box:nth-last-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    transform: translateX(0);
+}
+
+.box-bg-1 {
+    background: rgb(236,234,88);
+    background: linear-gradient(40deg, rgba(236,234,88,1) 40%, rgba(0,212,255,1) 100%);
+}
+
+.box-bg-2 {
+    background: rgb(236, 88, 150);
+    background: linear-gradient(78deg, rgba(236, 88, 150,1) 40%, rgb(0, 255, 76) 100%);
+}
+
+.box-bg-3 {
+    background: rgb(194, 19, 13);
+    background: linear-gradient(105deg, rgba(194, 19, 13,1) 40%, rgb(162, 0, 255) 100%);
+}
+
