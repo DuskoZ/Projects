@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-light: #fff;
+    --clr-accent: #095027;
+    --clr-text: #2a3344;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+input#menu {
+    display: none;
+}
+
+.icon {
+    background: var(--clr-light);
+    cursor: pointer;
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+    padding: 1em;
+}
+
+label.icon {
+    position: fixed;
+    z-index: 200;
+}
+
+.icon .menu,
+.icon .menu::before,
+.icon .menu::after {
+    background: var(--clr-text);
+    content: '';
+    display: block;
+    height: 2px;
+    width: 1.25em;
+    position: absolute;
+    transition: background ease 300ms, top ease 300ms 300ms, transform ease 300ms;
+}
+
+.icon:hover .menu,
+.icon:hover .menu::before,
+.icon:hover .menu::after {
+    background: var(--clr-accent);
+}
+
+.icon .menu {
+    top: 1.6875em;
+    left: 1.125em;
+}
+
+.icon .menu::before {
+    top: -0.375em;
+}
+
+.icon .menu::after {
+    top: 0.375em;
+}
+
+#menu:checked + .icon .menu {
+    background: transparent;
+}
+
+#menu:checked + .icon .menu::before {
+    transform: rotate(45deg);
+}
+
+#menu:checked + .icon .menu::after {
+    transform: rotate(-45deg);
+}
+
+#menu:checked + .icon .menu::before,
+#menu:checked + .icon .menu::after {
+    top: 0;
+    transition: top ease 300ms, transform ease 300ms 300ms;
+}
+
+nav {
+    background: var(--clr-light);
+    color: var(--clr-text);
+    font-weight: 400;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    width: 3.75em;
+    padding-top: 3.75em;
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+    user-select: none;
+    transition: width ease 600ms;
+}
+
+#menu:checked ~ nav {
+    width: 12.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    cursor: pointer;
+    display: block;
+    line-height: 3.75em;
+    padding-left: 1em;
+    white-space: nowrap;
+}
+
+nav li:hover {
+    background: var(--clr-accent);
+    color: var(--clr-light);
+}
+
+nav li:hover i {
+    color: var(--clr-light);
+}
+
+nav i {
+    color: var(--clr-text);
+    margin-right: 1.5em;
+    vertical-align: text-bottom;
+}
+
