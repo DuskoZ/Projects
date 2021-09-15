@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #444;
+    background-color: #ddd;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.key {
+    border: 1px solid #999;
+    background-color: #e9e9e9;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 1em;
+    margin: 0.5em;
+    min-width: 7.5em;
+    position: relative;
+}
+
+.key small {
+    position: absolute;
+    width: 100%;
+    top: -2em;
+    left: 0;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #444;
+}
+
+@media (max-width: 48em) {
+
+    .key {
+        margin: 1.25em auto;
+    }
+
+}
