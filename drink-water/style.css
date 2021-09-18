@@ -1,0 +1,166 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-border: #144fc6;
+    --clr-fill: #6ab3f8;
+    --clr-light: #fff;
+
+    --main-transition: 300ms ease;
+}
+
+body {
+    background-color: #3494e4;
+    color: var(--clr-light);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Typography */
+
+h1,
+h3,
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 4em;
+}
+
+.text {
+    /* font-size: 0.875rem; */
+    margin-bottom: 2.5em;
+}
+
+/* Layout */
+
+.cup-container {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+.cup {
+    background-color: var(--clr-light);
+    border: 4px solid var(--clr-border);
+    color: var(--clr-border);
+    border-radius: 0 0 2.5em 2.5em;
+    height: 20em;
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Right-side */
+
+.cup.cup-small {
+    height: 6em;
+    width: 3.5em;
+    margin: 0.5em;
+    border-radius: 0 0 1em 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    /* font-size: 0.875rem; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+}
+
+.cup.cup-small.full {
+    background-color: var(--clr-fill);
+    color: var(--clr-light);
+}
+
+.cups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20em;
+}
+
+/* Left-side */
+
+.remained {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    transition: var(--main-transition);
+}
+
+.remained span {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.remained small {
+    font-size: 0.75rem;
+    margin-top: -0.5em;
+}
+
+.percentage {
+    background-color: var(--clr-fill);
+    font-size: 1.5rem;
+    font-weight: 600;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        overflow: visible;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cup-container {
+        flex-direction: column;
+        margin: 2em auto;
+        gap: 0;
+    }
+
+    .title {
+        margin-top: 7em;
+    }
+
+    .subtitle {
+        margin-bottom: 0;
+    }
+
+    .text {
+        margin: 1em 0;
+    }
+}
