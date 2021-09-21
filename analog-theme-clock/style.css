@@ -1,0 +1,138 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #2f2f2f;
+    --clr-secondary: #fff;
+
+    --transition: all 500ms ease-in;
+}
+
+html {
+    transition: var(--transition);
+}
+
+html.dark {
+    --clr-primary: #fff;
+    --clr-secondary: #2f2f2f;
+}
+
+html.dark {
+    background-color: #111;
+    color: var(--clr-primary);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.toggle {
+    cursor: pointer;
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    border: none;
+    border-radius: 0.25em;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: 7em;
+}
+
+.toggle:focus {
+    outline: none;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 12em;
+    height: 12em;
+}
+
+.needle {
+    background-color: var(--clr-primary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4em;
+    width: 0.1875em;
+    transform-origin: bottom center;
+    transition: var(--transition);
+}
+
+.needle.hour {
+    transform: translate(-50, -100%) rotate(0deg);
+}
+
+.needle.minute,
+.needle.second {
+    transform: translate(-50, -100%) rotate(0deg);
+    height: 6em;
+}
+
+.needle.second {
+    background-color: #eb230d;
+}
+
+.centre-point {
+    background-color: #eb230d;
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centre-point::after {
+    content: '';
+    background-color: var(--clr-primary);
+    width: 0.375em;
+    height: 0.375em;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time {
+    font-size: 3.75rem;
+    font-weight: 300;
+    margin-top: 0.5em;
+}
+
+.date {
+    color: var(--clr-primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.date .circle {
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.25em;
+    transition: var(--transition);
+}
