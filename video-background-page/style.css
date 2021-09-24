@@ -1,0 +1,255 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #fff;
+    --clr-secondary: #333;
+
+    --transition: all 600ms ease;
+}
+
+.dark {
+    --clr-primary: #333;
+    --clr-secondary: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--clr-primary);
+    color: var(--clr-secondary);
+    transition: var(--transition);
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header .logo {
+    position: relative;
+    display: inline-flex;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--clr-secondary);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    /* text-transform: uppercase; */
+}
+
+header .right-side {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.btns {
+    position: relative;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns i {
+    font-size: 1.25rem;
+    color: var(--clr-secondary);
+    transition: var(--transition);
+}
+
+.btns i:nth-of-type(2) {
+    display: none;
+}
+
+.btns.active i:nth-of-type(1) {
+    display: none;
+}
+
+.btns.active i:nth-of-type(2) {
+    display: block;
+}
+
+/* Main content */
+
+main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    user-select: none;
+    mix-blend-mode: screen; /*  clipping mask for video */
+    transition: var(--transition);
+}
+
+.dark .mask {
+    filter: invert(1);
+    mix-blend-mode: multiply; /* without multiply video mask is inverted */
+}
+
+main .title {
+    position: relative;
+    font-size: 10vw;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    z-index: 3;
+}
+
+/* Sidebar Navigation */
+
+.nav-list {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-primary);
+    z-index: 4;
+    transition: var(--transition);
+}
+
+.nav-list.active {
+    left: 0;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: var(--clr-secondary);
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 8em;
+    margin: 0.125em auto;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--clr-primary);
+    background: var(--clr-secondary);
+}
+
+.nav-item:nth-child(even) .nav-link:hover {
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.nav-item:nth-child(odd) .nav-link:hover {
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+/* Footer */
+
+.copyright,
+.social-list {
+    position: absolute;
+    bottom: 2.5em;
+    z-index: 4;
+}
+
+.copyright {
+    left: 5em;
+    font-family: inherit;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.social-list {
+    right: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-item + .social-item {
+    margin-top: 0.75em;
+}
+
+.social-link {
+    color: var(--clr-secondary);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+    
+    header {
+        padding: 1em 2.5em;
+    }
+
+    header .right-side {
+        gap: 0.5em;
+    }
+
+    .copyright {
+        left: 2.5em;
+        bottom: 2em;
+    }
+
+    .social-list {
+        /* flex-direction: row; */
+        right: 1.5em;
+        bottom: 2em;
+    }
+
+  /*.social-item + .social-item {
+        margin-top: 0;
+        margin-left: 0.75em;
+    } */
+
+}
