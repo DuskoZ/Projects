@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #639;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #fff;
+    color: #639;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: none;
+    transition: 200ms;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#toasts {
+    position: fixed;
+    bottom: 0.75em;
+    right: 0.75em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.toast {
+    background-color: #fff;
+    border-radius: 0.25em;
+    padding: 1em 2em;
+    margin: 0.5em;
+}
+
+.toast.info {
+    color: #639;
+}
+
+.toast.success {
+    color: #008000;
+}
+
+.toast.error {
+    color: #f00;
+}
