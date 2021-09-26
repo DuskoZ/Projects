@@ -12,6 +12,22 @@ const angle = () => {
     return Math.floor(Math.random() * 360);
 }
 
+function randomGradient() {
+    let deg = angle() + 'deg';
+    let color1 = random_rgba();
+    let color2 = random_rgba();
+    
+    // let gradient = `linear-gradient(${deg}, ${color1}, ${color2});`
+    // let gradient = `linear-gradient(${angle()}deg, ${random_rgba()}, ${random_rgba()});`;
+    // let gradient = `linear-gradient(${angle()}deg, #${randomColor()}, #${randomColor()});`;
+    
+    let gradient = 'linear-gradient(' + deg + ',' + color1 + ', '+ color2;
+
+    document.body.style.background = gradient;
+
+    return gradient;
+}
+
 const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
 
 sounds.forEach(sound => {
@@ -25,12 +41,8 @@ sounds.forEach(sound => {
 
         document.getElementById(sound).play();
 
-        // let gradient = `linear-gradient(${angle()}deg, #${randomColor()}, #${randomColor()});`;
-        // let gradient = `linear-gradient(${angle()}deg, ${random_rgba()}, ${random_rgba()});`;
-        // console.log(gradient, typeof gradient);
-
-        // btn.style.background = gradient;
-        btn.style.background = random_rgba();
+        btn.style.background = randomGradient();
+        // btn.style.background = random_rgba();
     });
 
     document.getElementById('buttons').appendChild(btn);
@@ -44,3 +56,4 @@ function stopSongs() {
         song.currentTime = 0;
     });
 };
+
