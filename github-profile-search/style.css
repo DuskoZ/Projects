@@ -1,0 +1,141 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr: #fdb850;
+    --clr-text: #194915;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fda726;
+    color: var(--clr-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.user-form {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.user-form input {
+    display: block;
+    width: 100%;
+    background-color: var(--clr);
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: var(--clr-text);
+    border: none;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-bottom: 2em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.user-form input::placeholder {
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.user-form input:focus {
+    outline: none;
+}
+
+.card {
+    max-width: 50rem;
+    background-color: var(--clr);
+    border-radius: 1em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    padding: 2.5em;
+}
+
+.avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 5px solid #fda726;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.user-info {
+    color: var(--clr-text);
+    margin-left: 2em;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.user-info h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.user-info ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 30rem;
+    margin: 1em 0;
+}
+
+.user-info li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info strong {
+    font-size: 0.875rem;
+    margin-left: 0.675em;
+}
+
+.repo {
+    text-decoration: none;
+    color: var(--clr-text);
+    background-color: orange;
+    font-size: 0.75rem;
+    padding: 0.375em 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+
+    body {
+        overflow: visible;
+        height: auto;
+        padding: 4em 0;
+    }
+
+    .card {
+        max-width: 32rem;
+        margin: 0 2em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-form {
+        max-width: 70%;
+    }
+
+    .user-info h2 {
+        margin-top: 1em;
+        /* text-align: center; */
+    }
+
+    .user-info ul {
+        flex-direction: column;
+    }
+
+}
