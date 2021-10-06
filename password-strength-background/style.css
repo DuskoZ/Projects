@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b')
+    no-repeat center center / cover;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+    z-index: -1;
+    filter: blur(20px);
+}
+
+.login-panel {
+    background: #fff;
+    border: none;
+    width: 26em;
+    height: 25em;
+    padding: 2.5em;
+    /* border-radius: 39% 56% 76% 43% / 44% 65% 47% 58%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-panel * + * {
+    margin-bottom: 1em;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: #444;
+}
+
+.input {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5em;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+input::placeholder {
+    color: #bbb;
+    font-size: 0.875rem;
+}
+
+.btn {
+    color: #fff;
+    background: #111;
+    border: none;
+    width: 100%;
+    padding: 1em 0;
+}
