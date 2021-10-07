@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel {
+    height: 530px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.img-container {
+    display: flex;
+    transform: translateX(0);
+    transition: 500ms ease-in-out;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #fc931b;
+    width: 100px;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+  
+.btn:focus {
+    outline: none;
+}
