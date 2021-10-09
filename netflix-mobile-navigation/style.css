@@ -45,8 +45,8 @@ body {
 .close-btn {
     opacity: 0.4;
     position: absolute;
-    top: 40px;
-    right: 30px;
+    top: 2.5em;
+    right: 2em;
 }
 
 /* Side panels */
