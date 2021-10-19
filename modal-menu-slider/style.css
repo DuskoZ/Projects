@@ -1,0 +1,236 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --modal-duration: 1s;
+    --clr-primary: #30336b;
+    --clr-secondary: #af0202;
+    --clr-text: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: transform 300ms ease;
+}
+
+body.show-nav {
+    transform: translateX(200px);
+}
+
+/* Side panel */
+
+nav {
+    background-color: var(--clr-primary);
+    border-right: 2px solid rgba(200, 200, 200, 0.1);
+    color: var(--clr-text);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12em;
+    height: 100%;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+
+nav .logo {
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+nav .logo img {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+}
+
+nav ul li {
+    list-style: none;
+    border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+    padding: 1.25em;
+}
+
+nav ul li:first-of-type {
+    border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+
+nav ul li a {
+    color: var(--clr-text);
+    text-decoration: none;
+}
+  
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header section */
+
+header {
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+    font-size: 1.25rem;
+    position: relative;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 500;
+}
+
+header p {
+    margin: 1.5em 0;
+}
+
+button,
+input[type="submit"] {
+    background-color: var(--clr-secondary);
+    border: none;
+    /* border-radius: 0.25em; */
+    color: var(--clr-text);
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.toggle {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.cta-btn {
+    font-family: inherit;
+    padding: 0.5em 1.5em;
+    font-size: 1.25rem;
+}
+
+/* Main content */
+
+.container {
+    /* padding: 1em; */
+    margin: 2em auto;
+    max-width: 100%;
+    width: 50rem;
+}
+
+.container h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1em 0;
+}
+
+.container p,
+.container ul li {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.container ul {
+    margin-left: 3em;
+    margin-bottom: 1.25em;
+}
+
+/* Modal panel */
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.modal-container.show-modal {
+    display: block;
+}
+
+.modal {
+    background-color: var(--clr-text);
+    border-radius: 0.25em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+    animation: modal-open 1s;
+    /* animation-name: modalopen;
+    animation-duration: var(--modal-duration); */
+}
+
+.modal-header {
+    background: var(--clr-primary);
+    color: var(--clr-text);
+    padding: 1em;
+}
+
+.modal-header h3 {
+    font-weight: 500;
+    border-bottom: 1px solid #333;
+}
+
+.modal-content {
+    padding: 1.5em;
+}
+
+.modal-content p {
+    font-size: 0.875rem;
+}
+
+.modal-form div {
+    margin: 1em 0;
+}
+
+.modal-form label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 0.25em;
+}
+
+.modal-form .form-input {
+    padding: 0.5em;
+    width: 100%;
+}
+
+.modal-form .form-input:focus {
+    outline: none;
+}
+
+.modal-form .submit-btn {
+    width: 100%;
+}
+
+.modal-form .submit-btn:hover {
+    background-color: #8b0303;
+}
+
+.close-btn {
+    background: transparent;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+}
