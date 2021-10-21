@@ -74,7 +74,7 @@ header {
     color: var(--clr-text);
     font-size: 1.25rem;
     position: relative;
-    padding: 40px 15px;
+    padding: 2em 0.75em;
     text-align: center;
 }
 
@@ -90,10 +90,9 @@ button,
 input[type="submit"] {
     background-color: var(--clr-secondary);
     border: none;
-    /* border-radius: 0.25em; */
     color: var(--clr-text);
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 0.5em 0.75em;
 }
 
 button:focus {
@@ -116,7 +115,6 @@ button:focus {
 /* Main content */
 
 .container {
-    /* padding: 1em; */
     margin: 2em auto;
     max-width: 100%;
     width: 50rem;
@@ -157,7 +155,6 @@ button:focus {
 
 .modal {
     background-color: var(--clr-text);
-    border-radius: 0.25em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 50%;
@@ -209,6 +206,7 @@ button:focus {
 
 .modal-form .submit-btn {
     width: 100%;
+    margin-top: 0.5em;
 }
 
 .modal-form .submit-btn:hover {
@@ -237,5 +235,12 @@ button:focus {
 
     .container {
         max-width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .modal {
+        max-width: 90%;
     }
 }
