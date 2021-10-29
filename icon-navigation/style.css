@@ -48,13 +48,13 @@ body {
 .navigation .icon {
     position: relative;
     line-height: 75px;
-    font-size: 30px;
+    font-size: 1.875rem;
     transition: 500ms;
 }
 
 .navigation li.active .icon {
     font-size: 1.25rem;
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 }
 
 .navigation .text {
@@ -63,7 +63,7 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
-    bottom: 20px;
+    bottom: 18px;
     transform: scale(0);
     transform: 250ms;
 }
@@ -84,7 +84,7 @@ body {
 .navigation li:nth-child(1).active ~ .indicator {
     background: #f53b57;
     box-shadow: 0 15px 25px #f53b5799;
-    transform: translateX(calc(70px * 0));
+    transform: translateX(0);
 }
 
 .navigation li:nth-child(2).active ~ .indicator {
