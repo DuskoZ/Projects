@@ -33,7 +33,6 @@ body {
 .filter {
     font-size: 1rem;
     padding: 0.625em;
-    /* border: none; */
     width: 100%;
 }
 
@@ -53,16 +52,24 @@ body {
     margin: 1.25em;
 }
 
+.post .post-info .post-title {
+    font-family: 'Kalam', inherit, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+}
+
 .post .number {
     position: absolute;
     top: -1em;
     left: -1em;
     font-size: 1rem;
+    font-weight: 500;
     width: 2.5em;
     height: 2.5em;
     border-radius: 50%;
-    background-color: #fafafa;
-    color: #fa751c;
+    background-color: #fa751c;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,10 +77,10 @@ body {
 }
 
 .loader {
-    opacity: 0;
     display: flex;
     position: fixed;
-    bottom: 50px;
+    bottom: 3em;
+    opacity: 0;
     transition: opacity 300ms ease-in;
 }
 
@@ -84,7 +91,7 @@ body {
 /* Circle */
 
 .circle {
-    background-color: #fff;
+    background-color: #fa751c;
     width: 0.75em;
     height: 0.75em;
     border-radius: 50%;
@@ -95,18 +102,18 @@ body {
 .circle:nth-of-type(2) {
     animation-delay: 100ms;
 }
-
+  
 .circle:nth-of-type(3) {
     animation-delay: 200ms;
 }
-
+  
 @keyframes bounce {
     0%,
     100% {
-        transform: translateY(0);
+      transform: translateY(0);
     }
-
+  
     50% {
-        transform: translateY(-10xp);
+      transform: translateY(-10px);
     }
 }

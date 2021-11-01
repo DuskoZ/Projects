@@ -24,7 +24,7 @@ async function showPosts() {
 
         postEl.innerHTML = `
             <div class="number">${post.id}</div>
-            <div class="post-info>
+            <div class="post-info">
                 <h2 class="post-title">${post.title}</h2>
                 <p class="post-body">${post.body}</p>
             </div>
