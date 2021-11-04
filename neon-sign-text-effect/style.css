@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-text-shadow: #03bcf4;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    font-family: 'Arial', sans-serif;
+    background: #07252d;
+    min-height: 100vh;
+}
+
+h2 {
+    position: relative;
+    font-size: 6rem;
+    color: #0e3472;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    -webkit-box-reflect: below -40px linear-gradient(transparent, #000004);
+}
+
+h2 span {
+    animation: animate 5s linear infinite;
+}
+
+h2 span:nth-child(even) {
+    animation-delay: 400ms;
+}
+
+@keyframes animate {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+        color: #0e3472;
+        text-shadow: none;
+    }
+
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+        color: #fff;
+        text-shadow: 
+            0 0 10px var(--clr-text-shadow),
+            0 0 20px var(--clr-text-shadow),
+            0 0 40px var(--clr-text-shadow),
+            0 0 80px var(--clr-text-shadow),
+            0 0 160px var(--clr-text-shadow),
+            0 0 400px var(--clr-text-shadow);
+    }
+}
