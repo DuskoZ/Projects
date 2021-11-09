@@ -17,6 +17,13 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-family: 'Rancho', 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+    margin-top: 1em;
+}
+
 .container {
     display: flex;
     justify-content: center;
