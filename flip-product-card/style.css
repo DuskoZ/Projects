@@ -8,4 +8,52 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #09383e;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+}
+
+.card  .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card .details h3 {
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.card .details h2 {
+    font-size: 1.5rem;
+    color: #e82a5b;
+    font-weight: 600;
+}
+
+.card .details a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #47bfce;
+    color: #fff;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    text-decoration: none;
 }
