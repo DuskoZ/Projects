@@ -25,6 +25,16 @@ img {
     height: 400px;
     background: #fff;
     transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.15),
+                0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: perspective(2000px) translateX(50%);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.15),
+                0 10px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card .cover {
@@ -37,11 +47,36 @@ img {
     align-items: center;
     z-index: 2;
     transform-style: preserve-3d;
+    transform-origin: left;
     overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+.card:hover .cover {
+    transform: rotateY(-180deg);
 }
 
 .card .cover img {
     max-width: 100%;
+    z-index: 1;
+}
+
+.card .cover::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 150%;
+    transform: rotate(36.5deg);
+    background: #fff;
+    box-shadow: 0 0 0 20px #47bfce;
+    transition: .5s ease;
+    transition-delay: 1s;
+}
+
+.card:hover .cover::before {
+    width: 0;
+    box-shadow: 0 0 0 250px #47bfce;
+    transform: rotate(143.5deg);
 }
 
 .card  .details {
