@@ -15,10 +15,6 @@ body {
     background: #09383e;
 }
 
-img {
-    max-width: 100%;
-}
-
 .card {
     position: relative;
     width: 300px;
@@ -79,18 +75,25 @@ img {
     transform: rotate(143.5deg);
 }
 
-.card  .details {
+/* Inner right side */
+
+.card .details {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
     z-index: 1;
+}
+
+.card .details img {
+    max-width: 75%;
 }
 
 .card .details h3 {
@@ -99,7 +102,7 @@ img {
 }
 
 .card .details h2 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     color: #e82a5b;
     font-weight: 600;
 }
