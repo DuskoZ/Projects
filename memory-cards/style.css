@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-background: #f7f6da;
+    --clr-text-n-borders: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--clr-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h2 {
+    position: relative;
+}
+
+/* Buttons */
+
+h2 button {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    transform: translate(120%, -50%);
+}
+
+.btn {
+    font-size: .875rem;
+    cursor: pointer;
+    background-color: var(--clr-background);
+    border: 1px solid var(--clr-text-n-borders);
+    border-radius: 0.25rem;
+    padding: .75em 1em;
+    margin: 1em;
+}
+
+.btn-small {
+    font-size: .75rem;
+    padding: .5em 1em;
+}
+
+.btn-ghost {
+    border: 0;
+    background-color: transparent;
+}
+
+.clear {
+    position: absolute;
+    left: 1.5em;
+    bottom: 1.5em;
+}
+
+/* Cards */
