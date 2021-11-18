@@ -62,3 +62,85 @@ h2 button {
 }
 
 /* Cards */
+
+.cards {
+    perspective: 1000px;
+    position: relative;
+    height: 300px;
+    width: 500px;
+    max-width: 100%;
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    font-size: 1.5rem;
+    transform: translateX(50%) rotateY(-10deg);
+    transition: transform 400ms ease, opacity 400s ease;
+}
+
+.card.active {
+    cursor: pointer;
+    opacity: 1;
+    z-index: 10;
+    transform: translateX(0) rotateY(0deg);
+}
+
+.card.left {
+    transform: translateX(-50%) rotateY(10deg);
+}
+
+.inner-card {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    border-radius: .25em;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 400ms ease;
+}
+
+.card.show-answer .inner-card {
+    transform: rotateX(180deg);
+}
+  
+.inner-card-front,
+.inner-card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: var(--clr-background);
+}
+
+.inner-card-front {
+    transform: rotateX(0deg);
+    z-index: 2;
+}
+
+.inner-card-back {
+    transform: rotateX(180deg);
+}
+
+.inner-card-front::after,
+.inner-card-back::after {
+    content: '\f021  Flip';
+    /* font-family: 'Font Awesome 5 Free', 'Poppins', sans-serif; */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ddd;
+}
+
+/* NAvigation Buttons */
