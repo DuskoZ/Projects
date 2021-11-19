@@ -30,6 +30,7 @@ h2 {
 
 h2 button {
     position: absolute;
+    top: 5px;
     right: 0;
     z-index: 2;
     transform: translate(120%, -50%);
@@ -40,7 +41,7 @@ h2 button {
     cursor: pointer;
     background-color: var(--clr-background);
     border: 1px solid var(--clr-text-n-borders);
-    border-radius: 0.25rem;
+    border-radius: .25rem;
     padding: .75em 1em;
     margin: 1em;
 }
@@ -69,6 +70,7 @@ h2 button {
     height: 300px;
     width: 500px;
     max-width: 100%;
+    margin-top: 1em;
 }
 
 .card {
@@ -143,4 +145,62 @@ h2 button {
     color: #ddd;
 }
 
-/* NAvigation Buttons */
+/* Navigation Buttons */
+
+.navigation {
+    display: flex;
+    margin: 1.25em 0;
+}
+
+.navigation .nav-button {
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navigation p {
+    margin: 0 1.5em;
+}
+
+/* New card/question container */
+
+.add-container {
+    background-color: var(--clr-background);
+    border-top: 2px solid var(--clr-text-n-borders);
+    opacity: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 300ms ease;
+}
+
+.add-container.show {
+    opacity: 1;
+    z-index: 2;
+}
+  
+.add-container h3 {
+    margin: 10px 0;
+}
+
+.form-group label {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+.form-group textarea {
+    font-size: 1rem;
+    padding: .75em;
+    border: 1px solid var(--clr-text-n-borders);
+    border-radius: .25em;
+    min-width: 500px;
+    max-width: 100%;
+}
