@@ -59,3 +59,22 @@ function createCard(data, index) {
 
     updateCurrentText();
 }
+
+// Show number of cards
+function updateCurrentText() {
+    currentEl.innerText = `${currentActiveCard + 1}/${cardsEl.length}`;
+}
+  
+// Get cards from local storage
+function getCardsData() {
+    const cards = JSON.parse(localStorage.getItem('cards'));
+    return cards === null ? [] : cards;
+}
+  
+// Add card to local storage
+function setCardsData(cards) {
+    localStorage.setItem('cards', JSON.stringify(cards));
+    window.location.reload();
+}
+  
+createCards();
