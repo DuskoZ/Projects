@@ -110,3 +110,35 @@ prevBtn.addEventListener('click', () => {
   
     updateCurrentText();
 });
+
+// Show add container
+showBtn.addEventListener('click', () => addContainer.classList.add('show'));
+// Hide add container
+hideBtn.addEventListener('click', () => addContainer.classList.remove('show'));
+  
+// Add new card
+addCardBtn.addEventListener('click', () => {
+    const question = questionEl.value;
+    const answer = answerEl.value;
+  
+    if (question.trim() && answer.trim()) {
+        const newCard = { question, answer };
+  
+        createCard(newCard);
+    
+        questionEl.value = '';
+        answerEl.value = '';
+    
+        addContainer.classList.remove('show');
+    
+        cardsData.push(newCard);
+        setCardsData(cardsData);
+    }
+});
+  
+// Clear cards button
+clearBtn.addEventListener('click', () => {
+    localStorage.clear();
+    cardsContainer.innerHTML = '';
+    window.location.reload();
+});
