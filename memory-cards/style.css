@@ -28,13 +28,13 @@ h2 {
 
 /* Buttons */
 
-h2 button {
+/* h2 button {
     position: absolute;
     top: 5px;
     right: 0;
     z-index: 2;
     transform: translate(120%, -50%);
-}
+} */
 
 .btn {
     font-size: .875rem;
@@ -46,14 +46,15 @@ h2 button {
     margin: 1em;
 }
 
-.btn-small {
-    font-size: .75rem;
-    padding: .5em 1em;
-}
-
 .btn-ghost {
     border: 0;
     background-color: transparent;
+}
+
+.add-btn {
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
 }
 
 .clear {
