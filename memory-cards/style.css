@@ -28,14 +28,6 @@ h2 {
 
 /* Buttons */
 
-/* h2 button {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    z-index: 2;
-    transform: translate(120%, -50%);
-} */
-
 .btn {
     font-size: .875rem;
     cursor: pointer;
@@ -146,7 +138,7 @@ h2 {
     color: #ddd;
 }
 
-/* Navigation Buttons */
+/* Navigation buttons */
 
 .navigation {
     display: flex;

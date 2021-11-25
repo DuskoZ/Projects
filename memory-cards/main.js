@@ -85,7 +85,7 @@ createCards();
 nextBtn.addEventListener('click', () => {
     cardsEl[currentActiveCard].className = 'card left';
   
-    currentActiveCard = currentActiveCard + 1;
+    currentActiveCard++;
   
     if (currentActiveCard > cardsEl.length - 1) {
         currentActiveCard = cardsEl.length - 1;
@@ -100,7 +100,7 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
     cardsEl[currentActiveCard].className = 'card right';
   
-    currentActiveCard = currentActiveCard - 1;
+    currentActiveCard--;
   
     if (currentActiveCard < 0) {
         currentActiveCard = 0;
