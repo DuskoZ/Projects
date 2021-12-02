@@ -6,3 +6,32 @@
     padding: 0;
 }
 
+:root {
+    --clr-primary: #006241;
+    --clr-secondary: #d50032;
+    --clr-light: #d4e9e2;
+    --clr-text: #000;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: var(--clr-text);
+}
+
+a {
+    color: var(--clr-text);
+}
+
+p {
+    margin: 5px 0;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+section a {
+    color: #fff;
+}
