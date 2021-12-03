@@ -35,3 +35,37 @@ img {
 section a {
     color: #fff;
 }
+
+/* Navigation */
+
+/* Footer */
+
+.footer-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2em 2em;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    margin: 1.25em 0;
+}
+
+.social img {
+    width: 2em;
+    height: 2em;
+}
+
+.social a {
+    text-decoration: none;
+    margin-right: 1.25em;
+}
+
+.divider {
+    width: 95%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 2.5em auto;
+}
