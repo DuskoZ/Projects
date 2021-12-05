@@ -106,7 +106,55 @@ section a {
     margin: 0 .5em;
 }
 
+/* Buttons */
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    border: 1px solid var(--clr-text);
+    border-radius: 3em;
+    padding: .5em 1em;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-dark-outline {
+    color: var(--clr-text);
+    border-color: var(--clr-text);
+    transition: .3s;
+}
+
+.btn-light-outline {
+    color: #fff;
+    border-color: #fff;
+    transition: .3s;
+}
+
+.btn-dark-outline:hover,
+.btn-light-outline:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: var(--clr-text);
+    transition: .3s;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+}
+
 /* Footer & Social Icons */
+
+.divider {
+    width: 95%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 2.5em auto;
+}
 
 .footer-container {
     width: 100%;
@@ -129,11 +177,4 @@ section a {
 .social a {
     text-decoration: none;
     margin-right: 1.25em;
-}
-
-.divider {
-    width: 95%;
-    height: 1px;
-    background-color: #ccc;
-    margin: 2.5em auto;
 }
