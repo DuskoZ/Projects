@@ -40,6 +40,47 @@ section a {
     color: #fff;
 }
 
+/* Buttons */
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    border: 1px solid var(--clr-text);
+    border-radius: 3em;
+    padding: .5em 1em;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-dark-outline {
+    color: var(--clr-text);
+    border-color: var(--clr-text);
+    transition: .3s;
+}
+
+.btn-light-outline {
+    color: #fff;
+    border-color: #fff;
+    transition: .3s;
+}
+
+.btn-dark-outline:hover,
+.btn-light-outline:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: var(--clr-text);
+    transition: .3s;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+}
+
 /* Navigation */
 
 .navbar {
@@ -106,45 +147,32 @@ section a {
     margin: 0 .5em;
 }
 
-/* Buttons */
+/* Boxes */
 
-.btn {
-    cursor: pointer;
-    display: inline-block;
-    background: none;
-    border: 1px solid var(--clr-text);
-    border-radius: 3em;
-    padding: .5em 1em;
-    line-height: 1.2;
+.box {
+    margin-bottom: 2em;
+}
+
+/* for box a */
+.box-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.box-text {
+    max-width: 500px;
     text-align: center;
-    text-decoration: none;
+    justify-self: center;
+    padding: 1.25em 0;
+    margin: 0 auto;
 }
 
-.btn-dark-outline {
-    color: var(--clr-text);
-    border-color: var(--clr-text);
-    transition: .3s;
+.box-text .btn {
+    margin-top: 1.25em;
 }
 
-.btn-light-outline {
-    color: #fff;
-    border-color: #fff;
-    transition: .3s;
-}
-
-.btn-dark-outline:hover,
-.btn-light-outline:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.btn-dark {
-    color: #fff;
-    background-color: var(--clr-text);
-    transition: .3s;
-}
-
-.btn-dark:hover {
-    background-color: #333;
+.box-f .box-text {
+    max-width: 600px;
 }
 
 /* Footer & Social Icons */
@@ -177,4 +205,14 @@ section a {
 .social a {
     text-decoration: none;
     margin-right: 1.25em;
+}
+
+/* Menus  */
+
+/* Mobile Menu  */
+
+.mobile-menu img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: .625em;
 }
