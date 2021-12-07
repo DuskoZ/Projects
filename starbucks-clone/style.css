@@ -147,6 +147,23 @@ section a {
     margin: 0 .5em;
 }
 
+/* Backgrounds */
+
+.bg-primary {
+    background-color: var(--clr-primary);
+    color: #fff;
+}
+
+.bg-secondary {
+    background-color: var(--clr-secondary);
+    color: #fff;
+}
+
+.bg-extra {
+    background-color: var(--clr-light);
+    color: var(--clr-text);
+}
+
 /* Boxes */
 
 .box {
@@ -173,6 +190,20 @@ section a {
 
 .box-f .box-text {
     max-width: 600px;
+}
+
+/* Grid selectors */
+
+.grid-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-reversed:first-child {
+    order: 2;
 }
 
 /* Footer & Social Icons */
