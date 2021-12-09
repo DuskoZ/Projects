@@ -111,6 +111,20 @@ section a {
     margin-bottom: 1.25rem;
 }
 
+/* Paddings */
+
+.padd-sm {
+    padding: 0.625em 0;
+}
+
+.padd-md {
+    padding: 1.25em 0;
+}
+
+.padd-lg {
+    padding: 2.5em 0;
+}
+
 /* Navigation */
 
 .navbar {
@@ -269,6 +283,40 @@ section a {
 }
 
 /* Menus  */
+
+/* Hamburger Menu */
+
+.hamburger {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    /* display: none; */
+    border: none;
+    background: none;
+    position: relative;
+    z-index: 10;
+    transition: all .25s;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #222;
+    transition: all .5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
 
 /* Mobile Menu  */
 
