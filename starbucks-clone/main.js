@@ -3,7 +3,7 @@ const nav = document.getElementById('menu');
 
 function navigation() {
     btn.classList.toggle('open');
-    nav. classList.toggle('hidden');
+    nav.classList.toggle('hidden');
     document.body.classList.toggle('no-scroll');
 }
 

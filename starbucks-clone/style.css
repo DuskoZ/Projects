@@ -224,7 +224,7 @@ section a {
     max-width: 500px;
     text-align: center;
     justify-self: center;
-    padding: 1.25em 0;
+    padding: 1.25em 1em;
     margin: 0 auto;
 }
 
@@ -388,4 +388,35 @@ section a {
 
 .no-scroll {
     overflow: hidden;
+}
+
+/* Media Queries */
+
+@media (max-width: 90rem) {
+
+    .box {
+        max-width: 90rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .divider {
+        max-width: 90%;
+    }
+
+}
+
+@media (max-width: 60rem) {
+    
+    .text-xl {
+        font-size: 2rem;
+    }
+
+    .text-lg {
+        font-size: 1.5rem;
+    }
+
+    .text-md {
+        font-size: 1.25rem;
+    }
 }
