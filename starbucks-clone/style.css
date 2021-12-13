@@ -224,7 +224,7 @@ section a {
     max-width: 500px;
     text-align: center;
     justify-self: center;
-    padding: 1.25em 1em;
+    padding: 1.25em 0;
     margin: 0 auto;
 }
 
@@ -403,7 +403,6 @@ section a {
     .divider {
         max-width: 90%;
     }
-
 }
 
 @media (max-width: 60rem) {
@@ -418,5 +417,42 @@ section a {
 
     .text-md {
         font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 48rem) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        top: 5.375rem;
+    }
+
+    .grid-col-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-reversed:first-child {
+        order: 0;
+    }
+
+    .navbar-brand img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .navbar .navbar-nav-left,
+    .navbar .navbar-nav-right {
+        display: none;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .social {
+        margin: 1.25em auto;
     }
 }
