@@ -420,7 +420,7 @@ section a {
     }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 50rem) {
 
     .hamburger {
         display: block;
@@ -453,6 +453,7 @@ section a {
     }
 
     .social {
-        margin: 1.25em auto;
+        display: flex;
+        justify-content: center;
     }
 }
