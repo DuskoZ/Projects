@@ -183,6 +183,11 @@ header .navigation .nav-link {
     border-top-right-radius: .5em;
 }
 
+/* popraviti poziciju capri slike */
+/* .cards .card:nth-child(1) .card-img {
+    background-position: bottom center;
+} */
+
 .cards .card-title {
     font-family: 'Seaweed Script', cursive;
     font-size: 2.25rem;
