@@ -174,7 +174,13 @@ header .navigation .nav-link {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    transition: transform .3s ease-in;
+}
+
+.cards .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
 }
 
 .cards .card-img {
@@ -196,17 +202,19 @@ header .navigation .nav-link {
 }
 
 .cards .card-btn {
+    display: block;
     width: 100%;
     font-family: inherit;
-    font-size: .875;
+    font-size: .875rem;
     font-weight: 600;
     text-transform: uppercase;
+    text-align: center;
     color: var(--clr-text-light);
     background-color: var(--clr-accent);
     border: none;
     border-bottom-left-radius: .5em;
     border-bottom-right-radius: .5em;
-    padding: .5em 0;
+    padding: .375em 0;
     transition: var(--btn-transition);
 }
 
@@ -222,11 +230,15 @@ header .navigation .nav-link {
 
 .contact-form {
     width: 100%;
-    height: 20rem;
+    height: 22rem;
     background-color: var(--clr-accent);
     color: var(--clr-text-light);
     box-shadow: 0 0 15px rgba(0, 0, 0, .4);
     padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .contact-form h2 {
@@ -234,7 +246,7 @@ header .navigation .nav-link {
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: .5rem;
+    margin-bottom: .75rem;
     position: relative;
 }
 
@@ -246,7 +258,6 @@ header .navigation .nav-link {
     position: absolute;
     bottom: -2px;
     left: calc(50% - 6rem);
-    
 }
 
 .contact-form form {
@@ -267,9 +278,9 @@ header .navigation .nav-link {
     width: max(12rem, 20rem);
 }
 
-.contact-form form .right-side {
+/* .contact-form form .right-side {
     
-}
+} */
 
 .contact-form .form-element {
     margin-bottom: 10px;
@@ -283,6 +294,7 @@ header .navigation .nav-link {
 }
 
 .contact-form input {
+    font-family: inherit;
     width: 100%;
     padding: 5px 8px;
     border: none;
@@ -292,7 +304,7 @@ header .navigation .nav-link {
 .contact-form textarea {
     font-family: inherit;
     width: 100%;
-    height: 11em; /*popraviti, ne svidja mi se rjesenje*/
+    height: 12em; /*popraviti, ne svidja mi se rjesenje*/
     border-radius: .5em;
     border: none;
     padding: .5em;
@@ -304,7 +316,7 @@ header .navigation .nav-link {
 }
 
 .contact-form .submit-btn {
-    width: 12em;
+    width: 15em;
     padding: .375em 0;
     border: 2px solid var(--clr-text-light);
     color: var(--clr-text-light);
@@ -324,4 +336,29 @@ header .navigation .nav-link {
     letter-spacing: 5px;
 }
 
+/* Media Queries */
 
+@media (max-width: 50rem) {
+
+    .about-us {
+        max-width: 90%;
+        margin-inline: auto;
+    }
+
+    .contact-form {
+        height: 35rem;
+    }
+
+    .contact-form h2 {
+        margin-bottom: 1em;
+    }
+
+    .contact-form form .top {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-form .submit-btn {
+        width: max(12rem, 20rem);
+    }
+}
