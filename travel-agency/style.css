@@ -12,6 +12,7 @@
     --clr-accent: #5fa8df;
 
     --btn-transition: all .3s ease-in;
+    --nav-transition: all .7s ease-in-out;
 }
 
 body {
@@ -31,6 +32,13 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 100;
+    transition: var(--nav-transition);
+}
+
+header.active {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 header .logo {
@@ -44,10 +52,12 @@ header .logo-icon {
     font-size: 2rem;
     align-self: baseline;
     padding-top: 2px;
+    transition: var(--btn-transition);
 }
 
 header .logo-icon:hover {
     animation: globe 2s ease-in-out;
+    color: var(--clr-accent);
 }
 
 header .logo-info {
@@ -87,7 +97,13 @@ header .navigation .nav-link {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+    transition: var(--btn-transition);
 }
+
+/* .header .navigation .nav-link:hover {
+    color: var(--clr-accent);
+    transform: translateY(-6px);
+} */
 
 @keyframes globe {
     0%,
