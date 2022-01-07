@@ -15,10 +15,13 @@
     --nav-transition: all .7s ease-in-out;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--clr-text-dark);
-    scroll-behavior: smooth;
     user-select: none;
 }
 
@@ -235,14 +238,24 @@ header .navigation .nav-link {
     border-bottom-left-radius: .5em;
     border-bottom-right-radius: .5em;
     padding: .375em 0;
+    position: relative;
+    z-index: 1;
     transition: var(--btn-transition);
+}
+
+.cards .card-btn::before,
+.cards .card-btn::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
 }
 
 .cards .card-btn:hover {
     cursor: pointer;
     outline: 2px solid var(--clr-accent);
-    background-color: var(--clr-text-light);
     color: var(--clr-accent);
+    box-shadow: inset -12em 0 0 0 var(--clr-text-light),
+                inset 12em 0 0 0 var(--clr-text-light);
     letter-spacing: 5px;
 }
 
