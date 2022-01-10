@@ -8,12 +8,14 @@ function fixNav() {
 }
 
 const btn = document.getElementById('menu-btn');
-// const nav = document.getElementById('menu');
+const nav = document.getElementById('menu');
 
-function navigation() {
+function mobileNav() {
     btn.classList.toggle('open');
-    // nav.classList.toggle('hidden');
+    nav.classList.toggle('hidden');
     document.body.classList.toggle('no-scroll');
 }
 
-btn.addEventListener('click', navigation);
+btn.addEventListener('click', mobileNav);
+
+//kreirati event listener koji zatvara mobile-menu kada se klikne na neki od linkova
