@@ -7,10 +7,11 @@ function fixNav() {
         : header.classList.remove('active');
 }
 
-const btn = document.getElementById('menu-btn');
-const nav = document.getElementById('menu');
+const btn = document.getElementById('menu-btn');  //hamburger icon
+const nav = document.getElementById('menu');      //mobile menu container
 
 function mobileNav() {
+    header.classList.add('active')
     btn.classList.toggle('open');
     nav.classList.toggle('hidden');
     document.body.classList.toggle('no-scroll');
@@ -18,4 +19,16 @@ function mobileNav() {
 
 btn.addEventListener('click', mobileNav);
 
-//kreirati event listener koji zatvara mobile-menu kada se klikne na neki od linkova
+const mobileMenuItem = document.querySelectorAll('.mobile-nav-item');
+
+function mobileMenuClose() {
+    btn.classList.toggle('open');
+    nav.classList.toggle('hidden');
+    document.body.classList.toggle('no-scroll');
+
+    //popraviti - kada se klikne na prvi element da nestane i pozadinska boja header containera
+}
+
+mobileMenuItem.forEach(element => {
+    element.addEventListener('click', mobileMenuClose);
+});

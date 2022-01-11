@@ -183,7 +183,12 @@ header .navigation .nav-link {
     transition: all .3s;
 }
 
-.mobile-menu .nav-list {
+.mobile-menu:not(.hiden) {
+    transition: var(--nav-transition);
+    transition-delay: .3s;
+}
+
+.mobile-menu .mobile-nav-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,7 +197,7 @@ header .navigation .nav-link {
     line-height: 2;
 }
 
-.mobile-menu .nav-link {
+.mobile-menu .mobile-nav-link {
     color: inherit;
     font-weight: 600;
     text-decoration: none;
@@ -201,7 +206,7 @@ header .navigation .nav-link {
     transition: var(--btn-transition);
 }
 
-.mobile-menu a:hover {
+.mobile-menu .mobile-nav-link:hover {
     color: var(--clr-accent);
     letter-spacing: 6px;
 }
@@ -544,7 +549,7 @@ footer .footer-bottom::before {
     }
 
     .contact-form {
-        height: 35rem;
+        height: 40rem;
     }
 
     .contact-form h2 {
@@ -558,6 +563,11 @@ footer .footer-bottom::before {
 
     .contact-form .submit-btn {
         width: max(12rem, 20rem);
+    }
+
+    .contact-form .submit-btn:hover {
+        box-shadow: inset -12em 0 0 0 var(--clr-text-light),
+                    inset 12em 0 0 0 var(--clr-text-light);
     }
 
     footer .footer-top {
