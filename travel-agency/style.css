@@ -44,6 +44,10 @@ header.active {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+header.no-box-shadow {
+    box-shadow: none;
+}
+
 header .logo {
     display: flex;
     justify-content: center;
@@ -531,12 +535,7 @@ footer .footer-bottom::before {
 
     .mobile-menu {
         top: 3.9375rem; /*63px = 3,9375rem*/
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .mobile-menu:not(.hidden) ~ header {
-        background-color: lime;
-        /* ukloniti box-shadow kada je vidljiv mobile-menu */
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
     }
 
     .header-container .navigation {
