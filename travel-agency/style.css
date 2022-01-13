@@ -527,7 +527,6 @@ footer .footer-bottom::before {
 =======================*/
 
 @media (max-width: 50rem) {
-
     
     .hamburger {
         display: block;
