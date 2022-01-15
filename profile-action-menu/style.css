@@ -17,6 +17,7 @@ body {
 
 .list {
     display: flex;
+    gap: 6px;
 }
 
 .list .user {
@@ -64,3 +65,53 @@ body {
     font-size: .875rem;
     font-weight: 500;
 }
+
+/* Navigation dots */
+
+.navigation {
+    width: 40px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.navigation.active {
+    width: 200px;
+}
+
+.navigation span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #222322;
+    transition: .5s;
+}
+
+.navigation span:nth-child(1) {
+    transform: translateY(-12px);
+}
+
+.navigation span:nth-child(3) {
+    transform: translateY(12px);
+}
+
+.navigation.active span {
+    width: 50px;
+    height: 50px;
+}
+
+.navigation.active span:nth-child(1) {
+    transform: translateY(0) translateX(-60px);
+}
+
+.navigation.active span:nth-child(3) {
+    transform: translateY(0) translateX(60px);
+}
+
