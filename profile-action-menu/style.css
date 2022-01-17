@@ -6,29 +6,37 @@
     padding: 0;
 }
 
+:root {
+    --border-radius: .625em;
+
+    --clr-light: #fff;
+    --clr-dark: #222322;
+    --clr-accent: #f4f818;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     width: 100%;
     min-height: 100vh;
-    background-color: #222322;
+    background-color: var(--clr-dark);
     display: grid;
     place-items: center;
 }
 
 .list {
     display: flex;
-    gap: 6px;
+    gap: .5em;
 }
 
 .list .user {
-    background-color: #fff;
+    background-color: var(--clr-light);
     height: 70px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 10px;
+    gap: .5em;
+    border-radius: var(--border-radius);
     padding: 10px;
 }
 
@@ -71,8 +79,8 @@ body {
 .navigation {
     width: 40px;
     height: 70px;
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: var(--clr-light);
+    border-radius: var(--border-radius);
     position: relative;
     cursor: pointer;
     display: flex;
@@ -89,9 +97,9 @@ body {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    border: 2px solid #222322;
+    border: 2px solid var(--clr-dark);
     position: absolute;
-    background-color: #222322;
+    background-color: var(--clr-dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,10 +130,8 @@ body {
 
 .navigation span i {
     display: none;
-    color: #fff;
-    /* font-size: 0rem; */
+    color: var(--clr-light);
     transition: .5s;
-    /* transition-delay: .5s; */
 }
 
 .navigation.active span i {
@@ -134,11 +140,25 @@ body {
 }
 
 .navigation.active span:hover {
-    background-color: #29fd53;
+    background-color: var(--clr-accent);
 }
 
 .navigation.active span:hover i {
-    color: #222322;
+    color: var(--clr-dark);
+}
+
+.navigation p {
+    display: none;
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--clr-dark);
+}
+
+.navigation.active p {
+    display: block;
 }
 
 
