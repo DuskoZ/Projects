@@ -1,3 +1,21 @@
 .hero-arrangements {
     background: url('./img/sardinia2.jpg') no-repeat center center / cover;
 }
+
+.destinations,
+.destination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.destinations .offer,
+.destinations .offer-prices,
+.destinations .offer-person-num {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
