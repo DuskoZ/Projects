@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #750505;
+    --clr-light: #fff;
+    --clr-dark: #333;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    padding: 1.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: var(--clr-primary);
+    font-size: 3rem;
+}
+
+p {
+    text-align: center;
+}
+
+.btn {
+    color: var(--clr-dark);
+    width: 100%;
+    border: 1px solid var(--clr-primary);
+    border-radius: 0.4em;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.375em 0em;
+}
