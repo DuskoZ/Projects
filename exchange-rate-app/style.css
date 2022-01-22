@@ -37,12 +37,20 @@ p {
     color: var(--clr-dark);
     width: 100%;
     border: 1px solid var(--clr-primary);
-    border-radius: 0.4em;
+    /* border-radius: 0.4em; */
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 0.375em 0em;
+    /* padding: 0.375em 0em; */
+    height: 2.5rem;
+    transition: 0.3s ease-in;
+}
+
+.btn:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    letter-spacing: 6px;
 }
 
 .currency {
@@ -70,3 +78,28 @@ p {
     text-align: right;
     height: 2.5rem;
 }
+
+select:focus,
+input:focus,
+button:focus {
+    outline: 0;
+}
+
+.swap-rate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rate {
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    padding-inline: 0.75em;
+}
+
+/* @media (max-width: 600px) {
+    .currency input {
+        width: 200px;
+    }
+} */
