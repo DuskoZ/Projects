@@ -17,3 +17,11 @@ function fetchAndConvert() {
             amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
         });
 }
+
+//Event Listeners
+currencyEl_one.addEventListener("change", fetchAndConvert);
+amountEl_one.addEventListener("input", fetchAndConvert);
+currencyEl_two.addEventListener("change", fetchAndConvert);
+amountEl_two.addEventListener("input", fetchAndConvert);
+
+fetchAndConvert();
