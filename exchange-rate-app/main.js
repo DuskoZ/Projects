@@ -25,3 +25,10 @@ currencyEl_two.addEventListener("change", fetchAndConvert);
 amountEl_two.addEventListener("input", fetchAndConvert);
 
 fetchAndConvert();
+
+swap.addEventListener("click", () => {
+    const temp = currencyEl_one.value;
+    currencyEl_one.value = currencyEl_two.value;
+    currencyEl_two.value = temp;
+    fetchAndConvert();
+});
