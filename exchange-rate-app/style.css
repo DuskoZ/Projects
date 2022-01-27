@@ -31,18 +31,17 @@ h1 {
 
 p {
     text-align: center;
+    max-width: 90%;
 }
 
 .btn {
     color: var(--clr-dark);
     width: 100%;
     border: 1px solid var(--clr-primary);
-    /* border-radius: 0.4em; */
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    /* padding: 0.375em 0em; */
     height: 2.5rem;
     transition: 0.3s ease-in;
 }
@@ -96,11 +95,17 @@ button:focus {
 .rate {
     color: var(--primary-color);
     font-size: 0.875rem;
+    margin-top: 0.5em;
     padding-inline: 0.75em;
 }
 
-/* @media (max-width: 600px) {
-    .currency input {
-        width: 200px;
+@media (max-width: 37rem) {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
     }
-} */
+
+    .currency input {
+        width: 14rem;
+    }
+}
