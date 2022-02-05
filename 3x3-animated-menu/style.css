@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-dark: #333;
+    --clr-light: #fff;
+    --clr-container: #212532;
+    --clr-item: #333849;
+    --clr-hover: #2dfc52;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--clr-dark);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: var(--clr-container);
+    border-radius: 0.5em;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-delay: 0.8s;
+}
+
+.navigation.active {
+    height: 200px;
+    width: 200px;
+    transition-delay: 0s;
+}
+
+.navigation span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7px;
+    height: 7px;
+    background: var(--clr-light);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+    /* transition: transform 500ms, width 500ms, height 500ms, background 500ms; */
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+}
+
+.navigation.active span {
+    transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+    height: 45px;
+    width: 45px;
+    background: var(--clr-item);
+}
+
+.navigation span i {
+    font-size: 0rem;
+    transition-delay: 0.5s;
+}
+
+.navigation.active span i {
+    font-size: 1.5rem;
+    color: var(--clr-light);
+}
+
+.navigation.active span:hover i {
+    color: var(--clr-hover);
+    filter: drop-shadow(0 0 2px var(--clr-hover))
+        drop-shadow(0 0 5px var(--clr-hover))
+        drop-shadow(0 0 15px var(--clr-hover));
+}
