@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="DuskoZ" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Lorem Ipsum Generator</title>
+    </head>
+    <body>
+        <section class="container">
+            <h3 class="title">Lorem Ipsum - Hipster edition</h3>
+            <form action="lorem-form">
+                <label for="ammount">Num of paragraphs:</label>
+                <input
+                    type="number"
+                    min="0"
+                    value="1"
+                    name="ammount"
+                    id="ammount"
+                />
+
+                <button type="submit" class="btn">Generate!</button>
+            </form>
+
+            <article class="lorem-text"></article>
+        </section>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
