@@ -83,3 +83,8 @@ input {
 input:focus {
     outline: none;
 }
+
+.result {
+    text-align: justify;
+    padding: 1em 0;
+}
