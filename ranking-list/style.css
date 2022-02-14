@@ -87,3 +87,47 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+.box .user-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.box .user-content .user-rank {
+    position: absolute;
+    right: 0;
+    font-size: 1.75rem;
+    color: #fff;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.box .user:hover .user-rank {
+    transform: scale(1);
+}
+
+.box .user .user-rank small {
+    font-weight: 500;
+    opacity: 0.4;
+}
+
+.box .user-name {
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.box .user-role {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.box .user:hover .user-name,
+.box .user:hover .user-role {
+    color: #fff;
+}
