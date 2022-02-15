@@ -18,7 +18,7 @@ body {
 
 .box {
     position: relative;
-    min-width: 25rem; /*26.5625*/
+    min-width: 25rem;
     background: #00bcd4;
     padding: 1.25rem;
     box-shadow: 0 35px 50px rgba(0, 0, 0, 0.1);
