@@ -5,3 +5,98 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    position: relative;
+}
+
+.container .box {
+    position: relative;
+    width: 25rem;
+    height: 6rem;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.075);
+    transition: 0.5s ease-in-out;
+}
+
+.container .box:nth-child(1) {
+    --clr-accent: #be0909;
+    transform: translateX(-70px);
+}
+
+.container .box:nth-child(2) {
+    --clr-accent: #a362ea;
+}
+
+.container .box:nth-child(3) {
+    --clr-accent: #028309;
+    transform: translateX(70px);
+}
+
+.container:hover .box:nth-child(1),
+.container:hover .box:nth-child(3) {
+    transform: translateX(0);
+}
+
+.container .box::before {
+    content: "";
+    position: absolute;
+    width: 0.5em;
+    height: 100%;
+    background-color: var(--clr-accent);
+    transition: 0.5s ease-in-out;
+}
+
+.container .box:hover::before {
+    width: 100%;
+}
+
+.container .box .content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.container .box .icon {
+    font-size: 2.5rem;
+    color: var(--clr-accent);
+    min-width: 2.5em;
+    position: relative;
+    display: grid;
+    place-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.container .box:hover .icon {
+    color: #fff;
+}
+
+.container .box h3 {
+    font-weight: 500;
+    color: var(--clr-accent);
+    transition: 0.5s ease-in-out;
+}
+
+.container .box:hover h3,
+.container .box:hover p {
+    color: #fff;
+}
+
+.container .box p {
+    font-size: 0.875rem;
+    color: #555;
+    transition: 0.5s ease-in-out;
+}
