@@ -16,16 +16,42 @@
         <section class="container">
             <h3 class="title">Lorem Ipsum - Hipster edition</h3>
             <form class="lorem-form">
-                <label for="ammount">Num of paragraphs:</label>
-                <input
-                    type="number"
-                    min="1"
-                    value="1"
-                    name="ammount"
-                    id="ammount"
-                />
+                <div class="choice">
+                    <p>I want:</p>
+                    <label for="paragraph">
+                        <input
+                            type="radio"
+                            name="type"
+                            id="paragraph"
+                            value="paragraph"
+                            checked
+                        />
+                        paragraphs
+                    </label>
 
-                <button type="submit" class="btn">Generate!</button>
+                    <label for="sentence">
+                        <input
+                            type="radio"
+                            name="type"
+                            id="sentence"
+                            value="sentence"
+                        />
+                        sentences
+                    </label>
+                </div>
+
+                <div class="generator">
+                    <label for="ammount" id="num">Num of paragraphs:</label>
+                    <input
+                        type="number"
+                        min="1"
+                        value="1"
+                        name="ammount"
+                        id="ammount"
+                    />
+
+                    <button type="submit" class="btn">Generate!</button>
+                </div>
             </form>
 
             <article class="lorem-text"></article>

@@ -62,14 +62,28 @@ h3 {
 
 .lorem-form {
     margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25em;
 }
 
 label {
-    /* font-size: 1.125rem; */
     letter-spacing: 1px;
 }
 
-input {
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+input[type="radio"] {
+    transform: translateY(0.1875em);
+}
+
+input[type="number"] {
     font-family: inherit;
     font-size: 0.875rem;
     font-weight: 600;
