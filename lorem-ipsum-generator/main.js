@@ -65,8 +65,12 @@ form.addEventListener("submit", async function (e) {
     }
 });
 
+// Notes
+
 // v0.1
 // added basic API call which gets desired num of paragraphs
 
 // v0.2
 // added choice between paragraphs and sentences
+
+// added third option for a desired number of words
