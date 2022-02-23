@@ -1,0 +1,114 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-bg: #333;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #f3f3f3;
+    display: grid;
+    place-items: center;
+}
+
+.title {
+    margin-top: -6em;
+}
+
+footer {
+    background-color: var(--clr-bg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12rem;
+    display: grid;
+    place-items: center;
+}
+
+.footer-list {
+    position: relative;
+    display: flex;
+    gap: 3.5em;
+}
+
+.footer-list .footer-list-item {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+.footer-list .footer-list-item:hover {
+    z-index: 100;
+    transform: scale(0.75);
+}
+
+.footer-list .footer-list-item::before {
+    content: "";
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--clr-social), 0 0 0 20px var(--clr-bg),
+        0 0 0 22px var(--clr-social);
+    transition: 0.5s;
+}
+
+.footer-list .footer-list-item:hover::before {
+    inset: 0;
+}
+
+.footer-list .footer-list-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--clr-bg);
+    transform: rotate(45deg);
+}
+
+.footer-list .footer-list-item:nth-child(1) {
+    --clr-social: #1877f2;
+}
+
+.footer-list .footer-list-item:nth-child(2) {
+    --clr-social: #c32aa3;
+}
+
+.footer-list .footer-list-item:nth-child(3) {
+    --clr-social: #f00;
+}
+
+.footer-list .footer-list-item:nth-child(4) {
+    --clr-social: #1da1f2;
+}
+
+.footer-list .footer-list-item:nth-child(5) {
+    --clr-social: #25d366;
+}
+
+.footer-list .footer-social {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--clr-social);
+    position: relative;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.footer-list .footer-social:hover {
+    font-size: 3rem;
+    filter: drop-shadow(0 0 20px var(--clr-social))
+        drop-shadow(0 0 40px var(--clr-social));
+}
