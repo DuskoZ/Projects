@@ -79,14 +79,15 @@ nav {
     font-size: 1rem;
     text-transform: capitalize;
     letter-spacing: 1px;
+    color: var(--clr-dark-blue);
     display: block;
-    pad: 0.5em 1em;
+    padding: 0.5em 1em;
     transition: var(--transition);
 }
 
 .links a:hover {
     color: var(--clr-light-blue);
-    padding: 1em;
+    padding-left: 1.5em;
 }
 
 .social-icons {
@@ -95,4 +96,53 @@ nav {
 
 .show-links {
     height: 10rem;
+}
+
+@media (min-width: 50rem) {
+    .nav-center {
+        max-width: 75rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+        height: auto;
+    }
+
+    .links a {
+        padding: 0;
+        margin: 0 0.5em;
+    }
+
+    .links a:hover {
+        padding: 0;
+        background: transparent;
+    }
+
+    .social-icons {
+        display: flex;
+    }
+
+    .social-icons a {
+        margin: 0 0.5em;
+        color: var(--clr-dark-blue);
+        transition: var(--transition);
+        font-size: 1.125rem;
+    }
+
+    .social-icons a:hover {
+        color: var(--clr-light-blue);
+    }
 }
