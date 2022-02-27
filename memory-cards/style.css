@@ -9,10 +9,11 @@
 :root {
     --clr-background: #f7f6da;
     --clr-text-n-borders: #333;
+    --clr-hover: #fcfcef;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: var(--clr-background);
     display: flex;
     flex-direction: column;
@@ -29,13 +30,26 @@ h2 {
 /* Buttons */
 
 .btn {
-    font-size: .875rem;
+    font-size: 0.875rem;
     cursor: pointer;
     background-color: var(--clr-background);
     border: 1px solid var(--clr-text-n-borders);
-    border-radius: .25rem;
-    padding: .75em 1em;
+    border-radius: 0.25rem;
+    padding: 0.75em 1em;
     margin: 1em;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    background-color: var(--clr-hover);
+}
+
+.btn i {
+    transition: 0.4s ease;
+}
+
+.btn:hover i {
+    transform: rotate(90deg);
 }
 
 .btn-ghost {
@@ -55,6 +69,11 @@ h2 {
     bottom: 1.5em;
 }
 
+.add-btn i,
+.clear i {
+    margin-right: 0.5em;
+}
+
 /* Cards */
 
 .cards {
@@ -70,12 +89,12 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
+    font-size: 1.5rem;
+    opacity: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
-    font-size: 1.5rem;
     transform: translateX(50%) rotateY(-10deg);
-    transition: transform 400ms ease, opacity 400s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .card.active {
@@ -91,18 +110,18 @@ h2 {
 
 .inner-card {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-    border-radius: .25em;
+    border-radius: 0.25em;
     height: 100%;
     width: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 400ms ease;
+    transition: transform 0.4s ease;
 }
 
 .card.show-answer .inner-card {
     transform: rotateX(180deg);
 }
-  
+
 .inner-card-front,
 .inner-card-back {
     backface-visibility: hidden;
@@ -128,8 +147,8 @@ h2 {
 
 .inner-card-front::after,
 .inner-card-back::after {
-    content: '\f021  Flip';
-    font-family: 'Font Awesome 5 Free', 'Poppins', sans-serif;
+    content: "\f021  Flip";
+    font-family: "Font Awesome 5 Free", "Poppins", sans-serif;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -172,16 +191,30 @@ h2 {
     top: 0;
     bottom: 0;
     width: 100%;
-    transition: 300ms ease;
+    transition: 0.3s ease;
 }
 
 .add-container.show {
     opacity: 1;
     z-index: 2;
 }
-  
+
 .add-container h3 {
     margin: 10px 0;
+}
+
+.add-container h2 {
+    position: relative;
+}
+
+.add-container h2 button {
+    position: absolute;
+    top: -0.875em;
+    left: 20em;
+}
+
+.add-container #add-card i {
+    margin-right: 0.5em;
 }
 
 .form-group label {
@@ -191,9 +224,13 @@ h2 {
 
 .form-group textarea {
     font-size: 1rem;
-    padding: .75em;
+    padding: 0.75em;
     border: 1px solid var(--clr-text-n-borders);
-    border-radius: .25em;
+    border-radius: 0.25em;
     min-width: 500px;
     max-width: 100%;
+}
+
+.form-group textarea:focus {
+    outline: none;
 }
