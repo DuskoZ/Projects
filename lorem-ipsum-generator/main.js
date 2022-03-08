@@ -15,8 +15,6 @@ radios.forEach((radio) => {
     });
 });
 
-let counter = 0;
-
 form.addEventListener("submit", async function (e) {
     // prevents submision to the server when user clicks on submit button
     e.preventDefault();
@@ -24,15 +22,15 @@ form.addEventListener("submit", async function (e) {
     // gets user's choice - and sets variable which will be used in API url
     const type = document.querySelector('input[name="type"]:checked').value;
     let typeOfText = "";
-    //type === "paragraph" ? (typeOfText = "paras") : (typeOfText = "sentences");
     type === "sentence" ? (typeOfText = "sentences") : (typeOfText = "paras");
 
-    // gets num of paragraphs and creates API url
+    // gets num of paragraphs/sentences/words and creates API url
     const value = parseInt(ammount.value);
     let url = "";
-    // let url = `https://hipsum.co/api/?type=hipster-centric&${typeOfText}=${value}`;
+
+    // if the type is "word", it gets 10 paragraphs and later checks is it enough words, API doesn't support words as url parameter
     if (type === "word") {
-        url = `https://hipsum.co/api/?type=hipster-centric&paras=2`;
+        url = `https://hipsum.co/api/?type=hipster-centric&paras=10`;
     } else {
         url = `https://hipsum.co/api/?type=hipster-centric&${typeOfText}=${value}`;
     }
@@ -44,29 +42,36 @@ form.addEventListener("submit", async function (e) {
 
         let myJSON = JSON.stringify(data);
         let jsonData = JSON.parse(myJSON);
-        counter++;
 
-        // text = Object.values(jsonData);
-        // console.log(typeof text, text);
-        // console.log(jsonData);
         return jsonData;
     }
 
     text = Object.values(await fetchText());
-    console.log(text);
 
-    // fetch(url)
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         console.log(data);
-    //         text = Object.values(data);
-    //         console.log(typeof text);
-    //     });
+    // joins paragraphs then splits into words and filters empty strings from the array
+    const cleanArray = (textArray) => {
+        return textArray
+            .join(" ")
+            .split(" ")
+            .filter((elem) => elem != "");
+    };
 
+    // if the last word ends with "," eliminates it
     // checks if "." is the last character and adds it if not
     const checkLastWord = (textArray) => {
         let lastWordIndex = textArray.length - 1;
         const lastWordLength = textArray[lastWordIndex].length;
+
+        if (textArray[lastWordIndex][lastWordLength - 1] === ",") {
+            let temp = textArray[textArray.length - 1];
+            textArray.pop();
+
+            temp = temp
+                .split("")
+                .filter((elem) => elem !== ",")
+                .join("");
+            textArray.push(temp);
+        }
 
         if (textArray[lastWordIndex][lastWordLength - 1] !== ".") {
             textArray[textArray.length - 1] += ".";
@@ -75,20 +80,10 @@ form.addEventListener("submit", async function (e) {
         return textArray;
     };
 
-    const cleanArray = (textArray) => {
-        return textArray
-            .toString()
-            .split(",")
-            .join("")
-            .split(" ")
-            .filter((elem) => elem != "");
-    };
-
-    // displays result, depending of user choice - paragraph, sentence, word
+    // displays result, depending of user choice - word, paragraph, sentence, also prevents potential bad input
     if (isNaN(value) || value < 1) {
         result.innerHTML = `<p class="result">${text[0]}</p>`;
     } else if (type === "word") {
-        // reduces array to one string, eliminates ",", then splits string into array which contains separate words and eliminates empty strings
         let tempText = [];
         let tempArray = cleanArray(text);
 
@@ -97,6 +92,7 @@ form.addEventListener("submit", async function (e) {
             tempText = tempArray.slice(0, value);
             tempText = checkLastWord(tempText).join(" ");
         } else {
+            // if the array length is less than desired number of words calls fetch func
             let fetchMoreWords = Object.values(await fetchText());
             fetchMoreWords = cleanArray(fetchMoreWords);
             tempText.push(fetchMoreWords);
@@ -107,6 +103,7 @@ form.addEventListener("submit", async function (e) {
 
         result.innerHTML = `<p class="result">${tempText}</p>`;
     } else {
+        // if user selects paragraphs or sentences
         let tempText = text.slice(0, value);
         tempText = tempText
             .map(function (item) {
@@ -116,8 +113,6 @@ form.addEventListener("submit", async function (e) {
 
         result.innerHTML = tempText;
     }
-
-    console.log(counter);
 });
 
 // Notes
@@ -129,3 +124,6 @@ form.addEventListener("submit", async function (e) {
 
 // v0.3
 // added third option for a desired number of words
+
+// v0.4
+// string bug fixes, ",", ".", ""
