@@ -5,3 +5,107 @@
     margin: 0;
     padding: 0;
 }
+
+/*=======
+Variables
+========*/
+
+:root {
+    --clr-dark: #222;
+    --clr-light: #fafafa;
+    --clr-accent: #1178df;
+
+    --transition: all 0.5s ease;
+    --spacing: 0.25rem;
+    --radius: 0.25rem;
+    --max-width: 75rem;
+
+    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/*===========
+Global styles
+===========*/
+
+body {
+    font-family: "poppins", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--clr-dark);
+    background: var(--clr-light);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*========
+Typography
+========*/
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 50rem) {
+    body {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+}
+
+/*=====
+Buttons
+=====*/
+
+/*====
+Navbar
+====*/
