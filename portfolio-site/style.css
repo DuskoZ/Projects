@@ -13,7 +13,8 @@ Variables
 :root {
     --clr-dark: #222;
     --clr-light: #fafafa;
-    --clr-accent: #1178df;
+    --clr-accent: #40826d;
+    /* --clr-accent: #1178df */
 
     --transition: all 0.5s ease;
     --spacing: 0.25rem;
@@ -109,3 +110,81 @@ Buttons
 /*====
 Navbar
 ====*/
+
+.nav {
+    height: 4rem;
+    width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.nav-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.nav-btn {
+    font-size: 2rem;
+    color: var(--clr-accent);
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    justify-self: end;
+    display: inline-block;
+}
+
+/* hide links in 'mobile first' view  */
+.nav-links {
+    display: none;
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--clr-light);
+    box-shadow: var(--shadow-light);
+    z-index: 10;
+}
+
+@media screen and (min-width: 48rem) {
+    .nav {
+        background: var(--clr-light);
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        column-gap: 1.5rem;
+        justify-self: end;
+    }
+
+    .nav-links a {
+        text-transform: capitalize;
+        color: var(--clr-dark);
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+        color: var(--clr-accent);
+    }
+}
+
+/*=====
+Sidebar
+=====*/
