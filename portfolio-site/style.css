@@ -18,7 +18,7 @@ Variables
 
     --transition: all 0.5s ease;
     --spacing: 0.25rem;
-    --radius: 0.25rem;
+    --radius: 0.5rem;
     --max-width: 75rem;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -59,15 +59,24 @@ img {
     margin-inline: auto;
 }
 
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 .section-center {
-    width: 90vw;
+    width: 85vw;
     margin: 0 auto;
     max-width: var(--max-width);
 }
 
 @media screen and (min-width: 62rem) {
     .section-center {
-        width: 95vw;
+        width: 90vw;
     }
 }
 
@@ -127,6 +136,29 @@ h4 {
 Buttons
 =====*/
 
+.btn {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    color: var(--clr-light);
+    background: var(--clr-accent);
+    padding: 0.375rem 0.75rem;
+    border: 2px solid transparent;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    color: var(--clr-accent);
+    background: var(--clr-light);
+    border-color: var(--clr-accent);
+}
+
 /*====
 Navbar
 ====*/
@@ -144,9 +176,11 @@ Navbar
 }
 
 .nav-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding-inline: 2em;
 }
 
 .nav-btn {
@@ -331,10 +365,19 @@ Sidebar
     display: grid;
     place-items: center;
 }
-
-.hero-btn {
-    margin-top: 1.25rem;
+.hero-title {
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
 }
+
+.hero-role {
+    color: #777;
+    margin: 0;
+}
+
+/* .hero-btn {
+    margin: 1.5rem 0;
+} */
 
 .hero-icons {
     display: flex;
@@ -379,3 +422,39 @@ Sidebar
 /*===
 About
 ===*/
+
+.about-title {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.about-title .underline {
+    margin-left: 0;
+}
+
+.about-center {
+    display: grid;
+    gap: 3rem 2rem;
+}
+
+.about-img {
+    justify-self: center;
+}
+
+@media screen and (min-width: 62rem) {
+    .about-center {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-img {
+        position: relative;
+    }
+
+    .about-img::before {
+        left: -2rem;
+    }
+
+    .about-info {
+        align-self: center;
+    }
+}
