@@ -12,3 +12,15 @@ navBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("show-sidebar");
 });
+
+// set year in footer
+// date.innerHTML = new Date().getFullYear();
+
+// adds fixed class to navbar
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 80) {
+        navbar.classList.add("fixed");
+    } else {
+        navbar.classList.remove("fixed");
+    }
+});
