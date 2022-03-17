@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     line-height: 1.5;
     background: var(--clr-neutral-900);
     height: 100vh;
@@ -28,15 +28,14 @@ body {
     max-width: 35ch;
     border-radius: 0.75rem;
     overflow: hidden; /* to trim bottom overflow */
-    box-shadow: 0 0 20px  var(--clr-accent-400);
-    transition: transform 500ms ease;
+    box-shadow: 0 0 20px var(--clr-accent-400);
+    transition: transform 0.5s ease;
 }
 
 .card:hover,
 .card:focus-within {
     transform: scale(1.05);
 }
-/* focus-within - ako neki child element dobije focus */
 
 .card-content {
     padding: 1.5em;
@@ -57,8 +56,9 @@ body {
     margin-bottom: 1em;
 }
 
+/* green line  */
 .card-title::after {
-    content: '';
+    content: "";
     width: calc(100% + 1.5rem); /* rem because of h2 and line 42 */
     height: 3px;
     background: var(--clr-accent-400);
@@ -97,7 +97,6 @@ body {
 
 /* is it touch or desktop device? */
 @media (hover) {
-
     .card-content {
         transform: translateY(70%);
         transition: transform 500ms ease;
@@ -130,9 +129,7 @@ body {
 }
 
 /* if someone don't want animations */
-
 @media (prefers-reduced-motion: reduce) {
-
     *,
     *::before,
     *::after {
