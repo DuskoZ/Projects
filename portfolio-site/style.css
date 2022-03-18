@@ -29,8 +29,12 @@ Variables
 Global styles
 ===========*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 0.875rem;
     line-height: 1.5;
     color: var(--clr-dark);
@@ -57,6 +61,10 @@ img {
     margin-bottom: 1.25rem;
     background: var(--clr-accent);
     margin-inline: auto;
+}
+
+.bg-grey {
+    background: #eee;
 }
 
 .section {
@@ -165,13 +173,17 @@ Navbar
 
 .nav {
     height: 4rem;
-    /* width: var(--max-width); */
     width: 100%;
-    max-width: var(--max-width);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    transition: var(--transition);
+}
+
+.nav-center {
+    width: 100%;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -198,7 +210,7 @@ Navbar
     display: none;
 }
 
-.navbar-fixed {
+.fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -211,9 +223,12 @@ Navbar
 @media screen and (min-width: 48rem) {
     .nav {
         background: var(--clr-light);
-        /* display: grid;
-        grid-template-columns: auto 1fr;
-        align-items: center; */
+    }
+
+    .nav-center {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .nav-btn {
@@ -458,3 +473,64 @@ About
         align-self: center;
     }
 }
+
+/*======
+Services
+======*/
+
+.service {
+    background: var(--clr-light);
+    padding: 3em 1.5em;
+    margin-bottom: 2em;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.service:hover {
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.service i {
+    font-size: 3rem;
+    margin-bottom: 0.75em;
+}
+
+.service .underline {
+    width: 4rem;
+    height: 2px;
+    transition: var(--transition);
+}
+
+.service:hover .underline {
+    background: var(--clr-light);
+}
+
+.service p {
+    transition: var(--transition);
+}
+
+.service:hover p {
+    color: var(--clr-light);
+}
+
+@media screen and (min-width: 42rem) {
+    .services-center {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .services-center {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/*====== 
+Projects
+======*/
