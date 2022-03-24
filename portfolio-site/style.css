@@ -653,6 +653,77 @@ Projects
 Skills
 ====*/
 
+.skills h3 {
+    margin: 1.5rem 0;
+    color: var(--clr-accent);
+}
+
+.skill {
+    margin-bottom: 1em;
+}
+
+.skill p {
+    color: var(--clr-accent);
+    margin-bottom: 0.5em;
+    text-transform: capitalize;
+}
+
+.skill-container {
+    background: var(--clr-light);
+    width: 100%;
+    height: 1rem;
+    border-radius: var(--radius);
+    position: relative;
+}
+
+.skill-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--clr-accent);
+    width: 50%;
+    height: 100%;
+    border-radius: var(--radius);
+}
+
+.value-40 {
+    width: 40%;
+}
+
+.value-70 {
+    width: 70%;
+}
+
+.value-80 {
+    width: 80%;
+}
+
+.skill-text {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+}
+
+.skill-text-40 {
+    left: 40%;
+}
+
+.skill-text-70 {
+    left: 70%;
+}
+
+.skill-text-80 {
+    left: 80%;
+}
+
+@media screen and (min-width: 48rem) {
+    .skills-center {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
 /*=====
 Contact
 =====*/
