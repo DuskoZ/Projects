@@ -14,7 +14,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 // set year in footer
-// date.innerHTML = new Date().getFullYear();
+date.innerHTML = new Date().getFullYear();
 
 // adds fixed class to navbar
 window.addEventListener("scroll", () => {
