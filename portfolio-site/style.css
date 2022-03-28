@@ -780,7 +780,7 @@ Footer
     display: grid;
     place-items: center;
     background: #333;
-    padding: 5em;
+    padding: 4em;
 }
 
 .footer .social-icons {
@@ -832,4 +832,32 @@ Footer
 
 /*===========
 About me page
+===========*/
+
+.single-page {
+    min-height: calc(100vh - 4rem - 202px);
+}
+
+.single-page h1 {
+    text-align: center;
+}
+
+.page-info {
+    max-width: 65ch;
+}
+
+.page-info a {
+    text-transform: uppercase;
+    color: var(--clr-accent);
+    transition: var(--transition);
+}
+
+.page-info a:hover {
+    color: var(--clr-light);
+    background-color: var(--clr-accent);
+    padding-inline: 5px;
+}
+
+/*===========
+Projects page
 ===========*/
