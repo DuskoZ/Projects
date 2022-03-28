@@ -18,7 +18,7 @@ date.innerHTML = new Date().getFullYear();
 
 // adds fixed class to navbar
 window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 80) {
+    if (window.pageYOffset > 64) {
         navbar.classList.add("fixed");
     } else {
         navbar.classList.remove("fixed");
