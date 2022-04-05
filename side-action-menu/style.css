@@ -25,7 +25,6 @@ body {
 
 .navigation {
     width: 5rem;
-    /* min-height: 12rem; */
     background-color: var(--clr-light);
     box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
@@ -42,13 +41,12 @@ body {
 
 .navigation .menu-toggle {
     position: relative;
-    width: 5rem;
     height: 4.375rem;
+    width: 100%;
     padding: 0 1.5rem;
     display: flex;
     align-items: center;
     cursor: pointer;
-    width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -116,6 +114,10 @@ body {
     padding: 0.5em;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation.active .menu {
@@ -124,10 +126,20 @@ body {
 
 .navigation .menu .menu-item {
     list-style: none;
+    width: 3.5rem;
+}
+
+.navigation.active .menu .menu-item {
+    width: 100%;
+}
+
+.navigation .menu .menu-item:not(:first-of-type) {
+    margin-top: 0.5em;
 }
 
 .navigation .menu a {
     position: relative;
+    color: var(--clr-dark);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -159,7 +171,6 @@ body {
     align-items: center;
     margin-left: 10px;
     opacity: 0;
-    transition: var(--transition);
 }
 
 .navigation.active .text {
