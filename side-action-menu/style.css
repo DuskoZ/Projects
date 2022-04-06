@@ -127,6 +127,7 @@ body {
 .navigation .menu .menu-item {
     list-style: none;
     width: 3.5rem;
+    transition: var(--transition);
 }
 
 .navigation.active .menu .menu-item {
