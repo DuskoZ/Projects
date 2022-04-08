@@ -9,23 +9,23 @@
     --clr-primary: #f70058;
     --clr-dark: #0c0e36;
     --clr-light: #fff;
+
     --fw-normal: 400;
     --fw-bold: 700;
     --fw-black: 900;
-    --grid: minmax(1em, 10%)
-            minmax(10rem, 22ch) 
-            minmax(10rem, 23ch)
-            minmax(1em, 3fr)
-            max-content;
-    /* 2 'margins' and 2 in the middle for the main content */ 
+
+    --transition: all 0.5s ease;
+    --grid: minmax(1em, 10%) minmax(10rem, 22ch) minmax(10rem, 23ch)
+        minmax(1em, 3fr) max-content;
+    /* 2 'margins' and 2 in the middle for the main content */
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 1.125rem;
     line-height: 1.5;
     color: var(--clr-dark);
-    background: gray;
+    background: #808080;
 }
 
 a {
@@ -52,7 +52,6 @@ header {
     justify-content: space-between;
     max-width: 35rem;
     margin: 0 auto;
-    /* margin-top: 1em; */
     padding: 1em;
     list-style: none;
     font-size: 0.875rem;
@@ -64,6 +63,7 @@ header {
 .nav__list-item {
     margin-left: 1em;
     margin-right: 1em;
+    transition: var(--transition);
 }
 .nav__list-item:hover {
     color: var(--clr-primary);
@@ -82,7 +82,7 @@ header {
     background: var(--clr-dark);
     color: var(--clr-light);
     width: max-content;
-    margin: .5em auto -1em;
+    margin: 0.5em auto -1em;
     position: relative;
     z-index: 1;
 }
@@ -98,14 +98,14 @@ header {
 
 .weather__info {
     margin: 0;
-    margin-left: 0.75rem; /* rem instead of em */
+    margin-left: 0.75rem;
     text-align: left;
     color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     font-size: 0.875rem;
     font-weight: var(--fw-bold);
     letter-spacing: 1px;
-    display: flex; /* p and span are becoming flex items */
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -115,17 +115,17 @@ header {
     margin-left: 1em;
     margin-right: 0.75rem /* line 101 - margin:left */;
     font-size: 1rem;
-    text-transform: none; /* cm to lowercase */
+    text-transform: none;
 }
 
 .weather__info:first-of-type {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    position: relative; /* needed to display line in ::after */
+    position: relative;
 }
 
 .weather__info:first-of-type::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -0.25rem;
     background: var(--clr-light);
@@ -180,6 +180,7 @@ header {
 .btn--primary {
     background-color: var(--clr-primary);
     color: var(--clr-light);
+    transition: var(--transition);
 }
 
 .btn--primary:hover,
@@ -188,9 +189,10 @@ header {
 }
 
 .btn-outline {
-    outline: 3px solid var(--clr-primary); /* ako koristim border height je veci nego kod drugog dugmeta */
+    outline: 3px solid var(--clr-primary);
     outline-offset: -3px;
     color: var(--clr-primary);
+    transition: var(--transition);
 }
 
 .btn-outline:hover,
@@ -203,7 +205,6 @@ header {
 /* Media Queries */
 
 @media (min-width: 700px) {
-
     .nav {
         max-width: 30rem;
         margin: 0 auto;
@@ -215,7 +216,7 @@ header {
 
     .main {
         display: grid;
-        grid-template-columns: var(--grid); 
+        grid-template-columns: var(--grid);
         justify-items: start;
         padding-left: 0;
         padding-right: 0;
@@ -228,11 +229,9 @@ header {
     .main--ski {
         background-position: left bottom;
     }
-
 }
 
 @media (min-width: 1000px) {
-
     header {
         display: grid;
         grid-template-columns: var(--grid);
@@ -260,12 +259,10 @@ header {
         grid-column: -2 / -1;
         justify-self: end;
     }
-
 }
 
 @media (min-width: 1200px) {
-
     .main--ski {
-         background-position: center right;
+        background-position: center right;
     }
 }
