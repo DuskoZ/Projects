@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="DuskoZ">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <title>Let Us Know Your Feedback</title>
-</head>
-<body>
-    
-    <div class="panel-container" id="panel">
-        <strong>How satisfied are you with our <br /> customer support performance?</strong>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="DuskoZ" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Let Us Know Your Feedback</title>
+    </head>
+    <body>
+        <div class="panel-container" id="panel">
+            <strong
+                >How satisfied are you with our <br />
+                customer support performance?</strong
+            >
 
-        <div class="ratings-container">
-            <div class="rating">
-                <img src="https://image.flaticon.com/icons/svg/187/187150.svg" alt="">
-                <small>Unhappy</small>
+            <div class="ratings-container">
+                <div class="rating">
+                    <img src="./img/unhappy.svg" alt="unhappy reaction" />
+                    <small>Unhappy</small>
+                </div>
+
+                <div class="rating">
+                    <img src="./img/neutral.svg" alt="neutral reaction" />
+                    <small>Neutral</small>
+                </div>
+
+                <div class="rating active">
+                    <img src="./img/happy.svg" alt="happy reaction" />
+                    <small>Satisfied</small>
+                </div>
             </div>
-      
-            <div class="rating">
-                <img src="https://image.flaticon.com/icons/svg/187/187136.svg" alt=""/>
-                <small>Neutral</small>
-            </div>
-      
-            <div class="rating active">
-                <img src="https://image.flaticon.com/icons/svg/187/187133.svg" alt=""/>
-                <small>Satisfied</small>
-            </div>
+
+            <button class="btn" id="send">Send Review</button>
         </div>
 
-        <button class="btn" id="send">Send Review</button>
-    </div>
-
-    <script src="./main.js"></script>
-</body>
+        <script src="./main.js"></script>
+    </body>
 </html>
