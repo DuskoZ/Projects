@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$clr-light: #fafafa;
+$clr-dark: #333;
+$clr-accent-primary: #40826d;
+
+$padding: 2rem;
+$radius: 0.25rem;
+$max-width: 75rem;
+
+$shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 0 15px rgba(0, 0, 0, 0.2);
+
+// =======
+// General
+// =======
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// ==========
+// Typography
+// ==========
