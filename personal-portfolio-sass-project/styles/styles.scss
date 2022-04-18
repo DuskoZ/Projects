@@ -7,10 +7,12 @@
 $clr-light: #fafafa;
 $clr-dark: #333;
 $clr-accent-primary: #40826d;
+$clr-primary: #191d2b;
 
 $padding: 2rem;
 $radius: 0.25rem;
 $max-width: 75rem;
+$transition: all 0.5s ease-in-out;
 
 $shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
 $shadow-dark: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -21,6 +23,9 @@ $shadow-dark: 0 0 15px rgba(0, 0, 0, 0.2);
 
 body {
     font-family: "Poppins", sans-serif;
+    background-color: $clr-primary;
+    color: $clr-light;
+    transition: $transition;
 }
 
 ul {
@@ -28,9 +33,54 @@ ul {
 }
 
 a {
+    display: inline-block;
+    font-family: inherit;
     text-decoration: none;
+    color: inherit;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem 10rem;
+}
+
+.container {
+    // display: none;
+    background-color: $clr-primary;
+    transform: translateY(-100%) scale(0);
+    transition: $transition;
+}
+
+.active {
+    display: block;
+    transform: translateY(0) scale(1);
+    animation: showSection 1s ease-in-out;
+
+    @keyframes showSection {
+        0% {
+            transform: translateY(-100%) scale(0);
+        }
+        100% {
+            transform: translateY(0) scale(1);
+        }
+    }
 }
 
 // ==========
 // Typography
 // ==========
+
+// ======
+// Header
+// ======
+
+.header {
+    min-height: 100vh;
+    color: $clr-light;
+    overflow: hidden;
+    // padding: 0 !important;
+}
