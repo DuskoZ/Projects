@@ -16,7 +16,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/styles.css" />
         <title>Personal Portfolio Site | Sass project</title>
     </head>
     <body>
@@ -54,6 +54,36 @@
         </header>
         <!-- End of Header -->
 
+        <!-- Side navigation buttons -->
+        <nav class="navigation">
+            <div class="nav-btn btn-1 active-btn" data-id="header">
+                <i class="fa-solid fa-house"></i>
+            </div>
+
+            <div class="nav-btn btn-2" data-id="about">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="nav-btn btn-3" data-id="portfolio">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <div class="nav-btn btn-4" data-id="blog">
+                <i class="fa-solid fa-newspaper"></i>
+            </div>
+
+            <div class="nav-btn btn-5" data-id="contact">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </nav>
+        <!-- End of Navigation -->
+
+        <!-- Theme btn -->
+        <div class="theme-btn">
+            <i class="fa-solid fa-adjust"></i>
+            <!-- <i class="fa-solid fa-circle-half-stroke"></i> -->
+        </div>
+
         <!-- Main content -->
         <main>
             <section class="container about" id="about">
@@ -68,5 +98,7 @@
             </section>
         </main>
         <!-- End of Main content -->
+
+        <script src="./main.js"></script>
     </body>
 </html>
