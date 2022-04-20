@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
+$clr-primary: #191d2b;
+$clr-accent: #40826d;
 $clr-light: #fafafa;
 $clr-dark: #333;
-$clr-accent: #40826d;
-$clr-primary: #191d2b;
 
 $clr-grey-0: #f8f8f8;
 $clr-grey-1: #dbe1e8;
@@ -24,6 +24,21 @@ $transition: all 0.5s ease-in-out;
 
 $shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
 $shadow-dark: 0 0 15px rgba(0, 0, 0, 0.2);
+
+body.light-mode {
+    $clr-primary: #fff;
+    $clr-accent: #ebde27;
+    $clr-light: #454e56;
+    $clr-dark: #333;
+
+    $clr-grey-0: #f8f8f8;
+    $clr-grey-1: #6c7983;
+    $clr-grey-2: #6c7983;
+    $clr-grey-3: #6c7983;
+    $clr-grey-4: #454e56;
+    $clr-grey-5: #f8f8f8;
+    $clr-grey-6: #12181b;
+}
 
 // =======
 // General
@@ -161,4 +176,70 @@ section {
     color: $clr-light;
     overflow: hidden;
     // padding: 0 !important;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+
+    .left-header {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .shape {
+            transition: $transition;
+            width: 65%;
+            height: 100%;
+            background-color: $clr-accent;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+        }
+
+        .image {
+            border-radius: $radius;
+            height: 90%;
+            width: 68%;
+            margin-left: 4rem;
+            background-color: $clr-dark;
+            transition: $transition;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: $transition;
+                // filter: grayscale(100%);
+
+                // if photo is in color
+                // &:hover {
+                //     filter: grayscale(0);
+                // }
+            }
+        }
+    }
+
+    .right-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 18rem;
+
+        .name {
+            font-size: 2.5rem;
+
+            span {
+                color: $clr-accent;
+            }
+        }
+
+        p {
+            margin: 1.5rem 0;
+            line-height: 1.7;
+        }
+    }
 }
