@@ -83,6 +83,16 @@ section {
     transform: translateY(0) scale(1);
     animation: showSection 1s ease-in-out;
 
+    // slide top to bottom
+    // @keyframes showSection {
+    //     0% {
+    //         transform: translateY(-100%) scaleY(0);
+    //     }
+    //     100% {
+    //         transform: translateY(0) scaleY(1);
+    //     }
+    // }
+
     @keyframes showSection {
         0% {
             transform: translateY(-100%) scale(0);
@@ -112,19 +122,31 @@ section {
         cursor: pointer;
         padding: 1rem;
         background-color: $clr-grey-4;
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 3.25rem;
+        height: 3.25rem;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0.75rem 0;
+        margin: 0.625rem 0;
         box-shadow: $shadow-dark;
+        transition: $transition;
+
+        &:hover {
+            transition: $transition;
+            box-shadow: 0 0 15px $clr-accent;
+            transition: $transition;
+
+            i {
+                color: $clr-light;
+            }
+        }
 
         i {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             color: $clr-grey-2;
             pointer-events: none;
+            transition: $transition;
         }
     }
 
@@ -160,6 +182,62 @@ section {
         font-size: 1.5rem;
         color: $clr-grey-2;
         pointer-events: none;
+    }
+}
+
+// =======
+// Buttons
+// =======
+
+.btn-container {
+    display: flex;
+    align-self: flex-start;
+}
+
+.main-btn {
+    border-radius: 2.5em;
+    color: inherit;
+    font-weight: 600;
+    border: 1px solid $clr-accent;
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    overflow: hidden;
+
+    .btn-text {
+        padding: 0 2em;
+    }
+
+    .btn-icon {
+        background-color: $clr-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 1em;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: $transition;
+        z-index: -1;
+    }
+
+    &:hover {
+        transition: $transition;
+
+        &::before {
+            background-color: $clr-accent;
+            width: 100%;
+            height: 100%;
+            transform: translateX(0);
+            transition: $transition;
+        }
     }
 }
 
@@ -201,10 +279,10 @@ section {
         }
 
         .image {
-            border-radius: $radius;
+            border-radius: 2em;
             height: 90%;
             width: 68%;
-            margin-left: 4rem;
+            margin-left: 4em;
             background-color: $clr-dark;
             transition: $transition;
 
@@ -227,7 +305,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 18rem;
+        padding-right: 15rem;
 
         .name {
             font-size: 2.5rem;
