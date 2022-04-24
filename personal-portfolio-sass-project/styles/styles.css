@@ -295,6 +295,35 @@ p {
   letter-spacing: 1px;
 }
 
+.title {
+  text-align: center;
+}
+
+.title h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.title h2 span {
+  color: var(--clr-accent);
+}
+
+.title h2 .bg-text {
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--clr-grey-5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
 .header {
   min-height: 100vh;
   color: var(--clr-light);
@@ -352,6 +381,13 @@ p {
      object-fit: cover;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.header-content .header-left .image img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .header-content .header-right {
@@ -379,5 +415,120 @@ p {
 .header-content .header-right p {
   margin: 1.5rem 0;
   line-height: 1.7;
+}
+
+.portfolio-text {
+  text-align: center;
+  padding: 1em;
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  margin-top: 3em;
+}
+
+.projects .project {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.projects .project img {
+  width: 100%;
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  -o-object-position: center bottom;
+     object-position: center bottom;
+}
+
+.projects .project:hover .hover-card {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.projects .project .hover-card {
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-accent);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.projects .project .hover-card h3 {
+  font-size: 1.5rem;
+  color: var(--clr-light);
+  margin-bottom: 1em;
+}
+
+.projects .project .hover-card .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .project .hover-card .icons .icon {
+  cursor: pointer;
+  background-color: var(--clr-primary);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.projects .project .hover-card .icons .icon i {
+  font-size: 2rem;
+  color: var(--clr-light);
+  margin: 0 1rem;
+}
+
+.projects .project .hover-card .icons .icon:hover {
+  background-color: var(--clr-light);
+}
+
+.projects .project .hover-card .icons .icon:hover i {
+  color: var(--clr-primary);
 }
 /*# sourceMappingURL=styles.css.map */
