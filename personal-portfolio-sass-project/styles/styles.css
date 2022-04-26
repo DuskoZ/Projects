@@ -427,7 +427,7 @@ p {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2em;
+  gap: 2em;
   margin-top: 3em;
 }
 
@@ -530,5 +530,81 @@ p {
 
 .projects .project .hover-card .icons .icon:hover i {
   color: var(--clr-primary);
+}
+
+.blogs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.blogs .blog {
+  position: relative;
+  background-color: var(--clr-grey-5);
+  border-radius: var(--radius);
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.blogs .blog:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.blogs .blog:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 15px var(--clr-accent);
+          box-shadow: 0 0 15px var(--clr-accent);
+}
+
+.blogs .blog img {
+  width: 100%;
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.blogs .blog .blog-info {
+  margin-top: -0.5em;
+  padding: 1.125em;
+  border-top: 8px solid var(--clr-accent);
+}
+
+.blogs .blog .blog-info h4 {
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5em;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.blogs .blog .blog-info h4:hover {
+  color: var(--clr-accent);
+}
+
+.blogs .blog .blog-info p {
+  color: var(--clr-grey-1);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  padding-bottom: 0.5em;
 }
 /*# sourceMappingURL=styles.css.map */
