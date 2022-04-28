@@ -224,8 +224,11 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+      align-self: start;
 }
 
 .main-btn {
@@ -606,5 +609,167 @@ p {
   font-size: 0.875rem;
   line-height: 1.6;
   padding-bottom: 0.5em;
+}
+
+.contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3em;
+}
+
+.contact-content .contact-left {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.contact-content .contact-left h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+}
+
+.contact-content .contact-left h4 span {
+  color: var(--clr-accent);
+}
+
+.contact-content .contact-left p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+.contact-content .contact-left .contact-info .contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-content .contact-left .contact-info .contact-item .icon {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.5rem 1fr;
+      grid-template-columns: 2.5rem 1fr;
+}
+
+.contact-content .contact-left .contact-info .contact-item .icon i {
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-content .contact-left .contact-info .contact-item p {
+  margin: 0.25em 0;
+}
+
+.contact-content .contact-left .contact-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5em;
+}
+
+.contact-content .contact-left .contact-icons a {
+  cursor: pointer;
+  color: var(--clr-light);
+  background-color: var(--clr-grey-5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.contact-content .contact-left .contact-icons a:nth-of-type(1) {
+  --clr-accent: #3b5998;
+}
+
+.contact-content .contact-left .contact-icons a:nth-of-type(2) {
+  --clr-accent: #0077b5;
+}
+
+.contact-content .contact-left .contact-icons a:nth-of-type(3) {
+  --clr-accent: #0084b4;
+}
+
+.contact-content .contact-left .contact-icons a:nth-of-type(4) {
+  --clr-accent: #333;
+}
+
+.contact-content .contact-left .contact-icons a:not(:first-of-type) {
+  margin-left: 1em;
+}
+
+.contact-content .contact-left .contact-icons a:hover {
+  background-color: var(--clr-accent);
+  -webkit-box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.contact-content .contact-left .contact-icons a i {
+  font-size: 1.25rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.contact-content .contact-right {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin-left: 3em;
+}
+
+.contact-content .contact-right .form-element {
+  margin: 1.5em 0;
+}
+
+.contact-content .contact-right .form-element input,
+.contact-content .contact-right .form-element textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 1px;
+  color: var(--clr-light);
+  background-color: var(--clr-grey-5);
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--clr-accent);
+  outline: none;
+  resize: none;
+  transition: --transition;
+}
+
+.contact-content .contact-right .form-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-content .contact-right .form-flex :last-child {
+  margin-left: 1.5em;
 }
 /*# sourceMappingURL=styles.css.map */
