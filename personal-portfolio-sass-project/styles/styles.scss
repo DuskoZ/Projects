@@ -24,7 +24,7 @@
     --transition: all 0.5s ease-in-out;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.2);
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 .light-mode {
@@ -269,8 +269,14 @@ section {
 // Typography
 // ==========
 
+h4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
 p {
     letter-spacing: 1px;
+    line-height: 1.6;
 }
 
 .title {
@@ -373,7 +379,81 @@ p {
 
         p {
             margin: 1.5rem 0;
-            line-height: 1.7;
+        }
+    }
+}
+
+// =====
+// About
+// =====
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3em;
+    padding-bottom: 5em;
+
+    .about-left {
+        padding-right: 5em;
+
+        h4 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            padding: 2em 0;
+            color: var(--clr-grey-1);
+        }
+    }
+
+    .about-right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+
+        .about-item {
+            border: 2px solid var(--clr-grey-5);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+
+            &:hover {
+                cursor: default;
+                transform: translateY(-5px);
+                border: 2px solid var(--clr-accent);
+                box-shadow: var(--shadow-dark);
+            }
+
+            .about-text {
+                padding: 1.5em;
+                display: flex;
+                flex-direction: column;
+
+                .text-large {
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: var(--clr-accent);
+                }
+
+                .text-small {
+                    font-size: 1.125rem;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: var(--clr-grey-1);
+                    padding-left: 3em;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 15px;
+                        width: 30px;
+                        height: 2px;
+                        background-color: var(--clr-light);
+                    }
+                }
+            }
         }
     }
 }
@@ -527,7 +607,6 @@ p {
             p {
                 color: var(--clr-grey-1);
                 font-size: 0.875rem;
-                line-height: 1.6;
                 padding-bottom: 0.5em;
             }
         }
@@ -546,8 +625,6 @@ p {
         flex: 2;
 
         h4 {
-            font-size: 2rem;
-            text-transform: uppercase;
             margin-top: 0.5em;
 
             span {
@@ -557,7 +634,6 @@ p {
 
         p {
             margin: 1em 0;
-            line-height: 1.6;
         }
 
         .contact-info {
@@ -590,7 +666,7 @@ p {
 
             a {
                 cursor: pointer;
-                color: var(--clr-light);
+                color: var(--clr-grey-2);
                 background-color: var(--clr-grey-5);
                 display: flex;
                 justify-content: center;
@@ -598,6 +674,7 @@ p {
                 width: 3em;
                 height: 3em;
                 border-radius: 50%;
+                box-shadow: var(--shadow-light);
                 transition: var(--transition);
 
                 &:nth-of-type(1) {
@@ -609,7 +686,7 @@ p {
                 }
 
                 &:nth-of-type(3) {
-                    --clr-accent: #0084b4;
+                    --clr-accent: #1da1f2;
                 }
 
                 &:nth-of-type(4) {
@@ -621,6 +698,7 @@ p {
                 }
 
                 &:hover {
+                    color: var(--clr-grey-0);
                     background-color: var(--clr-accent);
                     box-shadow: 0 0 15px rgba($color: #fff, $alpha: 0.4),
                         0 0 20px rgba($color: #fff, $alpha: 0.2);
