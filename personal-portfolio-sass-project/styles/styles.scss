@@ -387,6 +387,25 @@ p {
 // About
 // =====
 
+.stats-title {
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 3em 0;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-color: var(--clr-accent);
+        width: 40%;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -451,6 +470,70 @@ p {
                         width: 30px;
                         height: 2px;
                         background-color: var(--clr-light);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-stats {
+    padding-bottom: 4em;
+
+    .progress-bars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+
+        .progress-bar {
+            display: flex;
+            flex-direction: column;
+
+            .progress-title {
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            .progress-container {
+                display: flex;
+                align-items: center;
+
+                .progress-text {
+                    color: var(--clr-grey-2);
+                }
+
+                .progress {
+                    background-color: var(--clr-grey-4);
+                    width: 100%;
+                    height: 0.5em;
+                    margin-left: 1em;
+                    position: relative;
+
+                    span {
+                        background-color: var(--clr-accent);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 80%;
+                        height: 100%;
+                        transition: var(--transition);
+                    }
+
+                    .html {
+                        width: 90%;
+                    }
+
+                    .css {
+                        width: 85%;
+                    }
+
+                    .node {
+                        width: 70%;
+                    }
+
+                    .react,
+                    .python {
+                        width: 60%;
                     }
                 }
             }

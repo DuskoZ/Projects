@@ -425,6 +425,26 @@ p {
   margin: 1.5rem 0;
 }
 
+.stats-title {
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 3em 0;
+  position: relative;
+}
+
+.stats-title::before {
+  content: "";
+  background-color: var(--clr-accent);
+  width: 40%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .about-container {
   display: -ms-grid;
   display: grid;
@@ -507,6 +527,82 @@ p {
   width: 30px;
   height: 2px;
   background-color: var(--clr-light);
+}
+
+.about-stats {
+  padding-bottom: 4em;
+}
+
+.about-stats .progress-bars {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.about-stats .progress-bars .progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-stats .progress-bars .progress-bar .progress-title {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.about-stats .progress-bars .progress-bar .progress-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-stats .progress-bars .progress-bar .progress-container .progress-text {
+  color: var(--clr-grey-2);
+}
+
+.about-stats .progress-bars .progress-bar .progress-container .progress {
+  background-color: var(--clr-grey-4);
+  width: 100%;
+  height: 0.5em;
+  margin-left: 1em;
+  position: relative;
+}
+
+.about-stats .progress-bars .progress-bar .progress-container .progress span {
+  background-color: var(--clr-accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.about-stats .progress-bars .progress-bar .progress-container .progress .html {
+  width: 90%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-container .progress .css {
+  width: 85%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-container .progress .node {
+  width: 70%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-container .progress .react,
+.about-stats .progress-bars .progress-bar .progress-container .progress .python {
+  width: 60%;
 }
 
 .portfolio-text {
