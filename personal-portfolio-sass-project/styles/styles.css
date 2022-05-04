@@ -605,6 +605,67 @@ p {
   width: 60%;
 }
 
+.timeline {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  padding-bottom: 4em;
+}
+
+.timeline .timeline-item {
+  position: relative;
+  padding-left: 3em;
+  border-left: 2px solid var(--clr-accent);
+}
+
+.timeline .timeline-item .timeline-icon {
+  background-color: var(--clr-accent);
+  position: absolute;
+  top: 0;
+  left: -26px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.timeline .timeline-item .timeline-icon i {
+  font-size: 1.25rem;
+}
+
+.timeline .timeline-item .timeline-duration {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: var(--clr-grey-5);
+  padding: 0.25em 0.5em;
+  border-radius: 1em;
+  display: inline-block;
+}
+
+.timeline .timeline-item h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5em 0;
+}
+
+.timeline .timeline-item h5 span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--clr-grey-2);
+}
+
+.timeline .timeline-item p {
+  font-size: 0.875rem;
+  color: var(--clr-grey-2);
+  padding-bottom: 1em;
+}
+
 .portfolio-text {
   text-align: center;
   padding: 1em;
