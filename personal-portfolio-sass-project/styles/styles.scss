@@ -893,7 +893,83 @@ p {
 // Media Queries
 // =============
 
+@media screen and (max-width: 768px) {
+    .title {
+        h2 {
+            font-size: 3rem;
+
+            .bg-text {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    section {
+        padding: 5rem 3rem;
+    }
+
+    .about-container .about-right,
+    .about-stats .progress-bars,
+    .timeline,
+    .blogs,
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .timeline {
+        gap: 4em;
+    }
+
+    .projects {
+        margin-top: 1em;
+    }
+
+    .contact-content {
+        flex-direction: column;
+
+        .contact-left {
+            margin: 0 auto;
+
+            h4 {
+                text-align: center;
+            }
+
+            .contact-icons {
+                justify-content: center;
+            }
+        }
+
+        .contact-right {
+            margin-left: 0;
+            margin-top: 1.5em;
+
+            .form-flex {
+                flex-direction: column;
+
+                :last-child {
+                    margin-left: 0;
+                    margin-top: 1.5em;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 600px) {
+    .title {
+        h2 {
+            font-size: 2.25rem !important;
+
+            .bg-text {
+                font-size: 4rem !important;
+            }
+        }
+    }
+
+    section {
+        padding: 3rem !important;
+    }
+
     // ==========
     // Navigation
     // ==========
@@ -922,10 +998,7 @@ p {
     .theme-btn {
         width: 3rem;
         height: 3rem;
-    }
-
-    .main-btn {
-        text-align: center;
+        right: 1.5em;
     }
 
     // ======
@@ -960,5 +1033,28 @@ p {
                 text-align: center;
             }
         }
+    }
+
+    // =====
+    // About
+    // =====
+
+    .about-container {
+        grid-template-columns: repeat(1, 1fr);
+
+        .about-left {
+            padding-right: 0;
+        }
+
+        .about-right {
+            grid-template-columns: repeat(1, 1fr);
+            padding-top: 3em;
+        }
+    }
+
+    .projects,
+    .blogs,
+    .contact-content {
+        padding-bottom: 5rem;
     }
 }

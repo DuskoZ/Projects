@@ -1018,7 +1018,73 @@ p {
   margin-left: 1.5em;
 }
 
+@media screen and (max-width: 768px) {
+  .title h2 {
+    font-size: 3rem;
+  }
+  .title h2 .bg-text {
+    font-size: 5rem;
+  }
+  section {
+    padding: 5rem 3rem;
+  }
+  .about-container .about-right,
+  .about-stats .progress-bars,
+  .timeline,
+  .blogs,
+  .projects {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .timeline {
+    gap: 4em;
+  }
+  .projects {
+    margin-top: 1em;
+  }
+  .contact-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-content .contact-left {
+    margin: 0 auto;
+  }
+  .contact-content .contact-left h4 {
+    text-align: center;
+  }
+  .contact-content .contact-left .contact-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-content .contact-right {
+    margin-left: 0;
+    margin-top: 1.5em;
+  }
+  .contact-content .contact-right .form-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-content .contact-right .form-flex :last-child {
+    margin-left: 0;
+    margin-top: 1.5em;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .title h2 {
+    font-size: 2.25rem !important;
+  }
+  .title h2 .bg-text {
+    font-size: 4rem !important;
+  }
+  section {
+    padding: 3rem !important;
+  }
   .navigation {
     width: 100%;
     top: auto;
@@ -1046,9 +1112,7 @@ p {
   .theme-btn {
     width: 3rem;
     height: 3rem;
-  }
-  .main-btn {
-    text-align: center;
+    right: 1.5em;
   }
   .header-content {
     -ms-grid-columns: (1fr)[1];
@@ -1073,6 +1137,23 @@ p {
   .header-content .header-right .name {
     font-size: 1.75rem !important;
     text-align: center;
+  }
+  .about-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .about-left {
+    padding-right: 0;
+  }
+  .about-container .about-right {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    padding-top: 3em;
+  }
+  .projects,
+  .blogs,
+  .contact-content {
+    padding-bottom: 5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
