@@ -67,10 +67,14 @@ a {
 section {
     min-height: 100vh;
     width: 100%;
+    // max-width: 100rem;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 3rem 10rem;
+    // left: 50%;
+    // margin: 0 auto;
+    // transform: translateX(-50%);
+    padding: 3rem 9rem;
 }
 
 .container {
@@ -85,16 +89,6 @@ section {
     display: block;
     transform: translateY(0) scale(1);
     animation: showSection 1s ease-in-out;
-
-    // slide top to bottom
-    // @keyframes showSection {
-    //     0% {
-    //         transform: translateY(-100%) scaleY(0);
-    //     }
-    //     100% {
-    //         transform: translateY(0) scaleY(1);
-    //     }
-    // }
 
     @keyframes showSection {
         0% {
@@ -893,35 +887,54 @@ p {
 // Media Queries
 // =============
 
-@media screen and (max-width: 768px) {
+// 78rem
+@media screen and (max-width: 1248px) {
+    .header-content .header-right {
+        padding-right: 8rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// 68rem
+@media screen and (max-width: 1088px) {
+    // .btn-container {
+    //     flex-direction: column;
+    // }
+
     .title {
         h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
 
             .bg-text {
-                font-size: 5rem;
+                font-size: 6rem;
             }
         }
     }
 
-    section {
-        padding: 5rem 3rem;
-    }
-
-    .about-container .about-right,
-    .about-stats .progress-bars,
-    .timeline,
-    .blogs,
-    .projects {
+    .about-container {
         grid-template-columns: repeat(1, 1fr);
-    }
 
-    .timeline {
-        gap: 4em;
-    }
+        .about-left {
+            padding-right: 0;
+        }
 
-    .projects {
-        margin-top: 1em;
+        .about-right {
+            padding-top: 3em;
+        }
+    }
+}
+
+// 60rem
+@media screen and (max-width: 960px) {
+    section {
+        padding: 5rem;
     }
 
     .contact-content {
@@ -940,8 +953,8 @@ p {
         }
 
         .contact-right {
-            margin-left: 0;
-            margin-top: 1.5em;
+            margin: 1.5em auto 0;
+            max-width: 48rem;
 
             .form-flex {
                 flex-direction: column;
@@ -955,7 +968,67 @@ p {
     }
 }
 
-@media screen and (max-width: 600px) {
+// 48rem
+@media screen and (max-width: 768px) {
+    .title {
+        h2 {
+            font-size: 3rem;
+
+            .bg-text {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    .header-content {
+        grid-template-columns: repeat(1, 1fr);
+        // instead of padding-block, watch sass can't compile
+        padding-top: 5em;
+        padding-bottom: 5em;
+
+        .header-left {
+            .shape {
+                display: none;
+            }
+
+            .image {
+                margin: 0 auto;
+                width: 80%;
+            }
+        }
+
+        .header-right {
+            width: 80%;
+            grid-row: 1;
+            padding-right: 0 !important;
+            margin: 0 auto;
+
+            .name {
+                font-size: 1.75rem !important;
+                text-align: center;
+            }
+        }
+    }
+
+    .about-container .about-right,
+    .about-stats .progress-bars,
+    .timeline,
+    .blogs,
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .timeline {
+        gap: 4em;
+    }
+
+    .projects {
+        margin-top: 1em;
+    }
+}
+
+// 38rem
+@media screen and (max-width: 608px) {
     .title {
         h2 {
             font-size: 2.25rem !important;
@@ -969,10 +1042,6 @@ p {
     section {
         padding: 3rem !important;
     }
-
-    // ==========
-    // Navigation
-    // ==========
 
     .navigation {
         width: 100%;
@@ -1001,60 +1070,17 @@ p {
         right: 1.5em;
     }
 
-    // ======
-    // Header
-    // ======
-
-    .header-content {
-        grid-template-columns: repeat(1, 1fr);
-        // instead of padding-block, watch sass can't compile
-        padding-top: 5em;
-        padding-bottom: 5em;
-
-        .header-left {
-            .shape {
-                display: none;
-            }
-
-            .image {
-                margin: 0 auto;
-                width: 85%;
-            }
-        }
-
-        .header-right {
-            width: 85%;
-            grid-row: 1;
-            padding-right: 0 !important;
-            margin: 0 auto;
-
-            .name {
-                font-size: 1.75rem !important;
-                text-align: center;
-            }
-        }
-    }
-
-    // =====
-    // About
-    // =====
-
     .about-container {
         grid-template-columns: repeat(1, 1fr);
-
-        .about-left {
-            padding-right: 0;
-        }
-
-        .about-right {
-            grid-template-columns: repeat(1, 1fr);
-            padding-top: 3em;
-        }
     }
 
     .projects,
     .blogs,
     .contact-content {
         padding-bottom: 5rem;
+    }
+
+    .contact-right {
+        max-width: 90% !important;
     }
 }
