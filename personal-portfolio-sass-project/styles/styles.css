@@ -1005,6 +1005,30 @@ p {
   transition: --transition;
 }
 
+.contact-content .contact-right .form-element input::-webkit-input-placeholder,
+.contact-content .contact-right .form-element textarea::-webkit-input-placeholder {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.contact-content .contact-right .form-element input:-ms-input-placeholder,
+.contact-content .contact-right .form-element textarea:-ms-input-placeholder {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.contact-content .contact-right .form-element input::-ms-input-placeholder,
+.contact-content .contact-right .form-element textarea::-ms-input-placeholder {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.contact-content .contact-right .form-element input::placeholder,
+.contact-content .contact-right .form-element textarea::placeholder {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
 .contact-content .contact-right .form-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1105,8 +1129,8 @@ p {
   }
   .contact-content .contact-right {
     margin: 1.5em auto 0;
+    width: 80%;
     max-width: 48rem;
-    min-width: 20rem;
   }
   .contact-content .contact-right .form-flex {
     -webkit-box-orient: vertical;
@@ -1230,7 +1254,13 @@ p {
     padding-bottom: 5rem;
   }
   .contact-right {
-    max-width: 90% !important;
+    width: 92% !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section {
+    padding: 2rem !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

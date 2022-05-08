@@ -103,8 +103,8 @@
 
         .contact-right {
             margin: 1.5em auto 0;
+            width: 80%;
             max-width: 48rem;
-            min-width: 20rem;
 
             .form-flex {
                 flex-direction: column;
@@ -244,6 +244,12 @@
     }
 
     .contact-right {
-        max-width: 90% !important;
+        width: 92% !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section {
+        padding: 2rem !important;
     }
 }
