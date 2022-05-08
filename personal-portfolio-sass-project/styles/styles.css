@@ -59,12 +59,14 @@ a {
 }
 
 section {
-  min-height: 100vh;
   width: 100%;
-  position: absolute;
+  min-height: 100vh;
+  max-width: 100rem;
+  position: relative;
   top: 0;
   left: 0;
   padding: 3rem 9rem;
+  margin: 0 auto;
 }
 
 .container {
@@ -232,6 +234,7 @@ section {
 }
 
 .main-btn {
+  cursor: pointer;
   border-radius: 2.5em;
   color: inherit;
   font-weight: 600;
@@ -240,16 +243,17 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   overflow: hidden;
 }
 
 .main-btn .btn-text {
   padding: 0 2em;
+  line-height: 1.2;
 }
 
 .main-btn .btn-icon {
@@ -270,28 +274,21 @@ section {
 .main-btn::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  background-color: var(--clr-accent);
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
   -webkit-transition: var(--transition);
   transition: var(--transition);
   z-index: -1;
 }
 
-.main-btn:hover {
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
 .main-btn:hover::before {
-  background-color: var(--clr-accent);
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 h4 {
@@ -1018,6 +1015,26 @@ p {
   margin-left: 1.5em;
 }
 
+@media screen and (min-width: 2000px) {
+  .header-right {
+    padding-right: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .container {
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header-content .header-left .shape {
+    display: none;
+  }
+  .header-content .header-right {
+    padding-right: 8rem;
+  }
+}
+
 @media screen and (max-width: 1248px) {
   .header-content .header-right {
     padding-right: 8rem;
@@ -1033,6 +1050,13 @@ p {
 }
 
 @media screen and (max-width: 1088px) {
+  .btn-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5em;
+  }
   .title h2 {
     font-size: 3.5rem;
   }
@@ -1052,6 +1076,13 @@ p {
 }
 
 @media screen and (max-width: 960px) {
+  .btn-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0;
+  }
   section {
     padding: 5rem;
   }
@@ -1089,6 +1120,18 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .btn-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5em;
+  }
+  .contact-right .main-btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
   .title h2 {
     font-size: 3rem;
   }
