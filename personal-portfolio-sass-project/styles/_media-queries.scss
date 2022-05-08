@@ -1,0 +1,247 @@
+// =============
+// Media Queries
+// =============
+
+@media screen and (min-width: 2000px) {
+    .header-right {
+        padding-right: 0 !important;
+    }
+}
+
+// 100rem
+@media screen and (min-width: 1601px) {
+    .container {
+        max-width: 100rem;
+        // margin-inline: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-content {
+        .header-left {
+            .shape {
+                display: none;
+            }
+        }
+
+        .header-right {
+            padding-right: 8rem;
+        }
+    }
+}
+
+// 78rem
+@media screen and (max-width: 1248px) {
+    .header-content .header-right {
+        padding-right: 8rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// 68rem
+@media screen and (max-width: 1088px) {
+    .btn-container {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .title {
+        h2 {
+            font-size: 3.5rem;
+
+            .bg-text {
+                font-size: 6rem;
+            }
+        }
+    }
+
+    .about-container {
+        grid-template-columns: repeat(1, 1fr);
+
+        .about-left {
+            padding-right: 0;
+        }
+
+        .about-right {
+            padding-top: 3em;
+        }
+    }
+}
+
+// 60rem
+@media screen and (max-width: 960px) {
+    .btn-container {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    section {
+        padding: 5rem;
+    }
+
+    .contact-content {
+        flex-direction: column;
+
+        .contact-left {
+            margin: 0 auto;
+
+            h4 {
+                text-align: center;
+            }
+
+            .contact-icons {
+                justify-content: center;
+            }
+        }
+
+        .contact-right {
+            margin: 1.5em auto 0;
+            max-width: 48rem;
+
+            .form-flex {
+                flex-direction: column;
+
+                :last-child {
+                    margin-left: 0;
+                    margin-top: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+// 48rem
+@media screen and (max-width: 768px) {
+    .btn-container {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .contact-right {
+        .main-btn {
+            align-self: center;
+        }
+    }
+
+    .title {
+        h2 {
+            font-size: 3rem;
+
+            .bg-text {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    .header-content {
+        grid-template-columns: repeat(1, 1fr);
+        // instead of padding-block, watch sass can't compile
+        // padding-block: 5em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+
+        .header-left {
+            .shape {
+                display: none;
+            }
+
+            .image {
+                margin: 0 auto;
+                width: 80%;
+            }
+        }
+
+        .header-right {
+            width: 80%;
+            grid-row: 1;
+            padding-right: 0 !important;
+            margin: 0 auto;
+
+            .name {
+                font-size: 1.75rem !important;
+                text-align: center;
+            }
+        }
+    }
+
+    .about-container .about-right,
+    .about-stats .progress-bars,
+    .timeline,
+    .blogs,
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .timeline {
+        gap: 4em;
+    }
+
+    .projects {
+        margin-top: 1em;
+    }
+}
+
+// 38rem
+@media screen and (max-width: 608px) {
+    .title {
+        h2 {
+            font-size: 2.25rem !important;
+
+            .bg-text {
+                font-size: 4rem !important;
+            }
+        }
+    }
+
+    section {
+        padding: 3rem !important;
+    }
+
+    .navigation {
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--clr-grey-5);
+        transform: translateX(-50%);
+
+        .nav-btn {
+            width: 2.75rem;
+            height: 2.75rem;
+            margin: 1em 0.5em;
+
+            i {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .theme-btn {
+        width: 3rem;
+        height: 3rem;
+        right: 1.5em;
+    }
+
+    .about-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projects,
+    .blogs,
+    .contact-content {
+        padding-bottom: 5rem;
+    }
+
+    .contact-right {
+        max-width: 90% !important;
+    }
+}
