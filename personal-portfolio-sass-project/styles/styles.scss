@@ -67,12 +67,9 @@ a {
 section {
     width: 100%;
     min-height: 100vh;
-    max-width: 100rem;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 3rem 9rem;
-    margin: 0 auto;
 }
 
 .container {
@@ -80,6 +77,15 @@ section {
     background-color: var(--clr-primary);
     transform: translateY(-100%) scale(0);
     transition: var(--transition);
+}
+
+.center {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 100rem;
+    padding: 3rem 9rem;
+    margin: 0 auto;
 }
 
 // Active page
