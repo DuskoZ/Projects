@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-dark: #222;
+    --clr-light: #fbfcff;
+    --clr-accent: #40826d;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-dark);
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 85px;
+    background-color: var(--clr-accent);
+    border-radius: 1.25rem;
+    filter: drop-shadow(-20px 20px 40px #40826d55);
+}
+
+.card .toggle {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 60px;
+    background-color: var(--clr-accent);
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    cursor: pointer;
+}
+
+.card .toggle::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border-top-right-radius: 35px;
+    box-shadow: 11px -10px 0 10px var(--clr-accent);
+}
+
+.card .toggle::after {
+    content: "";
+    position: absolute;
+    right: -34px;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border-top-left-radius: 35px;
+    box-shadow: -11px -10px 0 10px var(--clr-accent);
+}
+
+.card .toggle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -70%) rotate(405deg);
+    border-bottom: 3px solid var(--clr-light);
+    border-right: 3px solid var(--clr-light);
+}
