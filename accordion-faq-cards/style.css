@@ -1,0 +1,18 @@
+*,
+*::before,
+*:active {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color: #f5f8ff;
+}
+
+.container {}
