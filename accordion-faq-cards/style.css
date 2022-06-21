@@ -6,13 +6,105 @@
     box-sizing: border-box;
 }
 
+:root {
+    --clr-dark: #333;
+    --clr-light: #f5f8ff;
+
+    --transition: all 0.5s ease-in-out;
+    --box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     min-height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
-    background-color: #f5f8ff;
+    background-color: var(--clr-light);
 }
 
-.container {}
+.container {
+    margin-inline: 2.5em;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+.container .title {
+    color: var(--clr-dark);
+}
+
+.container .tab {
+    position: relative;
+    background-color: #fff;
+    padding: 0 1.25em 1.25em;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container .tab input {
+    appearance: none;
+}
+
+.container .tab label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.container .tab label::after {
+    content: "+";
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    right: 20px;
+    transition: var(--transition);
+}
+
+.container .tab:hover label::after {
+    color: var(--clr-dark);
+}
+
+.container .tab input:checked ~ label::after {
+    transform: rotate(135deg);
+}
+
+.container .tab label h2 {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: var(--clr-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-light);
+    font-size: 1.25rem;
+    border-radius: 5px;
+    margin-right: 0.5em;
+}
+
+.container .tab label h3 {
+    position: relative;
+    font-weight: 500;
+    color: var(--clr-dark);
+    z-index: 10;
+}
+
+.container .tab .content {
+    max-height: 0;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.container .tab input:checked ~ .content {
+    max-height: 100vh;
+}
+
+.container .tab .content p {
+    position: relative;
+    padding-block: 0.625em;
+    color: var(--clr-dark);
+    z-index: 10;
+}
