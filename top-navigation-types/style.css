@@ -7,7 +7,7 @@
 }
 
 :root {
-    --clr-accent: #40826d;
+    --clr-accent: #750e95;
     --clr-light: #fafafa;
     --clr-dark: #333;
 
@@ -33,6 +33,12 @@ body {
 
 ul {
     list-style-type: none;
+}
+
+ul i,
+.phone i,
+.profile i {
+    font-size: 1.5rem;
 }
 
 a {
@@ -85,6 +91,28 @@ a {
     gap: 1em;
 }
 
+.nav .nav-link.active {
+    color: var(--clr-accent);
+}
+
+/* Navigation #3 */
+
+.nav-3 .profile a {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation #4 */
+
+.nav-4 .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-4 .nav-link i {
+    margin-right: 3px;
+}
+
 /* Navigation #5 */
 .nav-5 .center {
     display: flex;
@@ -110,4 +138,9 @@ a {
     display: flex;
     align-items: center;
     gap: 1em;
+}
+
+.nav-5 .center .nav-top .details .phone {
+    display: flex;
+    align-items: center;
 }
