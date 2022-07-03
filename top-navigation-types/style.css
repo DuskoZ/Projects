@@ -126,6 +126,19 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.nav-5 .center .nav-top::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    opacity: 0.5;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
 }
 
 .nav-5 .social-icons {
@@ -143,4 +156,8 @@ a {
 .nav-5 .center .nav-top .details .phone {
     display: flex;
     align-items: center;
+}
+
+.nav-5 .center .nav-bottom {
+    padding-top: 0.5em;
 }
