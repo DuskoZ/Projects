@@ -44,6 +44,11 @@ ul i,
 a {
     text-decoration: none;
     color: var(--clr-dark);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: rgba(117, 14, 149, 0.7);
 }
 
 .container {
@@ -95,11 +100,56 @@ a {
     color: var(--clr-accent);
 }
 
+.nav .btn {
+    padding: 0.25em 0.75em;
+    border-radius: 0.5rem;
+}
+
+.nav .btn-accent {
+    background-color: rgba(117, 14, 149, 0.3);
+    color: var(--clr-accent);
+    transition: var(--transition);
+}
+
+.nav .btn-accent:hover {
+    color: var(--clr-light);
+    background-color: var(--clr-accent);
+}
+
+/* Navigation #2 */
+
+.nav-2 .clip-path {
+    width: 200px;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+    background: rgb(190, 57, 208);
+    background: linear-gradient(
+        45deg,
+        rgba(190, 57, 208, 1) 35%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
 /* Navigation #3 */
 
 .nav-3 .profile a {
     display: flex;
     align-items: center;
+}
+
+.nav-3 a span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 5px;
 }
 
 /* Navigation #4 */
