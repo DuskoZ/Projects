@@ -79,6 +79,12 @@ a:hover {
     align-items: center;
 }
 
+.nav .center .left {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
 .nav .logo {
     display: flex;
     justify-content: center;
@@ -106,7 +112,7 @@ a:hover {
 }
 
 .nav .btn-accent {
-    background-color: rgba(117, 14, 149, 0.3);
+    background-color: rgba(117, 14, 149, 0.2);
     color: var(--clr-accent);
     transition: var(--transition);
 }
@@ -118,23 +124,57 @@ a:hover {
 
 /* Navigation #2 */
 
+.nav-2 {
+    padding: 0 1em;
+    height: 56px;
+}
+
+.nav-2 .center {
+    height: 100%;
+}
+
 .nav-2 .clip-path {
-    width: 200px;
+    width: 250px;
     height: 100%;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
     background: rgb(190, 57, 208);
     background: linear-gradient(
         45deg,
-        rgba(190, 57, 208, 1) 35%,
-        rgba(0, 212, 255, 1) 100%
+        rgba(0, 212, 255, 1) 25%,
+        rgba(190, 57, 208, 1) 100%
     );
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1em;
+    padding-left: 1em;
+}
+
+.nav-2 .center .profile a {
+    color: var(--clr-light);
+}
+
+.nav-2 .center .profile a:first-of-type:hover {
+    color: var(--clr-accent);
 }
 
 /* Navigation #3 */
+
+.nav-3 .nav-item {
+    position: relative;
+}
+
+.nav-3 .nav-link.active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--clr-accent);
+    bottom: -1em;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 
 .nav-3 .profile a {
     display: flex;
