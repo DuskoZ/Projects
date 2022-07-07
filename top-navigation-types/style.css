@@ -69,6 +69,7 @@ a:hover {
     box-shadow: var(--shadow-dark);
     padding: 0.5em 1em;
     width: 100%;
+    /* border-radius: 3em; */
 }
 
 .nav .center {
@@ -271,6 +272,7 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 0.5em;
+    margin-left: 3.5em;
 }
 
 .nav-5 .center .nav-top .details {
@@ -284,6 +286,46 @@ a:hover {
     align-items: center;
 }
 
+.nav-5 .center .nav-top .details .lang {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.nav-5 .center .nav-top .details .lang:hover {
+    color: var(--clr-accent);
+}
+
+.nav-5 .center .nav-top .details .lang::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -0.75em;
+    transform: translateY(-50%);
+    background-color: var(--clr-dark);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    height: 8px;
+    width: 8px;
+    transition: var(--transition);
+}
+
+.nav-5 .center .nav-top .details .lang:hover::before {
+    background-color: var(--clr-accent);
+}
+
 .nav-5 .center .nav-bottom {
-    padding-top: 0.5em;
+    margin-block: 1em 0.5em;
+}
+
+.nav-5 .center .nav-bottom .active-btn {
+    padding: 0.375em 0.75em;
+    background-color: rgba(117, 14, 149, 0.2);
+    color: var(--clr-accent);
+    border-radius: 1em;
 }
