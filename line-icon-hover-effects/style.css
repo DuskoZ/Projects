@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    background-color: #ddd;
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.container ul {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
