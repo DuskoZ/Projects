@@ -22,3 +22,72 @@ body {
     gap: 40px;
     list-style: none;
 }
+
+.container li {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container li::before {
+    font-family: "fontAwesome";
+    font-size: 6rem;
+    text-align: center;
+    line-height: 8rem;
+    color: var(--clr-accent);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 4px solid var(--clr-accent);
+    transition: all 0.5s ease-in-out;
+}
+
+.container li:hover:before {
+    height: 100%;
+}
+
+.container li:nth-of-type(1) {
+    --clr-accent: #1da1f2;
+}
+
+.container li:nth-of-type(1)::before {
+    content: "\f099";
+}
+
+.container li:nth-of-type(2) {
+    --clr-accent: #dd2a7b;
+}
+
+.container li:nth-of-type(2)::before {
+    content: "\f16d";
+}
+
+.container li:nth-of-type(3) {
+    --clr-accent: #25d366;
+}
+
+.container li:nth-of-type(3)::before {
+    content: "\f232";
+}
+
+.container li:nth-of-type(4) {
+    --clr-accent: #f00;
+}
+
+.container li:nth-of-type(4)::before {
+    content: "\f16a";
+}
+
+.container li i {
+    font-size: 6rem;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--clr-accent);
+}
