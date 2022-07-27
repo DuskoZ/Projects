@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #191d2b;
+    --clr-accent: #40826d;
+    --clr-light: #fafafa;
+    --clr-dark: #333;
+
+    --clr-grey-0: #f8f8f8;
+    --clr-grey-1: #dbe1e8;
+    --clr-grey-2: #b2becd;
+    --clr-grey-3: #6c7983;
+    --clr-grey-4: #454e56;
+    --clr-grey-5: #2a2e35;
+    --clr-grey-6: #12181b;
+
+    --padding: 2rem;
+    --radius: 0.25rem;
+    --max-width: 75rem;
+    --transition: all 0.5s ease-in-out;
+
+    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-grey-0);
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container .nav-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.container .nav-list li {
+    position: relative;
+    list-style: none;
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+    border-radius: 4rem;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: var(--transition);
+}
+
+.container .nav-list li:hover {
+    width: 11rem;
+}
+
+.container .nav-list li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4rem;
+    background: linear-gradient(45deg, var(--from), var(--to));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.container .nav-list li:hover::before {
+    opacity: 1;
+}
+
+.container .nav-list li::after {
+}
+
+.container .nav-list li:nth-of-type(1) {
+    --from: #80ff72;
+    --to: #7ee8fa;
+}
+
+.container .nav-list li:nth-of-type(2) {
+    --from: #ffa9c6;
+    --to: #f434e2;
+}
+
+.container .nav-list li:nth-of-type(3) {
+    --from: #56ccf2;
+    --to: #2f80ed;
+}
+
+.container .nav-list li:nth-of-type(4) {
+    --from: #9f63dc;
+    --to: #ab1fbe;
+}
+
+.container .nav-list li:nth-of-type(5) {
+    --from: #f96;
+    --to: #ff5e62;
+}
