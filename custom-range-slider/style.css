@@ -31,7 +31,7 @@
 
 body {
     font-family: sans-serif;
-    background: var(--clr-grey-0);
+    background: #e9c46a;
     color: var(--clr-dark);
     min-height: 100vh;
     overflow: hidden;
@@ -45,10 +45,44 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1.25em;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), #fff);
+    background-color: var(--clr-grey-0);
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), #fff); */
     border-radius: var(--radius);
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fff;
+    /* box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fff; */
 }
 
 .container .slider {
+    width: 25rem;
+    /* height: 0.625rem; */
+    height: 1rem;
+    appearance: none;
+    background: var(--clr-dark);
+    outline: none;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.container .slider::-webkit-slider-thumb,
+.container .slider::-moz-range-thumb {
+    cursor: pointer;
+    appearance: none;
+    height: 1em;
+    width: 1em;
+    background: var(--clr-accent);
+    border-radius: 50%;
+    border: 2px solid var(--clr-dark);
+    box-shadow: -25.5rem 0 0 25rem var(--clr-accent);
+}
+
+.container #slider-value {
+    position: relative;
+    text-align: center;
+    width: 3rem;
+    padding-block: 2px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    margin-left: 0.5em;
+    border-radius: 1.25em;
 }
