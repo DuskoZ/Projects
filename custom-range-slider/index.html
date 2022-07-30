@@ -11,7 +11,21 @@
     </head>
     <body>
         <div class="container">
-            <input type="range" class="slider" min="0" max="100" value="0" />
+            <input
+                type="range"
+                class="slider"
+                min="0"
+                max="100"
+                value="0"
+                onmousemove="sliderValue(this.value)"
+            />
+            <span id="slider-value">0</span>
         </div>
+
+        <script>
+            const sliderValue = (value) => {
+                document.getElementById("slider-value").innerHTML = value;
+            };
+        </script>
     </body>
 </html>
