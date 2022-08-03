@@ -10,7 +10,7 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-dark: #222;
 
     --clr-grey-0: #f8f8f8;
     --clr-grey-1: #dbe1e8;
@@ -37,4 +37,68 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.skills {
+    width: 100%;
+    max-width: 600px;
+    padding-inline: 1.25em;
+}
+
+.skills .skill-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+
+.skills .skill-bar {
+    height: 1em;
+    background-color: #383838;
+    border-radius: var(--radius);
+}
+
+.skills .skill-per {
+    height: 100%;
+    background-color: var(--clr-accent);
+    border-radius: var(--radius);
+    position: relative;
+    animation: fill 2.5s 1;
+}
+
+.skills .skill-per::before {
+    content: attr(per);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 4px 6px;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    border-radius: var(--radius);
+    position: absolute;
+    top: -35px;
+    right: 0;
+    transform: translate(50%);
+}
+
+.skills .skill-per::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--clr-light);
+    border-radius: 2px;
+    position: absolute;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
