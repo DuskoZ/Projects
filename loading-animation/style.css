@@ -5,3 +5,52 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.animation {
+    width: 100%;
+    height: 100%;
+    background-color: #e15f41;
+    display: grid;
+    place-items: center;
+}
+
+.animation .circles {
+    width: 120px;
+    height: 120px;
+    display: grid;
+    grid-template: repeat(4, 20px) / repeat(4, 20px);
+    justify-content: space-between;
+    align-content: space-between;
+    transform: rotate(-45deg);
+}
+
+.animation span {
+    background-color: #fff;
+    border-radius: 50%;
+    animation: scale 1.6s linear infinite;
+}
+
+.animation span:nth-child(4n + 3) {
+    animation-delay: 200ms;
+}
+
+.animation span:nth-child(4n + 2) {
+    animation-delay: 400ms;
+}
+
+.animation span:nth-child(4n + 1) {
+    animation-delay: 600ms;
+}
+
+@keyframes scale {
+    50% {
+        transform: scale(0.5);
+    }
+}
