@@ -9,8 +9,8 @@
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
-    --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-light: #f1f1f1;
+    --clr-dark: #222;
 
     --clr-grey-0: #f8f8f8;
     --clr-grey-1: #dbe1e8;
@@ -31,10 +31,74 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
+    color: var(--clr-dark);
+    background: linear-gradient(125deg, #34495e, #2ecc71);
     min-height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.cards {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards .card {
+    background-color: var(--clr-light);
+    flex: 1;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.cards .card-header {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.cards .card-header .card-price {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.cards .card-header .card-price span {
+    font-size: 2rem;
+}
+
+.cards .card-header .card-title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background: red;
+    transform: translate(-50%, 50%);
+    width: 80%;
+    max-width: 360px;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.cards .card .card-info {
+    padding: 10px 20px;
+}
+
+@media screen and (max-width: 780px) {
+    .cards .card {
+        flex: 100%;
+    }
 }
