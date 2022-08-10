@@ -34,7 +34,6 @@ body {
     color: var(--clr-dark);
     background: linear-gradient(125deg, #34495e, #2ecc71);
     min-height: 100vh;
-    overflow: hidden;
     display: grid;
     place-items: center;
 }
@@ -60,13 +59,37 @@ li {
     flex: 1;
     margin: 10px;
     text-transform: uppercase;
+    min-width: 15rem;
 }
 
 .cards .card-header {
-    background-color: var(--clr-dark);
     color: var(--clr-light);
     position: relative;
     margin-bottom: 20px;
+}
+
+.cards .card1 .card-header {
+    background: #2980b9;
+}
+
+.cards .card2 .card-header {
+    background: #c0392b;
+}
+
+.cards .card3 .card-header {
+    background: #2c3e50;
+}
+
+.cards .card1 .card-title {
+    background-image: linear-gradient(125deg, #3498db, #9b59b6);
+}
+
+.cards .card2 .card-title {
+    background-image: linear-gradient(125deg, #e74c3c, #f39c12);
+}
+
+.cards .card3 .card-title {
+    background-image: linear-gradient(125deg, #34495e, #95a5a6);
 }
 
 .cards .card-header .card-price {
@@ -85,16 +108,77 @@ li {
     position: absolute;
     bottom: 0;
     left: 50%;
-    background: red;
     transform: translate(-50%, 50%);
     width: 80%;
     max-width: 360px;
     text-align: center;
     padding: 8px 0;
+    font-size: 0.875rem;
 }
 
 .cards .card .card-info {
     padding: 10px 20px;
+}
+
+.cards .card .card-info li {
+    margin: 0.5rem 0;
+    font-size: 0.875rem;
+    color: #344;
+    text-align: center;
+}
+
+.cards .card .card-info .border {
+    width: 80px;
+    height: 1px;
+    background: #344;
+    margin: auto;
+}
+
+.cards .card a {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.875rem;
+    border: 1px solid var(--clr-accent);
+    max-width: 360px;
+    transition: var(--transition);
+}
+
+.cards .card a:hover {
+    border-radius: 2em;
+}
+
+.cards .card1 a {
+    --clr-accent: #2980b9;
+    color: var(--clr-accent);
+}
+
+.cards .card2 a {
+    --clr-accent: #c0392b;
+    color: var(--clr-accent);
+}
+
+.cards .card3 a {
+    --clr-accent: #2c3e50;
+    color: var(--clr-accent);
+}
+
+.cards .card1 a:hover {
+    background: var(--clr-accent);
+    color: #fff;
+}
+
+.cards .card2 a:hover {
+    background: var(--clr-accent);
+    color: #fff;
+}
+
+.cards .card3 a:hover {
+    background: var(--clr-accent);
+    color: #fff;
 }
 
 @media screen and (max-width: 780px) {
