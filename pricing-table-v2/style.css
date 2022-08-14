@@ -8,7 +8,7 @@
 
 :root {
     --clr-primary: #191d2b;
-    --clr-accent: #40826d;
+    --clr-accent: #0fbcf9;
     --clr-light: #fafafa;
     --clr-dark: #333;
 
@@ -44,4 +44,52 @@ a {
 
 li {
     list-style: none;
+}
+
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px, 100%);
+}
+
+.pricing-table .pricing-card {
+    flex: 1;
+    min-width: 360px;
+    background-color: var(--clr-light);
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: #222;
+    transform: var(--transition);
+}
+
+.pricing-table .pricing-card .pricing-card-header {
+    background-color: var(--clr-accent);
+    display: inline-block;
+    color: var(--clr-light);
+    padding: 12px 30px;
+    border-radius: 0 0 20px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.pricing-card:hover .pricing-card-header {
+    box-shadow: 0 0 0 26em var(--clr-accent);
+}
+
+.pricing-table .pricing-card .price {
+    font-size: 4.5rem;
+    color: var(--clr-accent);
+    margin: 40px 0;
+    transition: var(--transition);
+}
+
+.pricing-table .pricing-card .price sup,
+.pricing-table .pricing-card .price span {
+    font-size: 1.375rem;
+    font-weight: 700;
 }
