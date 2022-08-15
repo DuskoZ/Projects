@@ -51,11 +51,13 @@ li {
     flex-wrap: wrap;
     justify-content: space-around;
     width: min(1600px, 100%);
+    margin: 0 auto;
 }
 
 .pricing-table .pricing-card {
-    flex: 1;
-    min-width: 360px;
+    /* flex: 1; */
+    min-width: 340px;
+    max-width: 400px;
     background-color: var(--clr-light);
     margin: 20px 10px;
     text-align: center;
@@ -92,4 +94,39 @@ li {
 .pricing-table .pricing-card .price span {
     font-size: 1.375rem;
     font-weight: 700;
+}
+
+.pricing-table .pricing-card:hover,
+.pricing-table .pricing-card:hover .price {
+    color: var(--clr-light);
+}
+
+.pricing-table .pricing-card li {
+    font-size: 1rem;
+    padding: 10px 0;
+    text-transform: uppercase;
+    transition-delay: 0.3s;
+}
+
+.pricing-table .pricing-card .order-btn {
+    display: inline-block;
+    margin-block: 5em 2.5em;
+    border: 2px solid var(--clr-accent);
+    color: var(--clr-accent);
+    padding: 18px 40px;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.pricing-table .pricing-card .order-btn:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
+}
+
+@media screen and (max-width: 1100px) {
+    .pricing-table {
+        flex: 50%;
+    }
 }
