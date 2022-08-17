@@ -5,3 +5,84 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --clr-primary: #191d2b;
+    --clr-accent: #40826d;
+    --clr-light: #fafafa;
+    --clr-dark: #333;
+
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.share-btn {
+    color: var(--clr-light);
+    background: linear-gradient(30deg, #3498db, #5363d8);
+    font-family: inherit, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: var(--transition);
+}
+
+.share-btn:hover {
+    border-radius: 0;
+}
+
+.share-btn .share-icons {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(100%);
+}
+
+.share-btn .share-icons a {
+    color: var(--clr-light);
+    transition: var(--transition);
+}
+
+.share-btn .text,
+.share-btn .icon {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.share-btn .icon {
+    transition-delay: 60ms;
+}
+
+.share-btn .share-icons a:nth-child(2) {
+    transition-delay: 60ms;
+}
+
+.share-btn .share-icons a:nth-child(3) {
+    transition-delay: 120ms;
+}
+
+.share-btn:hover .text,
+.share-btn:hover .icon,
+.share-btn:hover .share-icons a {
+    transform: translateY(-40px);
+}
+
+.share-btn .share-icons a:hover {
+    opacity: 0.7;
+}
