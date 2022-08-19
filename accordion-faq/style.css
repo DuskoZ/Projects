@@ -33,8 +33,69 @@ body {
     font-family: "Poppins", sans-serif;
     color: var(--clr-light);
     background-color: var(--clr-dark);
+    background: url("./bg.jpg") no-repeat center center / cover;
     min-height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.accordion-container {
+    max-width: 1200px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.accordion-container .img,
+.accordion-container .accordion-menu {
+    width: calc(50% - 20px);
+}
+
+.accordion-container .ac-title {
+    background-color: #e77f67;
+    color: var(--clr-light);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-container .ac-icon {
+    position: relative;
+    width: 14px;
+}
+
+.accordion-container .ac-icon::before,
+.accordion-container .ac-icon::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 3px;
+    background-color: var(--clr-light);
+    top: -1.5px;
+}
+
+.accordion-container .ac-icon::after {
+    transform: rotate(90deg);
+    transition: var(--transition);
+}
+
+.accordion-container .ac-text {
+    background-color: #ffffff60;
+    color: var(--clr-light);
+    line-height: 26px;
+    margin: 6px 0;
+    opacity: 0;
+    height: 0;
 }
