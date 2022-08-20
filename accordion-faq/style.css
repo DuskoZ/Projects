@@ -93,9 +93,32 @@ a {
 
 .accordion-container .ac-text {
     background-color: #ffffff60;
-    color: var(--clr-light);
+    color: var(--clr-dark);
     line-height: 26px;
     margin: 6px 0;
     opacity: 0;
     height: 0;
+}
+
+.accordion-container .ac-item:target .ac-text {
+    height: auto;
+    opacity: 1;
+    padding: 20px;
+    margin: 12px 0;
+}
+
+.accordion-container .ac-item:target .ac-icon::after {
+    transform: rotate(0);
+}
+
+@media screen and (max-width: 960px) {
+    .accordion-container {
+        max-width: 600px;
+    }
+
+    .accordion-container .img,
+    .accordion-container .accordion-menu {
+        width: 100%;
+        margin: 20px 0;
+    }
 }
