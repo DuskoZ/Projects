@@ -10,7 +10,7 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-dark: #222;
 
     --clr-grey-0: #f8f8f8;
     --clr-grey-1: #dbe1e8;
@@ -92,7 +92,7 @@ a {
 }
 
 .accordion-container .ac-text {
-    background-color: #ffffff60;
+    background-color: #ffffff70;
     color: var(--clr-dark);
     line-height: 26px;
     margin: 6px 0;
