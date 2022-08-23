@@ -28,3 +28,58 @@
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: url("./img/bg.jpg") no-repeat center center / cover;
+    display: grid;
+    place-items: center;
+}
+
+.profile-card {
+    width: 400px;
+    text-align: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.profile-card .profile-card-header {
+    background: #2c3a45;
+    padding: 60px 40px;
+}
+
+.profile-card .user-img {
+    display: inline-block;
+    padding: 0.5rem;
+    background: linear-gradient(130deg, #74b9ff, #e66767);
+    background-size: 200% 200%;
+    margin: auto;
+    border-radius: 50%;
+    animation: animated-gradient 4s linear infinite;
+}
+
+@keyframes animated-gradient {
+    25% {
+        background-position: left bottom;
+    }
+
+    50% {
+        background-position: right bottom;
+    }
+
+    75% {
+        background-position: right top;
+    }
+
+    100% {
+        background-position: left top;
+    }
+}
+
+.profile-card .user-img img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
