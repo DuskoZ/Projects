@@ -65,3 +65,22 @@ body {
     transform: translateY(-60px);
     transition: var(--transition);
 }
+
+.blog-posts h3 {
+    font-size: 1rem;
+    margin-bottom: 0.625em;
+}
+
+.blog-posts .post-date {
+    font-size: 0.875rem;
+    font-style: italic;
+    color: #e77f67;
+}
+
+.blog-posts .post:hover .post-img {
+    transform: translateY(20px);
+}
+
+.blog-posts .post:hover .post-content {
+    transform: translateY(-80px);
+}
