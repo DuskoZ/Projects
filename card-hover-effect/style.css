@@ -54,7 +54,7 @@ body {
 .blog-posts .post-img {
     width: 100%;
     border-radius: var(--radius);
-    transform: var(--transition);
+    transition: var(--transition);
 }
 
 .blog-posts .post-content {
@@ -83,4 +83,14 @@ body {
 
 .blog-posts .post:hover .post-content {
     transform: translateY(-80px);
+}
+
+@media screen and (max-width: 1200px) {
+    .blog-posts {
+        justify-content: center;
+    }
+
+    .blog-posts .post {
+        width: min(600px, 100%);
+    }
 }
