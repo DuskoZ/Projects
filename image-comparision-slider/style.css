@@ -60,3 +60,13 @@ body {
     background-color: #111;
     cursor: pointer;
 }
+
+.slider .original-image {
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    background: url("./img/1.jpg") no-repeat;
+    background-position: 0 center;
+    background-size: 100vw;
+}
