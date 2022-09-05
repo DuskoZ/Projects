@@ -32,9 +32,22 @@
 body {
     font-family: "Poppins", sans-serif;
     color: var(--clr-light);
-    background-color: var(--clr-dark);
+    background-color: #2c3a47;
     min-height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.newsletter-container {
+    background-color: var(--clr-light);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.picture {
+    width: 50%;
+    background: url("./bg.jpg") no-repeat center;
+    background-size: cover;
 }
