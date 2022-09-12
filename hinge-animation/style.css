@@ -24,3 +24,21 @@ body {
     transform-origin: top left;
     animation: hinge 2s ease-in-out;
 }
+
+@keyframes hinge {
+    20%,
+    60% {
+        transform: rotate(70deg);
+    }
+
+    40%,
+    80% {
+        transform: rotate(55deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(600px);
+        opacity: 0;
+    }
+}
