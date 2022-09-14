@@ -8,7 +8,7 @@
 
 :root {
     --clr-primary: #191d2b;
-    --clr-accent: #40826d;
+    --clr-accent: #3498db;
     --clr-light: #fafafa;
     --clr-dark: #333;
 
@@ -27,4 +27,31 @@
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    cursor: pointer;
+    background: none;
+    font-family: inherit;
+    font-size: 1.25rem;
+    padding: 0.5em 1em;
+    border: 1px solid --clr-accent;
+    margin: 10px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
