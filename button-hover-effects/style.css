@@ -55,3 +55,34 @@ body {
     position: relative;
     overflow: hidden;
 }
+
+.btn1,
+.btn2 {
+    color: var(--clr-accent);
+}
+
+.btn3,
+.btn4 {
+    color: var(--clr-light);
+}
+
+.btn1:hover,
+.btn2:hover {
+    color: var(--clr-light);
+}
+
+.btn3:hover,
+.btn4:hover {
+    color: var(--clr-accent);
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--clr-accent);
+    z-index: -1;
+    transition: 0.8s;
+}
