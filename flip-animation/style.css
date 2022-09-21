@@ -37,4 +37,19 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+    perspective: 500px;
+}
+
+.container .text {
+    font-size: 60px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.container .box {
+    cursor: pointer;
+    width: 20rem;
+    height: 6rem;
+    background-color: var(--clr-accent);
+    margin: 60px auto;
 }
