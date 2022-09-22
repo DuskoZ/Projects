@@ -53,3 +53,26 @@ body {
     background-color: var(--clr-accent);
     margin: 60px auto;
 }
+
+.container .text:hover,
+.container .box:hover {
+    animation: flipV 1s linear;
+}
+
+@keyframes flipV {
+    50% {
+        transform: rotateX(180deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes flipH {
+    50% {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
