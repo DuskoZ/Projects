@@ -9,12 +9,36 @@
 body {
     background-color: #333;
     color: #fff;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
 }
 
 .container {
     min-height: 100vh;
     position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.container #eyes,
+.container #eyes img {
+    position: absolute;
+}
+
+.container #eyes .eye-1 {
+    top: 54px;
+    right: 12px;
+}
+
+.container #eyes .eye-2 {
+    top: 67px;
+    right: 79px;
+}
+
+.container #eyes .eye-3 {
+    bottom: 45px;
+    left: 105px;
+}
+
+.container #eyes .eye-4 {
+    bottom: 48px;
+    left: 44px;
 }
