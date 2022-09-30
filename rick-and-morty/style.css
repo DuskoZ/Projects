@@ -24,21 +24,21 @@ body {
 }
 
 .container #eyes .eye-1 {
-    top: 54px;
-    right: 12px;
+    top: 95px;
+    right: 2px;
 }
 
 .container #eyes .eye-2 {
-    top: 67px;
-    right: 79px;
+    top: 111px;
+    right: 120px;
 }
 
 .container #eyes .eye-3 {
-    bottom: 45px;
-    left: 105px;
+    bottom: 98px;
+    left: 211px;
 }
 
 .container #eyes .eye-4 {
-    bottom: 48px;
-    left: 44px;
+    bottom: 93px;
+    left: 125px;
 }
