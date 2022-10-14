@@ -12,3 +12,10 @@ function generate_pwd(event) {
 
     output.innerHTML = pwd;
 }
+
+function copy() {
+    const copyText = output.innerHTML;
+    navigator.clipboard.writeText(copyText).then(() => {
+        alert("Copied to clipboard : " + copyText);
+    });
+}
