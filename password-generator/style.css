@@ -8,16 +8,24 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #3e4452;
-    color: white;
+    background-color: #333;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 h3 {
@@ -44,11 +52,11 @@ button {
 }
 
 button {
-    font-size: 3vw;
-    background-color: #686ffd;
+    font-size: 2rem;
+    background-color: #40826d;
     border: 0;
-    padding: 1vw 3vw;
-    border-radius: 25px;
+    padding: 20px 40px;
+    border-radius: 1.5rem;
     color: white;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
         0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
@@ -56,6 +64,6 @@ button {
 }
 
 button:hover {
-    opacity: 0.8;
+    opacity: 0.85;
     transition: all 0.4s;
 }
