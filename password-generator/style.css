@@ -36,13 +36,14 @@ h3 {
 
 .lar {
     font-size: 3vw;
-    color: #b1b2cf;
+    color: #40826d;
     margin: auto;
     margin-top: 30px;
+    transition: all 0.4s;
 }
 
 .lar:hover {
-    color: #686ffd;
+    color: #5ab699;
     transition: all 0.4s;
 }
 
