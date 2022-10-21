@@ -47,6 +47,16 @@ body {
     width: 100%;
 }
 
+.container span::before,
+.container span::after {
+    content: "";
+    width: 2px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #54e6e7;
+}
+
 .container button:hover span::before,
 .container button:hover span::after {
     height: 100%;
