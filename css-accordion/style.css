@@ -12,6 +12,7 @@
     --clr-light: #fafafa;
     --clr-dark: #333;
     --clr-midnight: #2c3e50;
+    --clr-midnight-active: #1f2c38;
     --clr-clouds: #ecf0f1;
 
     --clr-grey-0: #f8f8f8;
@@ -79,7 +80,7 @@ input {
 
 .tab {
     width: 100%;
-    color: white;
+    color: #fff;
     overflow: hidden;
 }
 
@@ -93,7 +94,7 @@ input {
 }
 
 .tab-label:hover {
-    background: #1f2c38;
+    background: var(--clr-midnight-active);
 }
 
 .tab-label:hover::after {
@@ -122,11 +123,11 @@ input {
 }
 
 .tab-close:hover {
-    background: #1f2c38;
+    background: var(--clr-midnight-active);
 }
 
 input:checked + .tab-label {
-    background: #1f2c38;
+    background: var(--clr-midnight-active);
 }
 
 input:checked + .tab-label::after {
