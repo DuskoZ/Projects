@@ -137,3 +137,61 @@ h2 {
 .control-radio input:disabled ~ .control-indicator:after {
     background: var(--clr-dark-grey);
 }
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.select select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: var(--clr-light-grey);
+    color: var(--clr-dark-grey);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select select::-ms-expand {
+    display: none;
+}
+
+.select select:hover,
+.select select:focus {
+    color: var(--clr-black);
+    background: var(--clr-grey);
+}
+
+.select select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.select-arrow {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: var(--clr-dark-grey) transparent transparent transparent;
+}
+
+.select select:hover ~ .select-arrow,
+.select select:focus ~ .select-arrow {
+    border-top-color: var(--clr-black);
+}
+
+.select select:disabled ~ .select-arrow {
+    border-top-color: var(--clr-grey);
+}
