@@ -9,6 +9,7 @@ var slideDurationSetting = 600; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
 var totalSlideNumber = $(".background").length;
 
+// scroll direction
 function parallaxScroll(evt) {
     if (isFirefox) {
         //Set delta for Firefox
@@ -42,3 +43,14 @@ function parallaxScroll(evt) {
         }
     }
 }
+
+// Set timeout to temporarily "lock" slides
+function slideDurationTimeout(slideDuration) {
+    setTimeout(function () {
+        ticking = false;
+    }, slideDuration);
+}
+
+// Event listener
+var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
+window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
