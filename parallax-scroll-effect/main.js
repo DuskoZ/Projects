@@ -54,3 +54,14 @@ function slideDurationTimeout(slideDuration) {
 // Event listener
 var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
+
+// slide motion
+function nextItem() {
+    var $previousSlide = $(".background").eq(currentSlideNumber - 1);
+    $previousSlide.removeClass("up-scroll").addClass("down-scroll");
+}
+
+function previousItem() {
+    var $currentSlide = $(".background").eq(currentSlideNumber);
+    $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+}
