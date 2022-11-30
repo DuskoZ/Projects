@@ -84,3 +84,55 @@ body.modal-active {
 #modal-container.two.out + .content {
     animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
+
+#modal-container.three {
+    z-index: 0;
+    transform: scale(1);
+}
+
+#modal-container.three .modal-background {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#modal-container.three .modal-background .modal {
+    animation: moveUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.three + .content {
+    z-index: 1;
+    animation: slideUpLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.three.out .modal-background .modal {
+    animation: moveDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.three.out + .content {
+    animation: slideDownLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.four {
+    z-index: 0;
+    transform: scale(1);
+}
+
+#modal-container.four .modal-background {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#modal-container.four .modal-background .modal {
+    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.four + .content {
+    z-index: 1;
+    animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.four.out .modal-background .modal {
+    animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.four.out + .content {
+    animation: blowUpContentTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
