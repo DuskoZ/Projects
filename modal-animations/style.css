@@ -136,3 +136,123 @@ body.modal-active {
 #modal-container.four.out + .content {
     animation: blowUpContentTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
+
+#modal-container.five {
+    transform: scale(1);
+}
+
+#modal-container.five .modal-background {
+    background: rgba(0, 0, 0, 0);
+    animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.five .modal-background .modal {
+    transform: translateX(-1500px);
+    animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.five.out {
+    animation: quickScaleDown 0s 0.5s linear forwards;
+}
+
+#modal-container.five.out .modal-background {
+    animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.five.out .modal-background .modal {
+    animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.six {
+    transform: scale(1);
+}
+
+#modal-container.six .modal-background {
+    background: rgba(0, 0, 0, 0);
+    animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.six .modal-background .modal {
+    background-color: transparent;
+    animation: modalFadeIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.six .modal-background .modal h2,
+#modal-container.six .modal-background .modal p {
+    opacity: 0;
+    position: relative;
+    animation: modalContentFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1)
+        forwards;
+}
+
+#modal-container.six .modal-background .modal .modal-svg rect {
+    animation: sketchIn 0.5s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.six.out {
+    animation: quickScaleDown 0s 0.5s linear forwards;
+}
+
+#modal-container.six.out .modal-background {
+    animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.six.out .modal-background .modal {
+    animation: modalFadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.six.out .modal-background .modal h2,
+#modal-container.six.out .modal-background .modal p {
+    animation: modalContentFadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+        forwards;
+}
+
+#modal-container.six.out .modal-background .modal .modal-svg rect {
+    animation: sketchOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.seven {
+    transform: scale(1);
+}
+
+#modal-container.seven .modal-background {
+    background: rgba(0, 0, 0, 0);
+    animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.seven .modal-background .modal {
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+    overflow: hidden;
+    animation: bondJamesBond 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.seven .modal-background .modal h2,
+#modal-container.seven .modal-background .modal p {
+    opacity: 0;
+    position: relative;
+    animation: modalContentFadeIn 0.5s 1.4s linear forwards;
+}
+
+#modal-container.seven.out {
+    animation: slowFade 0.5s 1.5s linear forwards;
+}
+
+#modal-container.seven.out .modal-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeToRed 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.seven.out .modal-background .modal {
+    border-radius: 3px;
+    height: 162px;
+    width: 227px;
+    animation: killShot 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.seven.out .modal-background .modal h2,
+#modal-container.seven.out .modal-background .modal p {
+    animation: modalContentFadeOut 0.5s 0.5 cubic-bezier(0.165, 0.84, 0.44, 1)
+        forwards;
+}
