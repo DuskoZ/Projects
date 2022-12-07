@@ -636,3 +636,36 @@ body.modal-active {
         width: 227px;
     }
 }
+
+@keyframes killShot {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(300px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeToRed {
+    0% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    100% {
+        background-color: rgba(255, 0, 0, 0.8);
+    }
+}
+
+@keyframes slowFade {
+    0% {
+        opacity: 1;
+    }
+    99.9% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
