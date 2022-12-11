@@ -38,3 +38,35 @@ body {
     display: grid;
     place-items: center;
 }
+
+.stat-cards-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    background: transparent;
+}
+
+.stat-cards-container .stat-card {
+    width: 100%;
+    max-width: 430px;
+    flex: 1;
+}
+
+.stat-cards-container .stat-card p {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+    .stat-cards-container {
+        flex-direction: column;
+        gap: 64px;
+        align-items: center;
+    }
+
+    .stat-cards-container .stat-card {
+        text-align: center;
+    }
+}
