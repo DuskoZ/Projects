@@ -42,23 +42,28 @@ body {
 .slider-container {
     /* scroll-snap-type: x mandatory; */
     scroll-padding: 25px;
-    column-gap: 20px;
+    column-gap: 2.5rem;
 
     display: grid;
-    height: 85vh;
+    min-height: 30vh;
     width: 85vw;
     margin: auto;
     grid-auto-flow: column;
     overflow-x: scroll;
     scroll-snap-type: x proximity;
+    padding: 2.5rem 0;
 }
 
-.slider-container {
-    /* flex: 0 0 100%;
+.slider-container .slider-card {
+    width: 300px;
+    max-width: 500px;
+    border: 2px solid var(--clr-accent);
+    border-radius: 2rem;
     padding: 2rem;
-    scroll-snap-align: start;
-    border-radius: 2rem; */
-
-    width: 50vw;
     scroll-snap-align: center;
+}
+
+.slider-container .slider-card h2 {
+    margin-bottom: 1em;
+    color: var(--clr-accent);
 }
