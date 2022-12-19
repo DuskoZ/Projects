@@ -22,7 +22,7 @@ body.modal-active {
 
 #modal-container {
     position: fixed;
-    display: flex;
+    display: table;
     gap: 32px;
     height: 100%;
     width: 100%;
