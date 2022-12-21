@@ -38,3 +38,42 @@ body {
     display: grid;
     place-items: center;
 }
+
+.slider-container {
+    position: relative;
+}
+
+.slider-container .slider .slide {
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.slider-container .slider .slide:first-child {
+    display: block;
+}
+
+.slider-container .slide_buttons {
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.slider-container a.slide_btn {
+    color: #474544;
+    font-size: 42px;
+    margin: 0 0.175em;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.slider-container .slide_btn.active,
+.slider-container .slide_btn:hover {
+    color: #428cc6;
+    cursor: pointer;
+}
