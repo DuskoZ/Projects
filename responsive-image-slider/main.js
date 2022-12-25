@@ -48,4 +48,47 @@ $(".slider").each(function () {
             }
         );
     }
+
+    function advance() {
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+            if (currentIndex < $slides.length - 1) {
+                move(currentIndex + 1);
+            } else {
+                move(0);
+            }
+        }, 4000);
+    }
+
+    $(".next_btn").on("click", function () {
+        if (currentIndex < $slides.length - 1) {
+            move(currentIndex + 1);
+        } else {
+            move(0);
+        }
+    });
+
+    $(".previous_btn").on("click", function () {
+        if (currentIndex !== 0) {
+            move(currentIndex - 1);
+        } else {
+            move(3);
+        }
+    });
+
+    $.each($slides, function (index) {
+        var $button = $('<a class="slide_btn">&bull;</a>');
+
+        if (index === currentIndex) {
+            $button.addClass("active");
+        }
+        $button
+            .on("click", function () {
+                move(index);
+            })
+            .appendTo(".slide_buttons");
+        bulletArray.push($button);
+    });
+
+    advance();
 });
