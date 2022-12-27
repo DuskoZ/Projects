@@ -1,6 +1,6 @@
 $(".slider").each(function () {
     var $this = $(this);
-    var $group = $this.find(".slide_group");
+    var $group = $this.find(".slide-group");
     var $slides = $this.find(".slide");
     var bulletArray = [];
     var currentIndex = 0;
@@ -60,7 +60,7 @@ $(".slider").each(function () {
         }, 4000);
     }
 
-    $(".next_btn").on("click", function () {
+    $(".next-btn").on("click", function () {
         if (currentIndex < $slides.length - 1) {
             move(currentIndex + 1);
         } else {
@@ -68,7 +68,7 @@ $(".slider").each(function () {
         }
     });
 
-    $(".previous_btn").on("click", function () {
+    $(".previous-btn").on("click", function () {
         if (currentIndex !== 0) {
             move(currentIndex - 1);
         } else {
@@ -77,7 +77,7 @@ $(".slider").each(function () {
     });
 
     $.each($slides, function (index) {
-        var $button = $('<a class="slide_btn">&bull;</a>');
+        var $button = $('<a class="slide-btn">&bull;</a>');
 
         if (index === currentIndex) {
             $button.addClass("active");
@@ -86,7 +86,7 @@ $(".slider").each(function () {
             .on("click", function () {
                 move(index);
             })
-            .appendTo(".slide_buttons");
+            .appendTo(".slide-buttons");
         bulletArray.push($button);
     });
 
