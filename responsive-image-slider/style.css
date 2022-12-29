@@ -7,7 +7,7 @@
 }
 
 :root {
-    --clr-primary: #191d2b;
+    --clr-primary: #6b0101;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
     --clr-dark: #333;
@@ -76,7 +76,7 @@ body {
 }
 
 .slider-container a.slide-btn {
-    color: #474544;
+    color: var(--clr-primary);
     font-size: 42px;
     margin: 0 5px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -88,7 +88,7 @@ body {
 
 .slider-container .slide-btn.active,
 .slider-container .slide-btn:hover {
-    color: #428cc6;
+    color: var(--clr-accent);
     cursor: pointer;
 }
 
