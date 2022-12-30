@@ -306,6 +306,8 @@ body.modal-active {
     background: white;
     position: relative;
     z-index: 0;
+    display: grid;
+    place-content: center;
 }
 
 .content h1 {
