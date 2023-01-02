@@ -22,7 +22,7 @@ function angle(cx, cy, ex, ey) {
     const dy = ey - cy;
     const dx = ex - cx;
 
-    const rad = Math.atan(dy, dx);
+    const rad = Math.atan2(dy, dx); // In radians
     const deg = (rad * 180) / Math.PI;
 
     return deg;
