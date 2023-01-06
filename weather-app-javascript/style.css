@@ -226,3 +226,27 @@ form button:active {
 }
 
 /* Media Queries */
+@media screen and (min-width: 560px) {
+    .cities {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+
+    .cities li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .city__conditions {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .notification {
+        padding: 0.5rem 4rem;
+    }
+
+    .container {
+        padding: 4rem;
+    }
+}
