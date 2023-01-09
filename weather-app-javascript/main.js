@@ -28,26 +28,45 @@ form.addEventListener("submit", (e) => {
             let cityCountry = elem
                 .querySelector(".city__country")
                 .textContent.toLowerCase();
+
+            // Check for the format <city, country>
+            if (inputVal.includes(",")) {
+                // If the country code is invalid (ex. berlin, deee), keep only the city name
+                if (inputVal.split(",")[1].length > 2) {
+                    inputVal = inputVal.split(",")[0];
+
+                    // Get the content from the existing city
+                    content = cityName;
+                } else {
+                    // Country code is valid so keep both city and country
+                    content = `${cityName},${cityCountry}`;
+                }
+            } else {
+                // Only the <city> format is used
+                content = cityName;
+            }
+
+            // Return whether or not the existing content matches the form input value
+            return content == inputVal.toLowerCase();
         });
 
-        // Check for the format <city, country>
-        if (inputVal.includes(",")) {
-            // If the country code is invalid (ex. berlin, deee), keep only the city name
-            if (inputVal.split(",")[1].length > 2) {
-                inputVal = inputVal.split(",")[0];
+        // If filteredArray is not blank, we have matches so we show a message and exit
+        if (filteredArray.length > 0) {
+            msg.textContent = `You already know the weather for ${
+                filteredArray[0].querySelector(".city__name").textContent
+            } ...otherwise be more specific by providing the country code as well 😉`;
 
-                // Get the content from the existing city
-                content = cityName;
-            } else {
-                // Country code is valid so keep both city and country
-                content = `${cityName},${cityCountry}`;
-            }
-        } else {
-            // Only the <city> format is used
-            content = cityName;
+            msg.classList.add("visible");
+
+            form.reset();
+            input.focus();
+
+            return;
         }
-
-        // Return whether or not the existing content matches the form input value
-        return content == inputVal.toLowerCase();
     }
+
+    // AJAX url
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
+
+    // Fetching the data
 });
