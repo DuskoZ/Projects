@@ -69,4 +69,23 @@ form.addEventListener("submit", (e) => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
     // Fetching the data
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            // If we get a 404 code, throw an error
+            if (data.cod == "404") {
+                throw new Error(`${data.cod}, ${data.message}`);
+            }
+
+            // Let's destructure the data object
+            const { main, name, sys, weather } = data;
+
+            // Define the icon location
+            const icon = `img/weather/${weather[0]["icon"]}.svg`;
+
+            // Create the list item for the new city
+            const li = document.createElement("li");
+
+            // Define markup
+        });
 });
