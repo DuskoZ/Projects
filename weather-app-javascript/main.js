@@ -87,5 +87,24 @@ form.addEventListener("submit", (e) => {
             const li = document.createElement("li");
 
             // Define markup
+            const markup = `
+				<figure>
+					<img src="${icon}" alt="${weather[0]["description"]}">
+				</figure>
+
+				<div>
+					<h2>${Math.round(main.temp)}<sup>°C</sup></h2>
+					<p class="city__conditions">${weather[0]["description"].toUpperCase()}</p>
+					<h3><span class="city__name">${name}</span><span class="city__country">${
+                sys.country
+            }</span></h3>
+				</div>
+			`;
+
+            // Add the new markup to the list item
+            li.innerHTML = markup;
+
+            // Add the new list item to the page
+            list.appendChild(li);
         });
 });
