@@ -106,5 +106,14 @@ form.addEventListener("submit", (e) => {
 
             // Add the new list item to the page
             list.appendChild(li);
+        })
+        .catch(() => {
+            msg.textContent = "Please search for a valid city!";
+            msg.classList.add("visible");
         });
+
+    msg.textContent = "";
+
+    form.reset();
+    input.focus();
 });
