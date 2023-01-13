@@ -192,7 +192,7 @@ form button:active {
 
 /* Cities */
 
-.cities {
+.container .cities {
     display: grid;
     grid-template-columns: 1fr;
     padding: 0;
@@ -200,7 +200,7 @@ form button:active {
     gap: 2rem;
 }
 
-.cities li {
+.container .cities li {
     list-style: none;
     display: flex;
     gap: 1.5rem;
@@ -210,14 +210,60 @@ form button:active {
     color: var(--clr-shade-80);
     border-radius: var(--global-border-radius);
     box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.08);
+    transition: 0.3s;
 }
 
-.city__conditions {
+.container .cities li:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.3);
+}
+
+.container .cities li img {
+    transition: var(--global-transition);
+}
+
+.container .cities li img:hover {
+    animation: icon 2s linear 0s 1 normal forwards;
+}
+
+@keyframes icon {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    10% {
+        transform: rotate(8deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-8deg);
+    }
+
+    90% {
+        transform: rotate(8deg);
+    }
+}
+
+.container .city__conditions {
     color: var(--clr-tint-40);
     margin-bottom: 1rem;
 }
 
-.city__country {
+.container .city__country {
     color: var(--clr-light);
     background-color: var(--clr-tertiary);
     border-radius: var(--global-border-radius);
@@ -227,16 +273,16 @@ form button:active {
 
 /* Media Queries */
 @media screen and (min-width: 560px) {
-    .cities {
+    .container .cities {
         grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
 
-    .cities li {
+    .container .cities li {
         flex-direction: column;
         text-align: center;
     }
 
-    .city__conditions {
+    .container .city__conditions {
         margin-bottom: 1.5rem;
     }
 }
