@@ -38,3 +38,31 @@ body {
     display: grid;
     place-items: center;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 80px 40px;
+    position: relative;
+}
+
+.container .card {
+    position: relative;
+    width: 350px;
+    height: 180px;
+    background-color: var(--clr-dark);
+    transition: var(--transition);
+}
+
+.container .card:hover {
+    height: 450px;
+}
+
+.container .card .lines {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
