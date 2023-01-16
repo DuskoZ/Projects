@@ -66,3 +66,60 @@ body {
     background: #000;
     overflow: hidden;
 }
+
+.container .card .lines::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(
+        transparent,
+        #45f3ff,
+        #45f3ff,
+        #45f3ff,
+        transparent
+    );
+    animation: animate 4s linear infinite;
+    animation-play-state: paused;
+}
+
+.container .card:hover .lines::before {
+    animation-play-state: running;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.container .card .lines::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translateX(-50%);
+    background: #000;
+    transition: var(--transition);
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card:hover .img-box {
+}
