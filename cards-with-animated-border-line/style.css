@@ -46,6 +46,7 @@ body {
     flex-wrap: wrap;
     padding: 80px 40px;
     position: relative;
+    gap: 80px;
 }
 
 .container .card {
@@ -127,6 +128,18 @@ body {
     height: 250px;
 }
 
+.container .card .img-box i {
+    font-size: 5rem;
+    color: var(--clr-light);
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.container .card:hover .img-box i {
+    font-size: 8rem;
+}
+
 .container .card .img-box::before {
     content: "";
     position: absolute;
@@ -177,4 +190,17 @@ body {
 
 .container .card:hover .img-box img {
     opacity: 1;
+}
+
+.container .card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.container .card .content .details {
 }
