@@ -124,8 +124,8 @@ body {
 
 .container .card:hover .img-box {
     top: 25px;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 .container .card .img-box i {
@@ -185,7 +185,7 @@ body {
     z-index: 1;
     filter: invert(1);
     opacity: 0.5;
-    transition: 0.5s;
+    transition: var(--transition);
 }
 
 .container .card:hover .img-box img {
@@ -203,4 +203,48 @@ body {
 }
 
 .container .card .content .details {
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+    transition: var(--transition);
+    transform: translateY(145px);
+}
+
+.container .card:hover .content .details {
+    transform: translateY(0px);
+}
+
+.container .card .content .details h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #45f3ff;
+    line-height: 1.2em;
+}
+
+.container .card .content .details p {
+    color: var(--clr-light);
+    opacity: 0;
+    transform: var(--transition);
+}
+
+.container .card .content .details a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #45f3ff;
+    color: var(--clr-dark);
+    margin-top: 0.625rem;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.container .card:hover .content .details p,
+.container .card:hover .content .details a {
+    opacity: 1;
+}
+
+.container .card .content .details a:hover {
+    background-color: #ff3c7b;
+    color: var(--clr-light);
 }
