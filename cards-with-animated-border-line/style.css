@@ -138,6 +138,7 @@ body {
 
 .container .card:hover .img-box i {
     font-size: 8rem;
+    color: #45f3ff;
 }
 
 .container .card .img-box::before {
@@ -219,6 +220,7 @@ body {
     font-weight: 500;
     color: #45f3ff;
     line-height: 1.2em;
+    margin-bottom: 10px;
 }
 
 .container .card .content .details p {
@@ -247,4 +249,10 @@ body {
 .container .card .content .details a:hover {
     background-color: #ff3c7b;
     color: var(--clr-light);
+}
+
+@media (max-width: 860px) {
+    .container {
+        gap: 120px;
+    }
 }
