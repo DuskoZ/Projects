@@ -271,6 +271,14 @@ form button:active {
     margin-left: 0.5rem;
 }
 
+footer {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
 /* Media Queries */
 @media screen and (min-width: 560px) {
     .container .cities {
