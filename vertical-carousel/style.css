@@ -178,3 +178,125 @@ body {
     position: absolute;
     transform: translate(140px, 0);
 }
+
+#carousel-wrapper.anim-next {
+    pointer-events: none;
+}
+
+#carousel-wrapper.anim-next #current-option-text1 {
+    animation: next-text 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-next #current-option-text2 {
+    animation: next-text 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-next #previous-option {
+    animation: next-top-arrow 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-next #next-option {
+    animation: next-bottom-arrow 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-next #image {
+    animation: next-image 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-previous {
+    pointer-events: none;
+}
+
+#carousel-wrapper.anim-previous #current-option-text1 {
+    animation: previous-text 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-previous #current-option-text2 {
+    animation: previous-text 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-previous #previous-option {
+    animation: previous-top-arrow 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-previous #next-option {
+    animation: previous-bottom-arrow 0.65s 0.085s;
+}
+
+#carousel-wrapper.anim-previous #image {
+    animation: previous-image 0.65s 0.085s;
+}
+
+@keyframes previous-text {
+    50%,
+    55% {
+        transform: translate(0%, 390px);
+    }
+    to {
+        transform: translate(0%, 380px);
+    }
+}
+
+@keyframes previous-top-arrow {
+    50% {
+        transform: translate(310px, 53px);
+    }
+}
+
+@keyframes previous-bottom-arrow {
+    50% {
+        transform: translate(310px, -47px) rotate(180deg);
+    }
+}
+
+@keyframes previous-image {
+    0% {
+        transform: translate(140px, 0) scale(1);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(140px, 0) scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(140px, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes next-text {
+    50%,
+    55% {
+        transform: translate(0%, -390px);
+    }
+    to {
+        transform: translate(0%, -380px);
+    }
+}
+
+@keyframes next-top-arrow {
+    50% {
+        transform: translate(310px, 47px);
+    }
+}
+
+@keyframes next-bottom-arrow {
+    50% {
+        transform: translate(310px, -53px) rotate(180deg);
+    }
+}
+
+@keyframes next-image {
+    0% {
+        transform: translate(140px, 0) scale(1);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(140px, 0) scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(140px, 0) scale(1);
+        opacity: 1;
+    }
+}
