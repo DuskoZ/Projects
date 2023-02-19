@@ -31,7 +31,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
+    color: #222;
     background-color: var(--clr-dark);
     min-height: 100vh;
     overflow: hidden;
