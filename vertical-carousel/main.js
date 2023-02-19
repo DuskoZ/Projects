@@ -5,13 +5,13 @@ const text1_options = [
     "How to learn JS in 2 months",
 ];
 const text2_options = [
-    "69 min. read",
-    "7 min. read",
-    "8 min. read",
-    "87,658.1277 min. read",
+    "32 min. read",
+    "6 min. read",
+    "10 min. read",
+    "32 min. read",
 ];
 
-const color_options = ["#EBB9D2", "#FE9968", "#7FE0EB", "#6CE5B1"];
+const color_options = ["#bfa89e", "#78a1bb", "#c2f9bb", "#cf777a"];
 const image_options = [
     "https://images.unsplash.com/photo-1524721696987-b9527df9e512?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80",
     "https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
@@ -26,3 +26,30 @@ const carousel = document.getElementById("carousel-wrapper");
 const mainMenu = document.getElementById("menu");
 const optionPrevious = document.getElementById("previous-option");
 const optionNext = document.getElementById("next-option");
+
+currentOptionText1.innerText = text1_options[i];
+currentOptionText2.innerText = text2_options[i];
+currentOptionImage.style.backgroundImage = "url(" + image_options[i] + ")";
+mainMenu.style.background = color_options[i];
+
+optionNext.addEventListener("click", () => {
+    i = i + 1;
+    i = i % text1_options.length;
+    currentOptionText1.dataset.nextText = text1_options[i];
+
+    currentOptionText2.dataset.nextText = text2_options[i];
+
+    mainMenu.style.background = color_options[i];
+    carousel.classList.add("anim-next");
+
+    setTimeout(() => {
+        currentOptionImage.style.backgroundImage =
+            "url(" + image_options[i] + ")";
+    }, 455);
+
+    setTimeout(() => {
+        currentOptionText1.innerText = text1_options[i];
+        currentOptionText2.innerText = text2_options[i];
+        carousel.classList.remove("anim-next");
+    }, 650);
+});
