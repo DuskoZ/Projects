@@ -53,3 +53,27 @@ optionNext.addEventListener("click", () => {
         carousel.classList.remove("anim-next");
     }, 650);
 });
+
+optionPrevious.addEventListener("click", () => {
+    if (i === 0) {
+        i = text1_options.length;
+    }
+    i = i - 1;
+    currentOptionText1.dataset.previousText = text1_options[i];
+
+    currentOptionText2.dataset.previousText = text2_options[i];
+
+    mainMenu.style.background = color_options[i];
+    carousel.classList.add("anim-previous");
+
+    setTimeout(() => {
+        currentOptionImage.style.backgroundImage =
+            "url(" + image_options[i] + ")";
+    }, 455);
+
+    setTimeout(() => {
+        currentOptionText1.innerText = text1_options[i];
+        currentOptionText2.innerText = text2_options[i];
+        carousel.classList.remove("anim-previous");
+    }, 650);
+});
