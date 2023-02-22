@@ -31,10 +31,38 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     min-height: 100vh;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
+    background: var(--clr-light);
+}
+
+.slider {
+    position: relative;
+    display: flex;
+}
+
+.slider .slides {
+    position: relative;
+    top: -4em;
+    left: 10em;
+}
+
+.slider .slides img {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.slider .slides img.active {
+    opacity: 1;
+}
+
+.slider .overlays {
+    position: relative;
+    width: 36em;
+    height: 18em;
 }
