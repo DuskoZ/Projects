@@ -45,8 +45,8 @@ body {
 
 .slider .slides {
     position: relative;
-    top: -4em;
-    left: 10em;
+    top: -4rem;
+    left: 10rem;
 }
 
 .slider .slides img {
@@ -54,7 +54,7 @@ body {
     width: 450px;
     height: 450px;
     opacity: 0;
-    z-index: 9999;
+    z-index: 1000;
 }
 
 .slider .slides img.active {
@@ -63,6 +63,44 @@ body {
 
 .slider .overlays {
     position: relative;
-    width: 36em;
-    height: 18em;
+    width: 36rem;
+    height: 18rem;
+}
+
+.slider .overlays .bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bar-color);
+    transform-origin: left;
+}
+
+.slider .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0 0 0 6rem;
+    list-style-type: none;
+}
+
+.slider .nav-links .nav-link {
+    font-size: 2rem;
+    font-family: Lora, serif;
+    line-height: 2;
+    text-decoration: none;
+    color: #7f8c8d;
+    transition: 0.3s;
+}
+
+.slider .nav-links .nav-link:hover {
+    color: #1c1e1f;
+}
+
+.slider .nav-links .nav-link.active {
+    color: #000;
+    pointer-events: none;
 }
