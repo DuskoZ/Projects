@@ -29,5 +29,33 @@ navLinks.forEach(function (navLink, activeIndex) {
                 fill: "forwards",
             }
         );
+        slideFadeOut.onfinish = function () {
+            slides.forEach(function (slide) {
+                return slide.classList.remove("active");
+            });
+            var activeSlide = slides[activeIndex];
+            activeSlide.classList.add("active");
+            activeSlide.animate(
+                [
+                    {
+                        transform: "translateX(-5%)",
+                        opacity: 0,
+                    },
+                    {
+                        transform: "translateX(0)",
+                        opacity: 1,
+                    },
+                ],
+                { duration: 600, easing: "ease-out", fill: "forwards" }
+            );
+        };
+        // overlay
+        maxZIndex += 1;
+        var activeOverlay = overlays[activeIndex];
+        activeOverlay.style.zIndex = "".concat(maxZIndex);
+        activeOverlay.animate(
+            [{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }],
+            { duration: 1200, fill: "forwards", easing: easeInOutQuart }
+        );
     });
 });
