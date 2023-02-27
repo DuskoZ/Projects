@@ -35,7 +35,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    background: var(--clr-light);
+    color: var(--clr-light);
+    background: var(--clr-dark);
 }
 
 .slider {
@@ -88,19 +89,19 @@ body {
 }
 
 .slider .nav-links .nav-link {
-    font-size: 2rem;
-    font-family: Lora, serif;
+    font-size: 1.75rem;
+    font-family: "Poppins", sans-serif;
     line-height: 2;
     text-decoration: none;
-    color: #7f8c8d;
+    color: var(--clr-light);
     transition: 0.3s;
 }
 
 .slider .nav-links .nav-link:hover {
-    color: #1c1e1f;
+    color: var(--clr-primary);
 }
 
 .slider .nav-links .nav-link.active {
-    color: #000;
+    color: var(--bar-color);
     pointer-events: none;
 }
