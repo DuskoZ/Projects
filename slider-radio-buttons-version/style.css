@@ -118,3 +118,51 @@ body {
 .container .tabs input:nth-child(3):checked ~ .content {
     left: -200vw;
 }
+
+.container .content .box .content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 768px;
+}
+
+.container .content .box .content-box i {
+    font-size: 10rem;
+    color: var(--clr-light);
+}
+
+.container .content .box .content-box h2 {
+    font-size: 3rem;
+    color: var(--clr-light);
+}
+
+.container .content .box .content-box p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--clr-light);
+}
+
+.container .content .box .content-box button {
+    font-size: 1.125rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    letter-spacing: 1px;
+    margin-top: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 36px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.container .content .box .content-box button:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
