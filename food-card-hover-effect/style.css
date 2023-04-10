@@ -29,12 +29,62 @@
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
+html,
 body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: #1f1d42;
+    background-color: #f0f8e1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card-hover {
+    width: 360px;
+    height: 500px;
+    position: relative;
     overflow: hidden;
-    display: grid;
-    place-items: center;
+    box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
+}
+
+.card-hover:has(.card-hover__link:hover) .card-hover__extra {
+    transform: translateY(0);
+    transition: transform 0.35s;
+}
+
+.card-hover:hover .card-hover__content {
+    background-color: #dee8c2;
+    bottom: 100%;
+    transform: translateY(100%);
+    padding: 50px 60px;
+    transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
 }
