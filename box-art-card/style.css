@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Raleway:wght@400;500;600;700;800&display=swap");
+
 *,
 *::after,
 *::before {
@@ -30,11 +32,59 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
+    font-family: "Raleway", sans-serif;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
     min-height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+h2 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 4rem;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f2ebdd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin: 0 30px;
+    height: 500px;
+    width: 250px;
+    background-color: #fff;
+    border: 5px solid var(--clr-dark);
+    box-shadow: 0 0 0 7px #fff, 0 0 8px 5px #000;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    border-bottom: 5px solid #000;
+    z-index: 1;
+}
+
+.card-image > img {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+}
+
+#hulk > .card-image {
+    height: 55%;
+    background-color: #ffdd33;
+}
+
+#hulk > .card-image > img {
+    width: 150%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
