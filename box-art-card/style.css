@@ -213,3 +213,68 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+#deadpool img {
+    height: 90%;
+}
+
+#deadpool > .card-text {
+    display: flex;
+    justify-content: center;
+    height: 20%;
+}
+
+#deadpool > .card-text > div {
+    width: 100%;
+}
+
+#deadpool > .card-text > div:last-child {
+    border-left: 3px solid black;
+}
+
+#deadpool > .card-text > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#deadpool > .card-text > div:first-child > span:first-child {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+#deadpool > .card-text > div:first-child > span:last-child {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#deadpool > .card-text > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#deadpool > .card-text > div:last-child > span:first-child {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+#deadpool > .card-text > div:last-child > span:nth-of-type(2) {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#deadpool > .card-text > div:last-child > span:last-child {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#deadpool > .card-image p {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    font-weight: 600;
+    color: #fff;
+}
