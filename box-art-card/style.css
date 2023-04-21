@@ -11,8 +11,8 @@
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
-    --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-light: #fff;
+    --clr-dark: #000;
 
     --clr-grey-0: #f8f8f8;
     --clr-grey-1: #dbe1e8;
@@ -59,15 +59,15 @@ h2 {
     margin: 0 30px;
     height: 500px;
     width: 250px;
-    background-color: #fff;
+    background-color: var(--clr-light);
     border: 5px solid var(--clr-dark);
-    box-shadow: 0 0 0 7px #fff, 0 0 8px 5px #000;
+    box-shadow: 0 0 0 7px var(--clr-light), 0 0 8px 5px var(--clr-dark);
 }
 
 .card-image {
     position: relative;
     width: 100%;
-    border-bottom: 5px solid #000;
+    border-bottom: 5px solid var(--clr-dark);
     z-index: 1;
 }
 
@@ -90,8 +90,8 @@ h2 {
 }
 
 #hulk h2 {
-    color: #59c887;
-    letter-spacing: -5px;
+    color: #2eb455;
+    letter-spacing: -2px;
     line-height: 50px;
     text-align: center;
     margin-top: 10px;
@@ -137,7 +137,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 5px solid black;
+    border: 5px solid var(--clr-dark);
     border-right: none;
     border-bottom: none;
     padding: 10px 20px;
@@ -166,10 +166,10 @@ h2 {
 
 #spiderman h2 {
     font-size: 3rem;
-    letter-spacing: 15px;
+    letter-spacing: 10px;
     text-align: center;
     margin-left: 10px;
-    color: #2e5579;
+    color: #07548f;
 }
 
 #spiderman > .card-text > div {
@@ -206,9 +206,9 @@ h2 {
 }
 
 #deadpool > .card-image {
-    height: calc(80% - 5px);
-    background-color: #a01f29;
-    border-top: 5px solid black;
+    height: calc(82.15% - 5px);
+    background-color: #23a66f;
+    border-top: 5px solid var(--clr-dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,7 +228,7 @@ h2 {
 }
 
 #deadpool > .card-text > div:last-child {
-    border-left: 3px solid black;
+    border-left: 3px solid var(--clr-dark);
 }
 
 #deadpool > .card-text > div:first-child {
@@ -276,5 +276,5 @@ h2 {
     left: 10px;
     z-index: 3;
     font-weight: 600;
-    color: #fff;
+    color: var(--clr-light);
 }
