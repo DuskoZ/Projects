@@ -38,3 +38,41 @@ body {
     display: grid;
     place-items: center;
 }
+
+.ag-format-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.ag-format-container .ag-courses_box {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+}
+
+.ag-format-container .ag-courses_item {
+    flex-basis: calc(33.33333% - 2rem);
+    margin: 0 1rem 2rem;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.ag-format-container .ag-courses-item_link {
+    display: block;
+    padding: 2rem 1.25rem;
+    background-color: #121212;
+    overflow: hidden;
+    position: relative;
+}
+
+.ag-format-container .ag-courses-item_link:hover,
+.ag-format-container .ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: var(--clr-light);
+}
+
+.ag-format-container .ag-courses-item_link:hover .ag-courses-item_bg {
+    transform: scale(10);
+}
