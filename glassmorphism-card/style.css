@@ -26,15 +26,41 @@
     --transition: all 0.5s ease-in-out;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+    --shadow-dark: 0 0 15px 1px rgba(0, 0, 0, 0.25);
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
+    color: var(--clr-dark);
     background-color: var(--clr-dark);
+    background: url("./bg_img.jpg") center / cover no-repeat fixed;
     min-height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+p:not(:last-child) {
+    margin-bottom: 1.5em;
+    font-size: 1.25rem;
+}
+
+.card {
+    max-width: 30rem;
+    min-height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    padding: 2.23rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: var(--shadow-dark);
+    backdrop-filter: blur(15px);
+}
+
+.card-author {
+    font-size: 0.875rem;
+    color: #444;
 }
