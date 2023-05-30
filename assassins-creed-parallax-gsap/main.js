@@ -9,6 +9,6 @@ const tl = gsap.timeline({
 
 gsap.utils.toArray(".layer").forEach((layer) => {
     const speed = layer.dataset.speed;
-    const movement = -(layer.offsetHeight - speed);
+    const movement = -(layer.offsetHeight * speed);
     tl.to(layer, { y: movement, ease: "none" }, 0);
 });
