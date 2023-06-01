@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #826afb;
+    --clr-accent: #40826d;
+    --clr-light: #fff;
+    --clr-dark: #333;
+
+    --padding: 2rem;
+    --radius: 0.25rem;
+    --max-width: 75rem;
+    --transition: all 0.5s ease-in-out;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-primary);
+}
+
+.container {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 15px 25px 25px;
+    color: var(--clr-light);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container .input-field {
+    position: relative;
+    height: 45px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.container .refresh-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: var(--clr-primary);
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 4px;
+    color: var(--clr-light);
+    cursor: pointer;
+}
+
+.container .refresh-button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+.container .input-field input,
+.container .button button {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+.container .input-field input {
+    padding: 0 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container .captcha-box input {
+    color: #6b6b6b;
+    font-size: 22px;
+    pointer-events: none;
+}
+
+.container .captcha-input input:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.container .message {
+    font-size: 14px;
+    margin: 14px 0;
+    color: var(--clr-primary);
+    display: none;
+}
+
+.container .message.active {
+    display: block;
+}
+
+.container .button button {
+    background: var(--clr-primary);
+    color: var(--clr-light);
+    cursor: pointer;
+    user-select: none;
+}
+
+.container .button button:active {
+    transform: scale(0.99);
+}
+
+.container .button.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
