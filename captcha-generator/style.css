@@ -10,20 +10,21 @@
     --clr-primary: #826afb;
     --clr-accent: #40826d;
     --clr-light: #fff;
-    --clr-dark: #333;
+    --clr-dark: #222;
 
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
+    --transition: all 0.3s ease-in-out;
 }
 
 body {
     height: 100vh;
     display: flex;
+    font-family: "Poppins", sans-serif;
     align-items: center;
     justify-content: center;
-    background: var(--clr-primary);
+    background: var(--clr-dark);
 }
 
 .container {
@@ -32,14 +33,15 @@ body {
     width: 100%;
     border-radius: 12px;
     padding: 15px 25px 25px;
-    color: var(--clr-light);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--clr-light);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .container h1 {
     color: #333;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     text-align: center;
 }
@@ -107,8 +109,18 @@ body {
 .container .button button {
     background: var(--clr-primary);
     color: var(--clr-light);
+    border: 2px solid var(--clr-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
     cursor: pointer;
     user-select: none;
+    transition: var(--transition);
+}
+
+.container .button button:hover {
+    background-color: var(--clr-light);
+    color: var(--clr-primary);
 }
 
 .container .button button:active {
