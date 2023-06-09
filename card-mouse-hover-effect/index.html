@@ -13,7 +13,12 @@
         <title>Mouse effect</title>
     </head>
     <body>
-        <div class="card" id="card">
+        <div
+            class="card"
+            id="card"
+            onmousemove="getPos(event)"
+            onmouseout="stopTracking(event)"
+        >
             <svg
                 class="w-6 h-6"
                 fill="none"
