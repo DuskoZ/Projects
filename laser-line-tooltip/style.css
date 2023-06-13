@@ -9,16 +9,8 @@
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
-    --clr-light: #fafafa;
+    --clr-light: #fff;
     --clr-dark: #333;
-
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
 
     --padding: 2rem;
     --radius: 0.25rem;
@@ -37,4 +29,60 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+.item-hints {
+    height: 500px;
+    width: 500px;
+    margin: 250px auto;
+}
+
+.item-hints .hint {
+    width: 60px;
+    height: 60px;
+    margin: 150px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-hints .hint::before {
+    /* //rotated squre */
+    background-color: var(--clr-light);
+    width: 8px;
+    height: 8px;
+    z-index: 2;
+    -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.item-hints .hint::after {
+    /* //green glow */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    z-index: 1;
+    -webkit-box-shadow: 0 0 50px 30px rgba(72, 170, 72, 0.3);
+    box-shadow: 0 0 50px 30px rgba(72, 170, 72, 0.3);
+    -webkit-animation: home_hero_item_hints_glow 2s
+        cubic-bezier(0.25, 0.1, 0.2, 1) infinite;
+    animation: home_hero_item_hints_glow 2s cubic-bezier(0.25, 0.1, 0.2, 1)
+        infinite;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
