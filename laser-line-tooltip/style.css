@@ -130,3 +130,65 @@ body {
     animation: home_hero_item_hints_border 2s linear infinite;
     margin: auto;
 }
+
+@-webkit-keyframes home_hero_item_hints_border {
+    0%,
+    100% {
+        border-color: rgba(255, 255, 255, 0.6);
+        -webkit-transform: translate(-50%, -50%) scale(0.95);
+        transform: translate(-0%, -0%) scale(0.95);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.3);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-0%, -0%) scale(1);
+    }
+}
+
+@keyframes home_hero_item_hints_border {
+    0%,
+    100% {
+        border-color: rgba(255, 255, 255, 0.6);
+        -webkit-transform: translate(-50%, -50%) scale(0.95);
+        transform: translate(-0%, -0%) scale(0.95);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.3);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-0%, -0%) scale(1);
+    }
+}
+
+.item-hints .hint-radius {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: background-color, opacity, visibility,
+        -webkit-transform;
+    transition-property: background-color, opacity, visibility,
+        -webkit-transform;
+    transition-property: background-color, opacity, visibility, transform;
+    transition-property: background-color, opacity, visibility, transform,
+        -webkit-transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease, ease, ease,
+        cubic-bezier(0.5, 0, 0, 1);
+    transition-timing-function: ease, ease, ease, cubic-bezier(0.5, 0, 0, 1);
+}
+
+.item-hints .hint:hover .hint-radius {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
