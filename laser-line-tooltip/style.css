@@ -192,3 +192,47 @@ body {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+
+.item-hints .hint[data-position="1"] .hint-content {
+    top: 85px;
+    left: 50%;
+    margin-left: 56px;
+}
+
+.item-hints .hint-content {
+    color: var(--clr-light);
+    width: 300px;
+    position: absolute;
+    z-index: 5;
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    pointer-events: none;
+}
+
+.item-hints .hint:hover .hint-content {
+    color: var(--clr-light);
+    width: 300px;
+    position: absolute;
+    z-index: 5;
+    padding: 12px 0;
+    opacity: 1;
+    visibility: visible !important;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.item-hints .hint-content::before {
+    width: 0px;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: var(--clr-light);
+    height: 1px;
+    position: absolute;
+    transition: width 0.4s;
+}
