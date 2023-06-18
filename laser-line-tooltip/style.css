@@ -236,3 +236,39 @@ body {
     position: absolute;
     transition: width 0.4s;
 }
+
+.item-hints .hint:hover .hint-content::before {
+    width: 180px;
+    transition: width 0.4s;
+}
+
+.item-hints .hint-content::after {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    content: "";
+    background-color: var(--clr-light);
+    height: 1px;
+    position: absolute;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.item-hints .hint:hover .hint-content::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.item-hints .hint[data-position="4"] .hint-content {
+    bottom: 85px;
+    left: 50%;
+    margin-left: 56px;
+}
