@@ -105,3 +105,45 @@ h1 {
     transform: translate(50%, -50%);
     right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
+
+.timeline .timeline-card .title,
+.timeline .timeline-card .description {
+    background: var(--clr-light);
+    position: relative;
+    padding-inline: 1.5rem;
+}
+
+.timeline .timeline-card .title {
+    overflow: hidden;
+    padding-block-start: 1.5rem;
+    padding-block-end: 1rem;
+    font-weight: 500;
+}
+
+.timeline .timeline-card .description {
+    padding-block-end: 1.5rem;
+    font-weight: 300;
+}
+
+.timeline .timeline-card .title::before,
+.timeline .timeline-card .description::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    border-radius: 50%;
+    filter: blur(4px);
+    transform: translate(-50%, 50%);
+}
+
+.timeline .timeline-card .title::before {
+    bottom: calc(100% + 0.125rem);
+}
+
+.timeline .timeline-card .description::before {
+    z-index: -1;
+    bottom: 0.25rem;
+}
+
