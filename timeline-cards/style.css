@@ -147,3 +147,38 @@ h1 {
     bottom: 0.25rem;
 }
 
+@media (min-width: 40rem) {
+    .timeline {
+        grid-template-columns: 1fr var(--line-w) 1fr;
+    }
+
+    .timeline::before {
+        grid-column: 2;
+    }
+
+    .timeline .timeline-card:nth-child(odd) {
+        grid-column: 1;
+    }
+
+    .timeline .timeline-card:nth-child(even) {
+        grid-column: 3;
+    }
+
+    .timeline .timeline-card:nth-child(2) {
+        grid-row: 2/4;
+    }
+
+    .timeline .timeline-card:nth-child(odd) .date::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        left: 0;
+    }
+
+    .timeline .timeline-card:nth-child(odd) .date::after {
+        transform: translate(-50%, -50%);
+        left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+    }
+
+    .timeline .timeline-card:nth-child(odd) .date {
+        border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+    }
+}
