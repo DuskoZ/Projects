@@ -11,30 +11,70 @@
     --clr-accent: #40826d;
     --clr-light: #fafafa;
     --clr-dark: #333;
-
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
-
-    --padding: 2rem;
-    --radius: 0.25rem;
-    --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
-
-    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
-    min-height: 100vh;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.page .r-title {
+    margin-top: var(--rTitleMarginTop, 0) !important;
+    margin-bottom: var(--rTitleMarginBottom, 0) !important;
+}
+
+.page p:not([class]) {
+    line-height: var(--cssTypographyLineHeight, 1.78);
+    margin-top: var(--cssTypographyBasicMargin, 1em);
+    margin-bottom: 0;
+}
+
+.page p:not([class]):first-child {
+    margin-top: 0;
+}
+
+.page .text {
+    display: var(--textDisplay, inline-flex);
+    font-size: var(--textFontSize, 1rem);
+}
+
+.page .time {
+    display: var(--timeDisplay, inline-flex);
+}
+
+.page .time__month {
+    margin-left: var(--timelineMounthMarginLeft, 0.25em);
+}
+
+.page .time {
+    padding: var(--timePadding, 0.25rem 1.25rem 0.25rem);
+    background-color: var(--timeBackgroundColor, #f0f0f0);
+
+    font-size: var(--timeFontSize, 0.75rem);
+    font-weight: var(--timeFontWeight, 700);
+    text-transform: var(--timeTextTransform, uppercase);
+    color: var(--timeColor, currentColor);
+}
+
+.page .card {
+    padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
+}
+
+.page .card__content {
+    margin-top: var(--cardContentMarginTop, 0.5rem);
+}
+
+.page .card {
+    border-radius: var(--timelineCardBorderRadius, 2px);
+    border-left: var(--timelineCardBorderLeftWidth, 3px) solid
+        var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
+    box-shadow: var(
+        --timelineCardBoxShadow,
+        0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 1px 2px 0 rgba(0, 0, 0, 0.24)
+    );
+    background-color: var(--timelineCardBackgroundColor, #fff);
 }
