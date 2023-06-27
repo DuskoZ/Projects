@@ -78,3 +78,86 @@ body {
     );
     background-color: var(--timelineCardBackgroundColor, #fff);
 }
+
+.page .card__title {
+    --rTitleMarginTop: var(--cardTitleMarginTop, 1rem);
+    font-size: var(--cardTitleFontSize, 1.25rem);
+}
+
+.page .timeline {
+    display: var(--timelineDisplay, grid);
+    grid-row-gap: var(--timelineGroupsGap, 2rem);
+}
+
+.page .timeline__year {
+    margin-bottom: 1.25rem; /* 1 */
+}
+
+.page .timeline__cards {
+    display: var(--timeloneCardsDisplay, grid);
+    grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+}
+
+.page .timeline {
+    --uiTimelineMainColor: var(--timelineMainColor, #222);
+    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+
+    border-left: var(--timelineLineWidth, 3px) solid
+        var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.page .timeline__year {
+    --timePadding: var(--timelineYearPadding, 0.5rem 1.5rem);
+    --timeColor: var(--uiTimelineSecondaryColor);
+    --timeBackgroundColor: var(--uiTimelineMainColor);
+    --timeFontWeight: var(--timelineYearFontWeight, 400);
+}
+
+.page .timeline__card {
+    position: relative;
+    margin-left: var(--timelineCardLineGap, 1rem);
+}
+
+.page .timeline__cards {
+    overflow: hidden;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.page .timeline__card::before {
+    content: "";
+    width: 100%;
+    height: var(--timelineCardLineWidth, 2px);
+    background-color: var(
+        --timelineCardLineBackgroundColor,
+        var(--uiTimelineMainColor)
+    );
+
+    position: absolute;
+    top: var(--timelineCardLineTop, 1rem);
+    left: -50%;
+    z-index: -1;
+}
+
+.page .timeline {
+    --timelineMainColor: #4557bb;
+}
+
+.page p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.page p:last-child {
+    margin-bottom: 0;
+}
+
+.page {
+    max-width: 50rem;
+    padding: 5rem 2rem 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
