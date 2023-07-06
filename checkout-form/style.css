@@ -11,30 +11,75 @@
     --clr-accent: #40826d;
     --clr-light: #fafafa;
     --clr-dark: #333;
-
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
-
-    --padding: 2rem;
-    --radius: 0.25rem;
-    --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
-
-    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
     background-color: var(--clr-dark);
     min-height: 100vh;
-    overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+h2 {
+    margin-bottom: 0px;
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 200;
+    font-size: 19px;
+    font-size: 1.2rem;
+}
+
+.checkout {
+    height: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: -webkit-linear-gradient(#c5e5e5, #ccddf9);
+    background: linear-gradient(#c9e5e9, #ccddf9);
+}
+.checkout .dropdown-select.visible {
+    display: block;
+}
+
+.checkout .dropdown {
+    position: relative;
+}
+
+.checkout ul {
+    margin: 0;
+    padding: 0;
+}
+
+.checkout ul li {
+    list-style: none;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.checkout ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.checkout .dropdown-select {
+    position: absolute;
+    background: #77aaee;
+    text-align: left;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 90%;
+    left: 2px;
+    line-height: 2em;
+    margin-top: 2px;
+    box-sizing: border-box;
 }
