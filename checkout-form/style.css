@@ -139,3 +139,71 @@ h2 {
     right: 0px;
     color: #4488dd;
 }
+
+.checkout .order-table td:first-of-type {
+    width: 25%;
+}
+
+.checkout .order-table {
+    position: relative;
+}
+
+.checkout .line {
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #ddd;
+}
+
+.checkout .order-table td:last-of-type {
+    vertical-align: top;
+    padding-left: 25px;
+}
+
+.checkout .order-info-content {
+    table-layout: fixed;
+}
+
+.checkout .full-width {
+    width: 100%;
+}
+
+.checkout .pay-btn {
+    border: none;
+    background: #22b877;
+    line-height: 2em;
+    border-radius: 10px;
+    font-size: 19px;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    width: calc(100% - 50px);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.checkout .pay-btn:hover {
+    background: #22a877;
+    color: #eee;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.checkout .total {
+    margin-top: 25px;
+    font-size: 20px;
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 30px;
+    right: 27px;
+    left: 35px;
+}
+
+.checkout .dense {
+    line-height: 1.2em;
+    font-size: 16px;
+    font-size: 1rem;
+}
