@@ -246,3 +246,52 @@ h2 {
     border-bottom-right-radius: 30px;
     position: relative;
 }
+
+.checkout .dropdown-btn {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.5em;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: background 0.2s ease;
+    transition: background 0.2s ease;
+}
+
+.checkout .dropdown-btn:after {
+    content: "\25BE";
+    right: 8px;
+    position: absolute;
+}
+
+.checkout .dropdown-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-transition: background 0.2s ease;
+    transition: background 0.2s ease;
+}
+
+.checkout .dropdown-select {
+    display: none;
+}
+
+.checkout .credit-card-image {
+    display: block;
+    max-height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.checkout .credit-info-content {
+    margin-top: 25px;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
