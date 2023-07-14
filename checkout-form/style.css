@@ -44,8 +44,6 @@ h2 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background: -webkit-linear-gradient(#c5e5e5, #ccddf9);
-    background: linear-gradient(#c9e5e9, #ccddf9);
 }
 .checkout .dropdown-select.visible {
     display: block;
