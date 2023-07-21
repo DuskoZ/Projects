@@ -1,0 +1,68 @@
+/* Google Fonts - Poppins */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #191d2b;
+    --clr-accent: #40826d;
+    --clr-light: #fff;
+    --clr-dark: #333;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-accent);
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 420px;
+    padding: 50px 0;
+    border-radius: 0.5rem;
+    background: var(--clr-light);
+    gap: 1.875rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circular-progress {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(var(--clr-accent) 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: var(--clr-light);
+}
+
+.progress-value {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--clr-accent);
+}
+
+.text {
+    font-size: 30px;
+    font-weight: 500;
+    color: #606060;
+}
