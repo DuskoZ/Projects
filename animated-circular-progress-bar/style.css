@@ -34,7 +34,7 @@ body {
     align-items: center;
 }
 
-.circular-progress {
+.container .circular-progress {
     position: relative;
     height: 250px;
     width: 250px;
@@ -45,7 +45,7 @@ body {
     justify-content: center;
 }
 
-.circular-progress::before {
+.container .circular-progress::before {
     content: "";
     position: absolute;
     height: 210px;
@@ -54,14 +54,14 @@ body {
     background-color: var(--clr-light);
 }
 
-.progress-value {
+.container .progress-value {
     position: relative;
     font-size: 40px;
     font-weight: 600;
     color: var(--clr-accent);
 }
 
-.text {
+.container .text {
     font-size: 30px;
     font-weight: 500;
     color: #606060;
