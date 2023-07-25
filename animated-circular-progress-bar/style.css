@@ -19,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--clr-accent);
+    background: var(--clr-dark);
     font-family: "Poppins", sans-serif;
 }
 
@@ -64,5 +64,5 @@ body {
 .container .text {
     font-size: 30px;
     font-weight: 500;
-    color: #606060;
+    color: var(--clr-accent);
 }
