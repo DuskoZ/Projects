@@ -12,21 +12,7 @@
     --clr-light: #fafafa;
     --clr-dark: #333;
 
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
-
-    --padding: 2rem;
     --radius: 0.25rem;
-    --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
-
-    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -37,4 +23,50 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbdbe6;
+}
+
+.main .main-card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.main .card-top {
+    display: flex;
+    min-height: 100px;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 25px 40px;
+}
+
+.main .card-bottom {
+    min-height: 320px;
+    background-color: #f6f6fb;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 40px;
+    border-radius: 0 0 20px 20px;
+}
+
+.main .card-top h3,
+.main p {
+    padding-top: 15px;
+}
+
+.main .card-top h3 {
+    font-size: 1.3rem;
+}
+
+.main .card-top p {
+    font-size: 0.7rem;
 }
