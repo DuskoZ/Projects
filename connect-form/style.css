@@ -131,3 +131,53 @@ body {
     height: 20px;
     object-fit: cover;
 }
+
+.main .social span {
+    font-size: 0.7rem;
+    padding-left: 5px;
+}
+
+.main .card-bottom input {
+    padding: 16px 0;
+    border-radius: var(--radius);
+    border: none;
+    border: 1px solid #dedee6;
+    text-indent: 13px;
+    font-size: 0.75rem;
+}
+
+.main .card-bottom .btn-grp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .card-bottom .btn-grp button {
+    width: 100%;
+    padding: 17px 20px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    border-radius: var(--radius);
+    transition: 0.5s;
+}
+
+.main .card-bottom .btn-grp button:nth-child(1):hover {
+    border: 1px solid #aaa;
+}
+
+.main .card-bottom .btn-grp button:nth-child(2):hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.main .card-bottom .btn-grp button:nth-child(1) {
+    background-color: transparent;
+    border: none;
+}
+
+.main .card-bottom .btn-grp button:nth-child(2) {
+    background-color: #12143b;
+    border: none;
+    color: #fff;
+}
