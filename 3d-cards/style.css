@@ -76,3 +76,62 @@ body {
     text-align: center;
     opacity: 0.89;
 }
+
+.card-container:hover,
+.card-container:focus {
+    opacity: 1;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    transform: translateZ(34px);
+}
+
+.overlay:nth-of-type(1) {
+    left: 0;
+    top: 0;
+}
+
+.overlay:nth-of-type(2) {
+    right: 0;
+    top: 0;
+}
+
+.overlay:nth-of-type(3) {
+    bottom: 0;
+    right: 0;
+}
+
+.overlay:nth-of-type(4) {
+    bottom: 0;
+    left: 0;
+}
+
+.overlay:nth-of-type(1):hover ~ .card,
+.overlay:nth-of-type(1):focus ~ .card {
+    transform-origin: right top;
+    transform: rotateX(3deg) rotateY(-3deg) translateZ(0);
+}
+
+.overlay:nth-of-type(2):hover ~ .card,
+.overlay:nth-of-type(2):focus ~ .card {
+    transform-origin: left top;
+    transform: rotateX(3deg) rotateY(3deg) translateZ(0);
+}
+
+.overlay:nth-of-type(3):hover ~ .card,
+.overlay:nth-of-type(3):focus ~ .card {
+    transform-origin: left bottom;
+    transform: rotateX(-3deg) rotateY(3deg) translateZ(0);
+}
+
+.overlay:nth-of-type(4):hover ~ .card,
+.overlay:nth-of-type(4):focus ~ .card {
+    transform-origin: right bottom;
+    transform: rotateX(-3deg) rotateY(-3deg) translateZ(0);
+}
