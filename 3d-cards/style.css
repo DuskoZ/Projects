@@ -135,3 +135,45 @@ body {
     transform-origin: right bottom;
     transform: rotateX(-3deg) rotateY(-3deg) translateZ(0);
 }
+
+.card {
+    border-radius: 5px;
+    height: 100%;
+    transition: all 300ms ease-out;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 0;
+    opacity: 0.89;
+    padding: 13px 21px;
+}
+
+.card:before,
+.card:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.21;
+    transition: transform 300ms ease;
+    transform: scale(0.98);
+}
+
+.card:before {
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.card-container:hover .card:before,
+.card-container:hover .card:after,
+.card-container:focus .card:before,
+.card-container:focus .card:after {
+    opacity: 0.34;
+    transform: scale(1);
+}
