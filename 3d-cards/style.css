@@ -177,3 +177,62 @@ body {
     opacity: 0.34;
     transform: scale(1);
 }
+
+.col:nth-of-type(1) .card-container:nth-of-type(1) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/pia22474-2000.jpg?itok=cajl1lYH");
+}
+
+.col:nth-of-type(2) .card-container:nth-of-type(1) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/m18-090.jpg?itok=TQ8Fuk4x");
+}
+
+.col:nth-of-type(3) .card-container:nth-of-type(1) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/40808879360_18c96d62f1_o.jpg?itok=NttmTWPK");
+}
+
+.col:nth-of-type(1) .card-container:nth-of-type(2) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/jwst-pv-145604copy.jpg?itok=Jq7GN-Rc");
+}
+
+.col:nth-of-type(2) .card-container:nth-of-type(2) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/ubernode_alt_horiz/public/thumbnails/image/worldview201709201920x1080.png");
+}
+
+.col:nth-of-type(3) .card-container:nth-of-type(2) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/nasasibexobs.jpg?itok=U2LCp14i");
+}
+
+.col:nth-of-type(1) .card-container:nth-of-type(3) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/pia19808.jpg?itok=rgxgamMM");
+}
+
+.col:nth-of-type(2) .card-container:nth-of-type(3) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/e0102_lg.jpg?itok=sd9lOayI");
+}
+
+.col:nth-of-type(3) .card-container:nth-of-type(3) .card:before {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/asteroid20180605-home.jpg?itok=KSUffiCR");
+}
+
+.card:after {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.89) 100%
+    );
+}
+
+h4 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    transform: translateY(5px);
+    transition: transform 450ms cubic-bezier(0.39, 0.575, 0.565, 1);
+    max-width: 320px;
+    outline: 1px solid transparent;
+}
+
+.overlay:hover ~ .card h4,
+.overlay:focus ~ .card h4 {
+    transform: translateZ(144px);
+}
