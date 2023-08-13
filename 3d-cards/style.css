@@ -41,6 +41,7 @@ body {
     flex-flow: row;
     perspective: 1000px;
     perspective-origin: center;
+    padding: 40px;
 }
 
 .col {
