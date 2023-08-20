@@ -211,3 +211,44 @@ input[type="radio"] {
     top: -25px;
     animation: movedown 0.3s ease 0.1s forwards;
 }
+
+@keyframes moveup {
+    0% {
+        bottom: -25px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes movedown {
+    0% {
+        top: -25px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.label {
+    transition: 0.3s ease all;
+}
+
+.opt-val {
+    position: absolute;
+    left: 14px;
+    width: 217px;
+    height: 21px;
+    opacity: 0;
+    background-color: #fff;
+    transform: scale(0);
+}
+
+.option input[type="radio"]:checked ~ .opt-val {
+    opacity: 1;
+    transform: scale(1);
+}
