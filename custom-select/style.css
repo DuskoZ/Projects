@@ -291,3 +291,44 @@ input[type="radio"] {
 .option:nth-child(1) input[type="radio"]:checked ~ .opt-val {
     top: -31px;
 }
+
+.option:nth-child(2) input[type="radio"]:checked ~ .label:before {
+    background-color: #ea4c89;
+}
+
+.option:nth-child(2) input[type="radio"]:checked ~ .opt-val {
+    top: -71px;
+}
+
+.option:nth-child(3) input[type="radio"]:checked ~ .label:before {
+    background-color: #0057ff;
+}
+
+.option:nth-child(3) input[type="radio"]:checked ~ .opt-val {
+    top: -111px;
+}
+
+.option:nth-child(4) input[type="radio"]:checked ~ .label:before {
+    background-color: #32c766;
+}
+
+.option:nth-child(4) input[type="radio"]:checked ~ .opt-val {
+    top: -151px;
+}
+
+.option:nth-child(5) input[type="radio"]:checked ~ .label:before {
+    background-color: #f48024;
+}
+
+.option:nth-child(5) input[type="radio"]:checked ~ .opt-val {
+    top: -191px;
+}
+
+.option:nth-child(6) input[type="radio"]:checked ~ .label:before {
+    background-color: #006400;
+    border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(6) input[type="radio"]:checked ~ .opt-val {
+    top: -231px;
+}
