@@ -332,3 +332,42 @@ input[type="radio"] {
 .option:nth-child(6) input[type="radio"]:checked ~ .opt-val {
     top: -231px;
 }
+
+.option .fa-codepen {
+    color: #000;
+}
+
+.option .fa-dribbble {
+    color: #ea4c89;
+}
+
+.option .fa-behance {
+    color: #0057ff;
+}
+
+.option .fa-hackerrank {
+    color: #32c766;
+}
+
+.option .fa-stack-overflow {
+    color: #f48024;
+}
+
+.option .fa-free-code-camp {
+    color: #006400;
+}
+
+#option-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    transition: 0.3s ease all;
+    z-index: 1;
+    display: none;
+}
+
+#options-view-button:checked ~ #options #option-bg {
+    display: block;
+}
