@@ -371,3 +371,39 @@ input[type="radio"] {
 #options-view-button:checked ~ #options #option-bg {
     display: block;
 }
+
+.option:hover .label {
+    color: #fff;
+}
+
+.option:nth-child(1):hover ~ #option-bg {
+    top: 0;
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+
+.option:nth-child(2):hover ~ #option-bg {
+    top: 40px;
+    background-color: #ea4c89;
+}
+
+.option:nth-child(3):hover ~ #option-bg {
+    top: 80px;
+    background-color: #0057ff;
+}
+
+.option:nth-child(4):hover ~ #option-bg {
+    top: 120px;
+    background-color: #32c766;
+}
+
+.option:nth-child(5):hover ~ #option-bg {
+    top: 160px;
+    background-color: #f48024;
+}
+
+.option:nth-child(6):hover ~ #option-bg {
+    top: 200px;
+    background-color: #006400;
+    border-radius: 0 0 4px 4px;
+}
