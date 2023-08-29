@@ -14,7 +14,7 @@
 
     --padding: 2rem;
     --radius: 0.625rem;
-    --max-width: 75rem;
+    --max-width: 30rem;
     --transition: all 0.5s ease-in-out;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@ li {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    min-width: 30rem;
+    min-width: var(--max-width);
     padding: 0 2.5rem;
 }
 
@@ -65,7 +65,7 @@ li {
     font-family: inherit;
     border-radius: 0.5rem;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     text-transform: uppercase;
     position: relative;
     display: inline-flex;
@@ -77,4 +77,47 @@ li {
     margin: 5px;
     padding: 0 2.5rem;
     cursor: pointer;
+}
+
+.container .breadcrumb__item:hover {
+    background: #490099;
+    color: #fff;
+}
+
+.container .breadcrumb__inner {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 2;
+    transform: skew(21deg);
+}
+
+.container .breadcrumb__title {
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media all and (max-width: 1000px) {
+    .container .breadcrumb {
+        height: 2.25rem;
+    }
+
+    .container .breadcrumb__title {
+        font-size: 0.75rem;
+    }
+
+    .container .breadcrumb__item {
+        padding: 0 1.875rem;
+    }
+}
+
+@media all and (max-width: 710px) {
+    .breadcrumb {
+        height: 1.875rem;
+    }
+    .breadcrumb__item {
+        padding: 0 1.25rem;
+    }
 }
