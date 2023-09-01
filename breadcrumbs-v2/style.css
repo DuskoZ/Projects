@@ -9,7 +9,7 @@
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
-    --clr-light: #fafafa;
+    --clr-light: #fff;
     --clr-dark: #333;
 
     --clr-grey-0: #f8f8f8;
@@ -37,4 +37,23 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+    /* color: #323f4a;
+    background: #f5f7fa; */
+}
+
+.breadcrumbs {
+    border: 1px solid #cbd2d9;
+    border-radius: 0.3rem;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.breadcrumbs__item {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    outline: none;
+    padding: 0.75em 0.75em 0.75em 1.25em;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.2s linear;
 }
