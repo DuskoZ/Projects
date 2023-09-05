@@ -84,4 +84,15 @@ body {
     z-index: 1;
 }
 
+.breadcrumbs__item:before {
+    background: #cbd2d9;
+    margin-left: 1px;
+}
 
+.breadcrumbs__item:last-child {
+    border-right: none;
+}
+
+.breadcrumbs__item.is-active {
+    background: #edf1f5;
+}
