@@ -7,26 +7,15 @@
 }
 
 :root {
-    --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fff;
     --clr-dark: #333;
 
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
+    --clr-grey-0: #edf1f5;
+    --clr-grey-1: #cbd2d9;
 
     --padding: 2rem;
-    --radius: 0.25rem;
-    --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
-
-    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+    --transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -37,12 +26,10 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
-    /* color: #323f4a;
-    background: #f5f7fa; */
 }
 
 .breadcrumbs {
-    border: 1px solid #cbd2d9;
+    border: 1px solid var(--clr-grey-1);
     border-radius: 0.3rem;
     display: inline-flex;
     overflow: hidden;
@@ -51,22 +38,23 @@ body {
 .breadcrumbs__item {
     background: var(--clr-light);
     color: var(--clr-dark);
+    letter-spacing: 0.5px;
     outline: none;
     padding: 0.75em 0.75em 0.75em 1.25em;
     position: relative;
     text-decoration: none;
-    transition: background 0.2s linear;
+    transition: var(--transition);
 }
 
 .breadcrumbs__item:hover:after,
 .breadcrumbs__item:hover {
-    background: #edf1f5;
+    background: var(--clr-grey-0);
 }
 
 .breadcrumbs__item:focus:after,
 .breadcrumbs__item:focus,
 .breadcrumbs__item.is-active:focus {
-    background: #323f4a;
+    background: var(--clr-accent);
     color: var(--clr-light);
 }
 
@@ -79,13 +67,13 @@ body {
     left: 100%;
     position: absolute;
     top: 0;
-    transition: background 0.2s linear;
+    transition: background 0.3s linear;
     width: 1em;
     z-index: 1;
 }
 
 .breadcrumbs__item:before {
-    background: #cbd2d9;
+    background: var(--clr-grey-1);
     margin-left: 1px;
 }
 
@@ -94,5 +82,5 @@ body {
 }
 
 .breadcrumbs__item.is-active {
-    background: #edf1f5;
+    background: var(--clr-grey-0);
 }
