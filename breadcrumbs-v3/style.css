@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 :root {
@@ -11,22 +13,6 @@
     --clr-accent: #40826d;
     --clr-light: #fafafa;
     --clr-dark: #333;
-
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
-
-    --padding: 2rem;
-    --radius: 0.25rem;
-    --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
-
-    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -37,4 +23,43 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.breadcrumbs,
+.title {
+    width: 450px;
+    height: 80px;
+    background: var(--clr-light);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+}
+
+.breadcrumbs {
+    border-radius: 50px;
+}
+
+.title {
+    margin-bottom: 25px;
+    border-radius: 50px;
+    color: var(--clr-dark);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 80px;
+}
+
+.breadcrumbs ul,
+.breadcrumbs ul li a {
+    display: flex;
+}
+
+.breadcrumbs ul {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumbs ul li {
+    margin-right: 30px;
+    position: relative;
 }
