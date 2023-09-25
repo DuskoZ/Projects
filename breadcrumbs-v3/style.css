@@ -63,3 +63,33 @@ body {
     margin-right: 30px;
     position: relative;
 }
+
+.wrapper ul li:before {
+    content: ">";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+    color: var(--clr-dark);
+}
+
+.wrapper ul li:last-child:before {
+    display: none;
+}
+
+.breadcrumbs ul li a {
+    align-items: baseline;
+    color: var(--clr-dark);
+}
+
+.breadcrumbs ul li a .icon {
+    margin-right: 5px;
+}
+
+.breadcrumbs ul li a p {
+    font-size: 12px;
+}
+
+.breadcrumbs ul li.active a {
+    color: var(--clr-accent);
+}
