@@ -44,4 +44,24 @@ body {
     background-position: center;
     cursor: pointer;
     transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card h2 {
+    background-color: var(--clr-light);
+    color: var(--clr-primary);
+    padding: 0.375rem 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.container .card:hover h2 {
+    opacity: 1;
 }
