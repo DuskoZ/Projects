@@ -47,10 +47,6 @@ body {
     outline-offset: var(--gap);
 }
 
-.container img:nth-child(2) {
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-
 .container img:last-child {
     border-radius: 50%;
     --clr: #5f0909;
