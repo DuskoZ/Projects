@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #191d2b;
+    --clr-accent: #40826d;
+    --clr-light: #fafafa;
+    --clr-dark: #333;
+}
+
+body {
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
