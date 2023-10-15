@@ -30,7 +30,7 @@ body {
 }
 
 .container img {
-    --clr: #40826d;
+    --clr: #191d2b;
     --border: 10px;
     --offset: 20px;
     --gap: 5px;
@@ -47,9 +47,12 @@ body {
         linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
     background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
     background-repeat: no-repeat;
+    object-fit: cover;
     filter: grayscale(0.4);
     transition: 0.4s;
     cursor: pointer;
+    width: 350px;
+    height: 350px;
 }
 
 .container img:hover {
