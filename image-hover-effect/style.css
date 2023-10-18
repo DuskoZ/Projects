@@ -35,4 +35,13 @@ body {
             92% no-repeat;
     -webkit-mask: var(--mask);
     mask: var(--mask);
+    filter: grayscale(0.5);
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+img:hover {
+    -webkit-mask-position: 7.5% 50%, 92.5% 50%;
+    mask-position: 7.5% 50%, 92.5% 50%;
+    filter: grayscale(0);
 }
