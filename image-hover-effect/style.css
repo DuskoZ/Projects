@@ -10,7 +10,7 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-dark: #212121;
 }
 
 body {
@@ -38,6 +38,7 @@ body {
     filter: grayscale(0.5);
     transition: 0.3s linear;
     cursor: pointer;
+    max-width: 300px;
 }
 
 img:hover {
