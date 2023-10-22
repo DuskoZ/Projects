@@ -10,23 +10,9 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-dark: #222;
 
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
-
-    --padding: 2rem;
-    --radius: 0.25rem;
-    --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
-
-    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+    --transition: all 0.2s ease-in-out;
 }
 
 body {
@@ -35,6 +21,51 @@ body {
     background-color: var(--clr-dark);
     min-height: 100vh;
     overflow: hidden;
-    display: grid;
+    display: flex;
     place-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    position: relative;
+    height: 300px;
+    width: 600px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    transition: var(--transition);
+}
+
+.wrapper .image-wrapper {
+    height: 300px;
+    width: 450px;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.wrapper img {
+    height: 300px;
+    width: 450px;
+    object-fit: cover;
+    object-position: top;
+    transition: var(--transition);
+}
+
+.wrapper .book-design-image {
+    object-position: center;
+}
+
+.wrapper .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    left: 380px;
+    transition: var(--transition);
+    overflow: hidden;
 }
