@@ -69,3 +69,27 @@ body {
     transition: var(--transition);
     overflow: hidden;
 }
+
+.wrapper h2 {
+    position: relative;
+    bottom: 0;
+    height: 300px;
+    color: #fff;
+    font-size: 80px;
+    font-family: Oswald;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.wrapper:hover img {
+    transform: scale(2);
+}
+
+.wrapper:hover h2 {
+    bottom: 300px;
+    transform: scale(0.4);
+}
+
+.wrapper:hover .image-wrapper {
+    width: 800px;
+}
