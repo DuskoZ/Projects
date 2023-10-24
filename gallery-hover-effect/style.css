@@ -12,7 +12,7 @@
     --clr-light: #fafafa;
     --clr-dark: #222;
 
-    --transition: all 0.2s ease-in-out;
+    --transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -45,6 +45,16 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: var(--transition);
+    position: relative;
+}
+
+.wrapper .image-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 .wrapper img {
@@ -62,12 +72,14 @@ body {
 .wrapper .header-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 300px;
     position: absolute;
     height: 300px;
     width: 300px;
     left: 380px;
     transition: var(--transition);
     overflow: hidden;
+    z-index: 3;
 }
 
 .wrapper h2 {
@@ -75,8 +87,8 @@ body {
     bottom: 0;
     height: 300px;
     color: #fff;
-    font-size: 80px;
-    font-family: Oswald;
+    font-size: 60px;
+    font-family: "Popins", sans-serif;
     text-transform: uppercase;
     transition: var(--transition);
 }
