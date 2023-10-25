@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #191d2b;
+    --clr-accent: #40826d;
+    --clr-light: #fafafa;
+    --clr-dark: #333;
+
+    --transition: all 0.5s ease-in-out;
+
+    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
