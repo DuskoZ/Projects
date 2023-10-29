@@ -10,7 +10,7 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-dark: #121212;
 
     --transition: all 0.5s ease-in-out;
 
@@ -37,8 +37,13 @@ body {
     initial-value: 0;
 }
 
-img {
-    --size: 200px;
+.container {
+    display: flex;
+    gap: 3rem;
+}
+
+.container img {
+    --size: 300px;
     --f: 5;
     --radius: calc(var(--size) / var(--f));
 
@@ -77,10 +82,10 @@ img {
     transition: --radius 0.3s linear;
 }
 
-img:hover {
+.container img:hover {
     --radius: calc(var(--size) / 2.5);
 }
 
-img.alt:hover {
+.container img.alt:hover {
     --radius: 0px;
 }
