@@ -12,14 +12,6 @@
     --clr-light: #fafafa;
     --clr-dark: #333;
 
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
-
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
@@ -37,4 +29,38 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+}
+
+.container > div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+    box-shadow: 1px 5px 15px var(--clr-accent);
+    position: relative;
+    overflow: hidden;
+}
+
+.container > div:nth-of-type(1) {
+    background: url("./images/soca_tolmin_slovenia.jpg") no-repeat 50% / cover;
+}
+
+.container > div:nth-of-type(2) {
+    background: url("./images/tara_srbija.jpg") no-repeat 50% / cover;
+}
+
+.container > div:nth-of-type(3) {
+    background: url("./images/hajducka_vrata_bih.jpg") no-repeat 50% / cover;
+}
+
+.container > div:nth-of-type(4) {
+    background: url("./images/taberda_russia.jpg") no-repeat 50% / cover;
 }
