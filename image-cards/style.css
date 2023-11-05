@@ -85,3 +85,21 @@ body {
     transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     visibility: hidden;
 }
+
+.container > div .content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.container > div:hover {
+    flex: 0 0 250px;
+    box-shadow: 1px 3px 15px #7645d8;
+    transform: translatey(-30px);
+}
+
+.container > div:hover .content {
+    opacity: 1;
+    transform: translatey(0%);
+    visibility: visible;
+}
