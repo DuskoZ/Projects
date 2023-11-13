@@ -10,7 +10,7 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #222;
+    --clr-dark: #1a1a1a;
 }
 
 body {
@@ -74,7 +74,7 @@ body {
 
 .clock .clock__indicator:nth-of-type(5n) {
     opacity: 1;
-    height: 93px;
+    height: 98px;
     border-top: 7px solid var(--clr-light);
 }
 
