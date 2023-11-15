@@ -38,3 +38,27 @@ body {
     display: grid;
     place-items: center;
 }
+
+.image-grid {
+    position: relative;
+    overflow: hidden;
+    height: 50vw;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+.image-grid .container {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: -20vw;
+    left: -8vw;
+    transform: rotateZ(45deg);
+    height: 100vw;
+    width: 107vw;
+}
+
+.image-grid .container .column {
+    overflow: hidden;
+    position: relative;
+}
