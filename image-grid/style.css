@@ -62,3 +62,62 @@ body {
     overflow: hidden;
     position: relative;
 }
+
+.image-grid .container .column:nth-of-type(1) {
+    border-right: 8px solid white;
+    width: 25%;
+    height: 66vw;
+}
+
+.image-grid .container .column:nth-of-type(1):hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.image-grid .container .column:nth-of-type(1):before {
+    position: absolute;
+    top: 8.4vw;
+    left: 8.1vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateZ(-45deg);
+    content: "";
+    width: 37vw;
+    height: 38vw;
+    background-image: url("./img/img1.jpg");
+}
+
+.image-grid .container .column:nth-of-type(2) {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 75%;
+    height: 109.1vw;
+}
+
+.image-grid .container .column:nth-of-type(2) .row {
+    border-top: 8px solid #fff;
+}
+
+.image-grid .container .column:nth-of-type(2) .row:nth-of-type(1) {
+    position: relative;
+    overflow: hidden;
+    height: 50vw;
+}
+
+.image-grid .container .column:nth-of-type(2) .row:nth-of-type(1):hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.image-grid .container .column:nth-of-type(2) .row:nth-of-type(1):before {
+    position: absolute;
+    top: -10.1vw;
+    left: -14.3vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateZ(-45deg);
+    content: "";
+    width: 65vw;
+    height: 39vw;
+    background-image: url("./img/img2.jpeg");
+}
