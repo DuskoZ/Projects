@@ -45,6 +45,7 @@ body {
     height: 50vw;
     background: #fff;
     margin-bottom: 60px;
+    width: 100%;
 }
 
 .image-grid .container {
@@ -120,4 +121,54 @@ body {
     width: 65vw;
     height: 39vw;
     background-image: url("./img/img2.jpeg");
+}
+
+.image-grid .container .column:nth-of-type(2) .row:nth-of-type(2) {
+    display: flex;
+    height: 40.5vw;
+}
+
+.image-grid .container .column:nth-of-type(2) .row:nth-of-type(3) {
+    border-top: none;
+}
+
+.image-grid
+    .container
+    .column:nth-of-type(2)
+    .row:nth-of-type(2)
+    div:nth-of-type(1) {
+    overflow: hidden;
+    width: 30%;
+    background-color: #8b8b8a;
+}
+
+.image-grid
+    .container
+    .column:nth-of-type(2)
+    .row:nth-of-type(2)
+    div:nth-of-type(1)
+    .text {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    transform: rotateZ(-45deg);
+    position: relative;
+}
+
+.image-grid
+    .container
+    .column:nth-of-type(2)
+    .row:nth-of-type(2)
+    div:nth-of-type(1)
+    .text
+    h6 {
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.35vw;
+    width: 20vw;
+    top: 16vw;
+    left: 7vw;
+    line-height: 1.55vw;
 }
