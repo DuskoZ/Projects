@@ -172,3 +172,56 @@ body {
     left: 7vw;
     line-height: 1.55vw;
 }
+
+.image-grid
+    .container
+    .column:nth-of-type(2)
+    .row:nth-of-type(2)
+    div:nth-of-type(1)
+    .text
+    p {
+    text-align: right;
+    position: absolute;
+    color: #fff;
+    font-size: 0.9vw;
+    width: 18vw;
+    top: 23.5vw;
+    left: -3.5vw;
+}
+
+.image-grid
+    .container
+    .column:nth-of-type(2)
+    .row:nth-of-type(2)
+    div:nth-of-type(2) {
+    position: relative;
+    width: 70%;
+    border-left: 8px solid white;
+    overflow: hidden;
+}
+
+.image-grid
+    .container
+    .column:nth-of-type(2)
+    .row:nth-of-type(2)
+    div:nth-of-type(2):hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.image-grid
+    .container
+    .column:nth-of-type(2)
+    .row:nth-of-type(2)
+    div:nth-of-type(2):before {
+    position: absolute;
+    top: 0;
+    left: -40vw;
+    width: 110.1vw;
+    height: 110vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateZ(-45deg);
+    content: "";
+    background-image: url("./img/img3.jpg");
+}
