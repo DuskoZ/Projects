@@ -225,3 +225,27 @@ body {
     content: "";
     background-image: url("./img/img3.jpg");
 }
+
+.image-grid .container .column:nth-of-type(2) .row:nth-of-type(3) {
+    position: relative;
+    height: 18.6vw;
+    overflow: hidden;
+}
+
+.image-grid .container .column:nth-of-type(2) .row:nth-of-type(3):hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.image-grid .container .column:nth-of-type(2) .row:nth-of-type(3):before {
+    position: absolute;
+    top: 7.5vw;
+    left: 25vw;
+    width: 33vw;
+    height: 27vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateZ(-45deg);
+    content: "";
+    background-image: url("./img/img4.jpg");
+}
