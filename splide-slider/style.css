@@ -53,10 +53,25 @@ body {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow-light);
+    position: relative;
 }
 
 .splide .splide__slide .img-wrapper img {
     max-width: 100%;
     aspect-ratio: 2/3;
     object-fit: cover;
+}
+
+.splide .splide__slide .text-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    transform: translateY(-100%);
+    transition: var(--transition);
+}
+
+.splide .splide__slide:hover .text-content {
+    transform: translateY(0);
 }
