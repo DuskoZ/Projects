@@ -62,14 +62,35 @@ body {
     object-fit: cover;
 }
 
+.splide .splide__slide .location {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.splide .splide__slide .location svg {
+    height: 24px;
+    width: auto;
+    display: block;
+}
+
 .splide .splide__slide .text-content {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 24px;
-    transform: translateY(-100%);
+    transform: translateY(100%);
     transition: var(--transition);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
 }
 
 .splide .splide__slide:hover .text-content {
