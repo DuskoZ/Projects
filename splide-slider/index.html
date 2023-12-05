@@ -328,10 +328,12 @@
                 var splide = new Splide(".splide", {
                     pagination: (boolean = true),
                     arrows: (boolean = true),
+                    pauseOnHover: (boolean = true),
                     gap: (number = 30),
                     autoplay: (boolean = true),
-                    interval: (number = 4000),
+                    interval: (number = 3000),
                     speed: (number = 600),
+                    perMove: (number = 1),
                     type: "loop",
                 });
                 splide.mount();
