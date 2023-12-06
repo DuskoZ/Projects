@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="DuskoZ" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./splide.min.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Slider | MutationObserver API</title>
+    </head>
+    <body>
+        <div class="sliding__solutions slider" data-id="widget">
+            <div class="sliding__solutions-slides-container splide">
+                <div class="sliding__solutions-tabs">
+                    <div class="sliding__solutions-tabs">
+                        <a
+                            class="tab-btn tab-1"
+                            type="button"
+                            role="tab"
+                            aria-controls="splide01-slide01"
+                            aria-label="Go to slide 1"
+                            tabindex="-1"
+                            >Get noticed</a
+                        >
+
+                        <a
+                            class="tab-btn tab-2 is-active"
+                            type="button"
+                            role="tab"
+                            aria-controls="splide01-slide02"
+                            aria-label="Go to slide 2"
+                            tabindex="-1"
+                            >Distribute</a
+                        >
+
+                        <a
+                            class="tab-btn tab-3"
+                            type="button"
+                            role="tab"
+                            aria-controls="splide01-slide03"
+                            aria-label="Go to slide 3"
+                            tabindex="-1"
+                            >Activation</a
+                        >
+
+                        <a
+                            class="tab-btn tab-4"
+                            type="button"
+                            role="tab"
+                            aria-controls="splide01-slide04"
+                            aria-label="Go to slide 4"
+                            tabindex="-1"
+                            >Optimisation</a
+                        >
+
+                        <a
+                            class="tab-btn tab-5"
+                            type="button"
+                            role="tab"
+                            aria-controls="splide01-slide05"
+                            aria-label="Go to slide 5"
+                            tabindex="-1"
+                            >Measurement</a
+                        >
+                    </div>
+                </div>
+
+                <div class="sliding__solutions-slides splide__track">
+                    <div class="splide__list">
+                        <div class="sliding__solutions-slide splide__slide">
+                            <div class="sliding__solutions-col--left">
+                                <img
+                                    src="./images/italy.jpg"
+                                    alt="Dolomites, Italy"
+                                />
+                            </div>
+                            <div
+                                class="sliding__solutions-col--right align-top"
+                            >
+                                <h4 class="card-name">Get noticed</h4>
+                                <h2 class="slide-heading">Lorem ipsum</h2>
+                                <div class="text-content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Explicabo aut,
+                                        reprehenderit error facere sapiente
+                                        corrupti corporis asperiores at
+                                        voluptatibus magni?
+                                    </p>
+                                </div>
+
+                                <div class="btn-wrapper">
+                                    <a
+                                        href=""
+                                        class="btn electric-blue"
+                                        tabindex="-1"
+                                    >
+                                        Book now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./splide.min.js"></script>
+        <script src="./main.js"></script>
+
+        <script type="text/javascript">
+            var splide = new Splide(".splide", {
+                pagination: (boolean = true),
+                arrows: (boolean = false),
+                autoplay: (boolean = true),
+                interval: (number = 5000),
+                speed: (number = 600),
+                type: "loop",
+            });
+            splide.mount();
+        </script>
+    </body>
+</html>
