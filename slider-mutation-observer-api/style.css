@@ -143,3 +143,63 @@ body {
     display: none;
     margin-bottom: 5px;
 }
+
+/* Buttons */
+.sliding__solutions .btn-wrapper {
+    margin-top: 40px;
+}
+
+.sliding__solutions .btn-wrapper a.solid-blue {
+    border: 1px solid #3c4cad;
+    background: #3c4cad;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.sliding__solutions .btn-wrapper a.solid-blue:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #111c29;
+}
+
+.sliding__solutions .btn-wrapper a.electric-blue {
+    background: #84f3ff;
+    border: 1px solid #84f3ff;
+    color: #111c29;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.sliding__solutions .btn-wrapper a.electric-blue:hover {
+    background: transparent;
+    border-color: #84f3ff;
+    color: #edefef;
+}
+
+/* Pagination */
+.sliding__solutions .sliding__solutions-slides-container .splide__pagination {
+    bottom: -0.5rem !important;
+}
+
+.sliding__solutions
+    .sliding__solutions-slides-container
+    .splide__pagination
+    button.splide__pagination__page {
+    transition: 0.3s;
+}
+
+.sliding__solutions
+    .sliding__solutions-slides-container
+    .splide__pagination
+    button.splide__pagination__page:hover {
+    background: #111c29;
+}
