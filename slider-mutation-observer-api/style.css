@@ -203,3 +203,45 @@ body {
     button.splide__pagination__page:hover {
     background: #111c29;
 }
+
+@media (max-width: 1000px) {
+    .sliding__solutions .sliding__solutions-tabs a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 800px) {
+    .sliding__solutions .sliding__solutions-tabs {
+        display: none;
+    }
+
+    .sliding__solutions .sliding__solutions-slide {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sliding__solutions
+        .sliding__solutions-slide
+        .sliding__solutions-col--left {
+        align-items: flex-end;
+    }
+
+    .sliding__solutions
+        .sliding__solutions-slide
+        .sliding__solutions-col--right
+        * {
+        text-align: center !important;
+        text-wrap: balance;
+    }
+
+    .sliding__solutions .btn-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .sliding__solutions
+        .sliding__solutions-slide
+        .sliding__solutions-col--right
+        .card-name {
+        display: block;
+    }
+}
