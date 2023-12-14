@@ -19,4 +19,30 @@ $(document).ready(function () {
             paginationPages.eq(tabIndex).trigger("click");
         });
     });
+
+    // Function to handle changes to the pagination buttons
+    function handlePaginationChanges(mutationsList) {
+        for (const mutation of mutationsList) {
+            if (
+                mutation.type === "attributes" &&
+                mutation.attributeName === "class"
+            ) {
+                const paginationButtons = $(".splide__pagination__page");
+                const activeIndex = paginationButtons.index(
+                    $(".splide__pagination__page.is-active")
+                );
+
+                if (activeIndex !== -1) {
+                    // Add the 'is-active' class to the corresponding tab-btn
+                    const tabBtns = $(".sliding__solutions-tabs .tab-btn");
+                    tabBtns.eq(activeIndex).addClass("is-active");
+
+                    // Remove the 'is-active' class from other tab-btns
+                    tabBtns
+                        .not(tabBtns.eq(activeIndex))
+                        .removeClass("is-active");
+                }
+            }
+        }
+    }
 });
