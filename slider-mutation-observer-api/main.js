@@ -45,4 +45,16 @@ $(document).ready(function () {
             }
         }
     }
+
+    // Create a MutationObserver to watch for changes to class attributes
+    // https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+    const observer = new MutationObserver(handlePaginationChanges);
+
+    // Start observing changes to the pagination buttons
+    const paginationButtons = $(".splide__pagination__page");
+    if (paginationButtons.length) {
+        paginationButtons.each(function () {
+            observer.observe(this, { attributes: true });
+        });
+    }
 });
