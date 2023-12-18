@@ -9,6 +9,7 @@ $(document).ready(function () {
         var paginationPages = $("." + dataId + " .splide__pagination__page");
 
         tabButtons.on("click", function () {
+            console.log("okida klik");
             tabButtons.removeClass("is-active");
             $(this).addClass("is-active");
 
