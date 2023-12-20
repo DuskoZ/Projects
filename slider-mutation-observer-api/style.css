@@ -9,6 +9,7 @@
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
+    --clr-accent-secondary: #67ccac;
     --clr-light: #fafafa;
     --clr-dark: #232323;
 
@@ -52,10 +53,14 @@ body {
     transition: var(--transition);
 }
 
+.sliding__solutions .sliding__solutions-tabs .tab-btn.is-active {
+    color: var(--clr-accent);
+}
+
 .sliding__solutions .sliding__solutions-tabs .tab-btn:hover {
     background: none;
     border: none;
-    color: var(--clr-accent);
+    color: var(--clr-accent-secondary);
 }
 
 /* Layout */
@@ -93,6 +98,7 @@ body {
     display: block;
     object-fit: cover;
     object-position: center;
+    border-radius: 1rem;
 }
 
 .sliding__solutions
@@ -165,8 +171,15 @@ body {
 .sliding__solutions
     .sliding__solutions-slides-container
     .splide__pagination
+    button.splide__pagination__page.is-active {
+    background-color: var(--clr-accent);
+}
+
+.sliding__solutions
+    .sliding__solutions-slides-container
+    .splide__pagination
     button.splide__pagination__page:hover {
-    background: var(--clr-primary);
+    background: var(--clr-accent-secondary);
 }
 
 @media (max-width: 1000px) {
