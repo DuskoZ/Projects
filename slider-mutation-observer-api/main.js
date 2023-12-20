@@ -5,11 +5,10 @@ $(document).ready(function () {
     // Add a click event listener to buttons inside .sliding__solutions-tabs
     slidingSolutions.each(function () {
         var dataId = $(this).data("id");
-        var tabButtons = $("." + dataId + " .sliding__solutions-tabs .tab-btn");
-        var paginationPages = $("." + dataId + " .splide__pagination__page");
+        var tabButtons = $(".sliding__solutions-tabs .tab-btn");
+        var paginationPages = $(".splide__pagination__page");
 
         tabButtons.on("click", function () {
-            console.log("okida klik");
             tabButtons.removeClass("is-active");
             $(this).addClass("is-active");
 
