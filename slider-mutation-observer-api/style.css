@@ -80,6 +80,10 @@ body {
     gap: 50px;
 }
 
+.sliding__solutions .sliding__solutions-slide p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
 .sliding__solutions .sliding__solutions-slide .sliding__solutions-col--left,
 .sliding__solutions .sliding__solutions-slide .sliding__solutions-col--right {
     flex: 1;
