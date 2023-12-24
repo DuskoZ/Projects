@@ -206,6 +206,8 @@ body {
 @media (max-width: 920px) {
     .sliding__solutions {
         max-width: min(100%, 600px);
+        margin: 0;
+        padding: 4rem 2rem;
     }
 
     .sliding__solutions .sliding__solutions-tabs {
@@ -246,5 +248,15 @@ body {
         .sliding__solutions-col--right
         .card-name {
         display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .sliding__solutions .sliding__solutions-tabs {
+        display: none;
+    }
+
+    .sliding__solutions .splide__list {
+        align-items: flex-start;
     }
 }
