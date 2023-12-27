@@ -23,3 +23,22 @@ filterButtons.forEach((button) => {
         });
     });
 });
+
+function updateActiveButton(newButton) {
+    filterList.querySelector(".active").classList.remove("active");
+    newButton.classList.add("active");
+}
+
+function filterEvents(filter) {
+    conferences.forEach((conference) => {
+        // get each conferences category
+        let eventCategory = conference.getAttribute("data-category");
+
+        // check if that category matches with the filter
+        if (filter === "all" || filter === eventCategory) {
+            conference.removeAttribute("hidden");
+        } else {
+            conference.setAttribute("hidden", "");
+        }
+    });
+}
