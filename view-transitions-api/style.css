@@ -117,3 +117,62 @@ body {
     :where(a:hover, a:focus, a[aria-current="page"]) {
     color: var(--link-current-color, #111);
 }
+
+.account-links {
+    display: flex;
+}
+
+.account-links > * {
+    display: flex;
+    align-items: center;
+    padding-block: var(--navigation-padding, 1rem);
+    padding-inline: 3rem;
+}
+
+.create-account {
+    background: var(--button-bg, var(--clr-dark));
+    color: var(--button-text, var(--clr-light));
+}
+
+.main-with-aside {
+    --flow-spacing: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.main-with-aside > :not(aside) {
+    flex-basis: 55ch;
+    flex-grow: 999;
+}
+
+.main-with-aside > aside {
+    flex-basis: 325px;
+    flex-grow: 1;
+}
+
+.sidebar {
+    --flow-spacing: 1em;
+    align-self: start;
+    padding: 2rem 3rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.breadcrumbs a {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 100vw;
+    background: var(--breadcrumb-color, #eee);
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
