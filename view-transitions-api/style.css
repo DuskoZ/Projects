@@ -205,11 +205,13 @@ body {
 
 .filter-btn {
     cursor: pointer;
+    font-weight: 600;
     text-transform: uppercase;
     background: transparent;
     border: 0;
     border-radius: 0.25rem;
     padding: 0.25rem 1rem;
+    transition: var(--transition);
 }
 
 .filter-btn:hover,
