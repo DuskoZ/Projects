@@ -26,8 +26,8 @@ body {
 
 h1 {
     color: var(--clr-light);
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 5rem;
+    font-weight: 700;
 }
 
 h1 span {
@@ -37,7 +37,7 @@ h1 span {
 
 h1 span::before {
     content: "";
-    height: 30px;
+    height: 50px;
     width: 2px;
     position: absolute;
     top: 50%;
