@@ -30,4 +30,5 @@ const typeEffect = () => {
     }
 };
 
+// Function call
 typeEffect();
