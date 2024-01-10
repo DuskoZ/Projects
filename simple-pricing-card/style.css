@@ -24,9 +24,6 @@
     --radius: 0.25rem;
     --max-width: 75rem;
     --transition: all 0.5s ease-in-out;
-
-    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -37,4 +34,37 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.container {
+    width: 30rem;
+    padding: 2.5rem;
+    background: var(--clr-light);
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.container .title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.container .price {
+    color: var(--clr-accent);
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin: 1rem 0;
+}
+
+.container span {
+    font-size: 1.25rem;
+}
+
+.container .description {
+    color: var(--clr-dark);
+    font-size: 1.125rem;
+    margin: 20px 0 20px;
 }
