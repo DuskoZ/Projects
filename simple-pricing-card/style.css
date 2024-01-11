@@ -23,7 +23,7 @@
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
+    --transition: all 0.25s ease-in-out;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
     padding: 2.5rem;
     background: var(--clr-light);
     text-align: center;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     position: relative;
@@ -66,5 +66,52 @@ body {
 .container .description {
     color: var(--clr-dark);
     font-size: 1.125rem;
-    margin: 20px 0 20px;
+    margin: 1.25rem 0 1.25rem;
+}
+
+.container .offer {
+    display: block;
+    color: #555;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+.subscribe-button {
+    display: inline-block;
+    padding: 1rem 0;
+    background-color: var(--clr-accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1.875rem;
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+    width: 100%;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.subscribe-button:hover {
+    background: #326656;
+}
+
+.ribbon-wrap {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    pointer-events: none;
+}
+
+.ribbon {
+    width: 230px;
+    font-size: 0.918rem;
+    text-align: center;
+    padding: 8px 0;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    position: absolute;
+    transform: rotate(-45deg);
+    right: -17px;
+    top: 29%;
 }
