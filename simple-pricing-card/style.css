@@ -10,19 +10,8 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-dark: #222;
 
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
-
-    --padding: 2rem;
-    --radius: 0.25rem;
-    --max-width: 75rem;
     --transition: all 0.25s ease-in-out;
 }
 
@@ -49,13 +38,14 @@ body {
 
 .container .title {
     font-size: 2rem;
+    line-height: 1.2;
     color: #333;
 }
 
 .container .price {
     color: var(--clr-accent);
     font-weight: 700;
-    font-size: 2.25rem;
+    font-size: 3rem;
     margin: 1rem 0;
 }
 
@@ -65,27 +55,26 @@ body {
 
 .container .description {
     color: var(--clr-dark);
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     margin: 1.25rem 0 1.25rem;
 }
 
 .container .offer {
     display: block;
-    color: #555;
+    color: var(--clr-dark);
     font-size: 1rem;
     margin-top: 1.5rem;
 }
 
 .subscribe-button {
     display: inline-block;
-    padding: 1rem 0;
+    padding: 0.75rem 3rem;
     background-color: var(--clr-accent);
     color: #fff;
     text-decoration: none;
     border-radius: 1.875rem;
-    font-size: 1.25rem;
-    margin-top: 2.5rem;
-    width: 100%;
+    font-size: 1.125rem;
+    margin-top: 2rem;
     font-weight: 500;
     transition: var(--transition);
 }
@@ -98,20 +87,22 @@ body {
     width: 150px;
     height: 150px;
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -5px;
+    left: -5px;
     pointer-events: none;
 }
 
 .ribbon {
     width: 230px;
     font-size: 0.918rem;
+    text-transform: uppercase;
     text-align: center;
-    padding: 8px 0;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
     background: var(--clr-accent);
     color: var(--clr-light);
     position: absolute;
     transform: rotate(-45deg);
-    right: -17px;
+    right: -25px;
     top: 29%;
 }
