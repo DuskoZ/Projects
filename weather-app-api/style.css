@@ -216,13 +216,16 @@ h1 {
         font-size: 1.5rem;
         padding: 1rem 0;
     }
+
     .container {
         flex-wrap: wrap;
         padding: 1rem;
     }
+
     .weather-input {
         width: 100%;
     }
+
     .weather-data h2 {
         font-size: 1.375rem;
     }
