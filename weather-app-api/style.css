@@ -32,8 +32,9 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
+    color: var(--clr-dark);
+    /* background-color: var(--clr-dark); */
+    background: url("./bg.jpg") no-repeat center center / cover;
     min-height: 100vh;
     overflow: hidden;
     display: flex;
@@ -46,9 +47,30 @@ header {
     width: 100%;
     background: linear-gradient(
         60deg,
-        rgba(64, 130, 109, 1),
-        rgba(25, 29, 43, 1)
+        rgba(64, 130, 109, 0.85),
+        rgba(25, 29, 43, 0.85)
     );
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+}
+
+header span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+}
+
+header span svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+header span svg path {
+    fill: var(--clr-light);
 }
 
 header h1 {
@@ -76,7 +98,7 @@ header h1 {
     padding: 0.75rem 1rem;
     margin: 0.5rem 0 1.25rem 0;
     border-radius: var(--radius);
-    border: 2px solid var(--clr-grey-3);
+    border: 2px solid var(--clr-accent);
     transition: var(--transition);
 }
 
@@ -168,31 +190,31 @@ header h1 {
 }
 
 .days-forecast h2 {
-    margin: 20px 0;
+    margin: 1.25rem 0;
     font-size: 1.5rem;
 }
 
 .days-forecast .weather-cards {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .weather-cards .card {
-    color: #fff;
-    padding: 18px 16px;
+    color: var(--clr-light);
+    padding: 1rem;
     list-style: none;
     width: calc(100% / 5);
-    background: #6c757d;
-    border-radius: 5px;
+    background: var(--clr-primary);
+    border-radius: var(--radius);
 }
 
 .weather-cards .card h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
 .weather-cards .card img {
-    max-width: 70px;
+    max-width: 4.375rem;
     margin: 5px 0 -12px 0;
 }
 
@@ -200,9 +222,11 @@ header h1 {
     .weather-data .current-weather {
         padding: 20px;
     }
+
     .weather-cards {
         flex-wrap: wrap;
     }
+
     .weather-cards .card {
         width: calc(100% / 4 - 15px);
     }
@@ -218,6 +242,7 @@ header h1 {
     .weather-input {
         width: 450px;
     }
+
     .weather-cards .card {
         width: calc(100% / 2 - 10px);
     }
