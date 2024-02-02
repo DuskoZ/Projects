@@ -180,12 +180,12 @@ header h1 {
 }
 
 .current-weather .icon img {
-    max-width: 120px;
-    margin-top: -15px;
+    max-width: 7.5rem;
+    margin-top: -1rem;
 }
 
 .current-weather .icon h6 {
-    margin-top: -10px;
+    margin-top: -0.625rem;
     text-transform: capitalize;
 }
 
@@ -220,7 +220,7 @@ header h1 {
 
 @media (max-width: 1400px) {
     .weather-data .current-weather {
-        padding: 20px;
+        padding: 1.25rem;
     }
 
     .weather-cards {
