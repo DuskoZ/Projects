@@ -12,6 +12,11 @@
     --clr-light: #fafafa;
     --clr-dark: #1a1a1a;
 
+    --clr-tag: #888;
+    --clr-tag-name: #8cb331;
+    --clr-tag-attr: #4c9c83;
+    --clr-tag-attr-value: #ff6600;
+
     --padding: 0.75rem;
     --radius: 0.5rem;
     --max-width: 75rem;
@@ -46,7 +51,7 @@ h1.title {
     background-color: var(--clr-accent);
     padding: var(--padding);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-light);
+    /* box-shadow: var(--shadow-light); */
     margin-block-start: 5rem;
 }
 
@@ -69,4 +74,22 @@ h1.title {
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+.section .code-box .code-wrapper .html {
+    color: var(--clr-tag);
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+.section .code-box .code-wrapper .html .tag-title {
+    color: var(--clr-tag-name);
+}
+
+.section .code-box .code-wrapper .html .tag-attribute {
+    color: var(--clr-tag-attr);
+}
+
+.section .code-box .code-wrapper .html .attr-value {
+    color: var(--clr-tag-attr-value);
 }
