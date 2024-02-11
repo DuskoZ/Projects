@@ -32,6 +32,13 @@ body {
     background-color: var(--clr-dark);
 }
 
+.heading-wrapper {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1.title {
     font-size: 3rem;
     margin: 0.75em auto;
