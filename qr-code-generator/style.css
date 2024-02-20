@@ -91,3 +91,59 @@ header .logo-wrapper svg {
     padding: 0 1rem;
     border: 1px solid var(--clr-grey-4);
 }
+
+.form input:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.form input::placeholder {
+    color: var(--clr-grey-2);
+}
+
+.form button {
+    color: var(--clr-light);
+    cursor: pointer;
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    background: var(--clr-accent);
+}
+
+.qr-code {
+    opacity: 0;
+    display: flex;
+    padding: 2rem 0;
+    border-radius: var(--radius);
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    border: 1px solid var(--clr-grey-1);
+}
+
+.container.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.qr-code img {
+    width: 10.625rem;
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 16rem;
+        padding: 1rem 1.25rem;
+    }
+
+    .container.active {
+        height: 32rem;
+    }
+
+    .form :where(input, button) {
+        height: 3.25rem;
+    }
+
+    .qr-code img {
+        width: 10rem;
+    }
+}
