@@ -42,7 +42,7 @@ body {
     max-width: 25.5rem;
     background: var(--clr-light);
     border-radius: var(--radius);
-    padding: 1.25rem 1.5rem 0;
+    padding: 1.25rem 1.5rem 1.5rem;
     transition: height 0.2s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -59,8 +59,9 @@ header h1 {
 
 header p {
     margin-top: 5px;
-    color: var(--clr-grey-3);
+    color: var(--clr-grey-4);
     font-size: 1rem;
+    text-align: center;
 }
 
 header .logo-wrapper {
@@ -97,15 +98,24 @@ header .logo-wrapper svg {
 }
 
 .form input::placeholder {
-    color: var(--clr-grey-2);
+    color: var(--clr-grey-3);
 }
 
 .form button {
     color: var(--clr-light);
     cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: 600;
     margin-top: 1.25rem;
     font-size: 1rem;
     background: var(--clr-accent);
+    border: 1px solid var(--clr-accent);
+    transition: var(--transition);
+}
+
+.form button:hover {
+    background: transparent;
+    color: var(--clr-accent);
 }
 
 .qr-code {
