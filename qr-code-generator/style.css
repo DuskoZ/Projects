@@ -116,12 +116,32 @@ header .logo-wrapper svg {
 .qr-code {
     opacity: 0;
     display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
     padding: 2rem 0;
     border-radius: var(--radius);
     align-items: center;
     pointer-events: none;
     justify-content: center;
     border: 1px solid var(--clr-grey-2);
+}
+
+.qr-code .download-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--clr-primary);
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.qr-code .download-btn:hover {
+    color: var(--clr-accent);
+}
+
+.qr-code .download-btn:hover svg {
+    fill: var(--clr-accent);
 }
 
 .container.active .qr-code {
