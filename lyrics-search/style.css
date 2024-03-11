@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #191d2b;
+    --clr-accent: #40826d;
+    --clr-light: #fafafa;
+    --clr-dark: #333;
+
+    --clr-grey-0: #f8f8f8;
+    --clr-grey-1: #dbe1e8;
+    --clr-grey-2: #b2becd;
+    --clr-grey-3: #6c7983;
+    --clr-grey-4: #454e56;
+    --clr-grey-5: #2a2e35;
+    --clr-grey-6: #12181b;
+
+    --padding: 2rem;
+    --radius: 0.25rem;
+    --max-width: 75rem;
+    --transition: all 0.5s ease-in-out;
+
+    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+header {
+    background-image: url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+header * {
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0 0 30px;
+}
+
+form {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+
+form input {
+    border: 0;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 15px 30px;
+    width: 100%;
+}
