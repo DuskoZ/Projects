@@ -97,3 +97,45 @@ form input {
     padding: 15px 30px;
     width: 100%;
 }
+
+form button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: #e056fd;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 30px;
+}
+
+.btn {
+    background-color: #8d56fd;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    padding: 4px 10px;
+}
+
+ul.songs {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.container {
+    margin: 30px auto;
+    max-width: 100%;
+    width: 500px;
+}
+
+.container h2 {
+    font-weight: 300;
+}
