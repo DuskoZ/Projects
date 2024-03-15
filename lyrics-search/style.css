@@ -10,7 +10,7 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-dark: #1a1a1a;
 
     --clr-grey-0: #f8f8f8;
     --clr-grey-1: #dbe1e8;
@@ -23,7 +23,7 @@
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
+    --transition: all 0.3s ease-in-out;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
@@ -34,9 +34,6 @@ body {
     color: var(--clr-light);
     background-color: var(--clr-dark);
     min-height: 100vh;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
 }
 
 button {
@@ -55,15 +52,16 @@ button:focus {
 header {
     background-image: url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center center;
-    color: #fff;
+    background-size: cover;
+    color: var(--clr-light);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 100px 0;
     position: relative;
+    width: 100%;
 }
 
 header::after {
@@ -92,29 +90,36 @@ form {
 
 form input {
     border: 0;
-    border-radius: 50px;
-    font-size: 16px;
-    padding: 15px 30px;
+    border-radius: 3rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
     width: 100%;
 }
 
 form button {
+    font-weight: 600;
+    letter-spacing: 0.5px;
     position: absolute;
     top: 2px;
     right: 2px;
-    background-color: #e056fd;
+    background-color: var(--clr-accent);
     border: 0;
-    border-radius: 50px;
-    color: #fff;
-    font-size: 16px;
-    padding: 13px 30px;
+    border-radius: 3rem;
+    color: var(--clr-light);
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    transition: var(--transition);
+}
+
+form button:hover {
+    background-color: #264d40;
 }
 
 .btn {
-    background-color: #8d56fd;
+    background-color: var(--clr-accent);
     border: 0;
     border-radius: 10px;
-    color: #fff;
+    color: var(--clr-light);
     padding: 4px 10px;
 }
 
