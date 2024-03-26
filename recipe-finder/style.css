@@ -118,3 +118,28 @@ body {
 .container .meal:hover .meal-info {
     opacity: 1;
 }
+
+.container .single-meal {
+    margin: 2rem auto;
+    width: 70%;
+}
+
+.container .single-meal img {
+    width: 300px;
+    margin: 15px;
+    border: 4px #fff solid;
+    border-radius: 2px;
+}
+
+.container .single-meal-info {
+    margin: 1.25rem;
+    padding: 0.625rem;
+    border: 2px dashed var(--clr-accent);
+    border-radius: var(--radius);
+}
+
+.container .single-meal p {
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
