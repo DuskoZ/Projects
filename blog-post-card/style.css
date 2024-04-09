@@ -51,3 +51,27 @@ body {
 .blog-copy {
     padding: 6rem 4rem 5rem 4rem;
 }
+
+.blog-avatar {
+    height: 7rem;
+    width: 7rem;
+    background: linear-gradient(90deg, #40826d, #191d2b);
+    z-index: 10;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    position: absolute;
+    left: -10%;
+    top: -13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-avatar img {
+    height: 8.5rem;
+    width: 8.5rem;
+    position: relative;
+    border-radius: 100%;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
