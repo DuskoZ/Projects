@@ -43,18 +43,18 @@ body {
 .blog-post {
     background: var(--clr-light);
     max-width: var(--max-width);
-    border-radius: var(--radius);
+    border-radius: 2.5rem;
     box-shadow: var(--shadow-dark);
     position: relative;
 }
 
 .blog-copy {
-    padding: 6rem 4rem 5rem 4rem;
+    padding: 4rem 3rem;
 }
 
 .blog-avatar {
-    height: 7rem;
-    width: 7rem;
+    height: 8rem;
+    width: 8rem;
     background: linear-gradient(90deg, #40826d, #191d2b);
     z-index: 10;
     box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
@@ -68,8 +68,8 @@ body {
 }
 
 .blog-avatar img {
-    height: 8.5rem;
-    width: 8.5rem;
+    height: 7rem;
+    width: 7rem;
     position: relative;
     border-radius: 100%;
     box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
@@ -78,7 +78,7 @@ body {
 
 h2 {
     margin: 0 0 1rem 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 0.5px;
     color: var(--clr-dark);
 }
@@ -86,12 +86,12 @@ h2 {
 h3 {
     margin: 0 0 0.5rem 0;
     color: #999;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 
 p {
     margin: 0 0 4.5rem 0;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     line-height: 1.5;
     color: var(--clr-dark);
 }
@@ -101,7 +101,7 @@ p {
     text-decoration: none;
     color: var(--clr-light);
     background: linear-gradient(90deg, #40826d, #191d2b);
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 4rem;
     border-radius: 3rem;
     border: none;
     outline: none;
@@ -111,6 +111,7 @@ p {
 
 .btn-primary:hover {
     box-shadow: 0px 5px 1rem rgba(64, 130, 109, 0.5);
+    transform: scale(1.05);
 }
 
 @media only screen and (max-width: 650px) {
