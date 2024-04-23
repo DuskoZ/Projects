@@ -1940,3 +1940,71 @@ body {
     margin-top: -50px;
     margin-left: -50px;
 }
+
+.text {
+    font-size: 62px;
+    font-style: italic;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    line-height: 72px;
+    padding: 6px 0;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.glow {
+    height: 75px;
+    width: 600px;
+    margin-left: -300px;
+    margin-top: -20px;
+    background: -moz-linear-gradient(
+        left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(254, 197, 12, 1) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+        left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(254, 197, 12, 1) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(254, 197, 12, 1) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+.shine {
+    height: 75px;
+    margin-top: -20px;
+    width: 200px;
+    margin-left: -100px;
+    border-radius: 50%;
+    background-color: transparent;
+    filter: blur(0px);
+    box-shadow: none;
+}
+
+.btn {
+    margin: 0 auto;
+    margin-top: 10%;
+    display: block;
+    width: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 1px;
+}
+
+.btn.btn-gold {
+    color: #55260c;
+    background-image: radial-gradient(#fffe01, #f9c41e);
+    box-shadow: 0 0 15px #f9c41e;
+}
