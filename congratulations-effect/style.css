@@ -2047,3 +2047,63 @@ body {
 .shineIn {
     animation: shineIn 0.3s forwards;
 }
+
+@-webkit-keyframes zoomOutIn {
+    from {
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    85% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
+@keyframes zoomOutIn {
+    from {
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    85% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
+@-webkit-keyframes shineIn {
+    to {
+        background-color: #fff33a;
+        filter: blur(35px);
+        box-shadow: 0 0 35px #fff33a;
+    }
+}
+
+@keyframes shineIn {
+    to {
+        background-color: #fff33a;
+        filter: blur(35px);
+        box-shadow: 0 0 35px #fff33a;
+    }
+}
+
+@media (max-width: 580px) {
+    .congrats {
+        transform: scale(0.55);
+    }
+}
