@@ -33,4 +33,29 @@ $(function () {
         }, 500);
         btn.fadeOut(200);
     };
+
+    btn.on("click", start);
+    bg_2.off().on(
+        "animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd",
+        function () {
+            setTimeout(function () {
+                bg_2.fadeOut("fast")
+                    .addClass("d-none")
+                    .removeClass(bg_2.data("in"));
+                text.removeClass("d-none").addClass(text.data("in"));
+            }, 600);
+        }
+    );
+
+    text.off().on(
+        "animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd",
+        function () {
+            setTimeout(function () {
+                text.addClass("txt-ind");
+                glow.removeClass("d-none").addClass(glow.data("in"));
+                dots.removeClass("d-none");
+                shine.removeClass("d-none").addClass(shine.data("in"));
+            }, 50);
+        }
+    );
 });
