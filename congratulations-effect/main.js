@@ -58,4 +58,13 @@ $(function () {
             }, 50);
         }
     );
+
+    glow.off().on(
+        "animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd",
+        function () {
+            bg_2.removeAttr("style")
+                .removeClass("d-none")
+                .addClass(bg_2.data("out"));
+        }
+    );
 });
