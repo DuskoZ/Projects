@@ -67,4 +67,30 @@ $(function () {
                 .addClass(bg_2.data("out"));
         }
     );
+
+    shine
+        .off()
+        .on(
+            "animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd",
+            function () {
+                setTimeout(function () {
+                    dots.fadeOut(300);
+                    glow.fadeOut(500);
+                }, 1000);
+                setTimeout(function () {
+                    shine.fadeOut(400);
+                    bg_1.removeClass(bg_1.data("in")).addClass(
+                        bg_1.data("out")
+                    );
+                }, 2000);
+                setTimeout(function () {
+                    text.removeClass(text.data("in")).addClass(
+                        text.data("out")
+                    );
+                    setTimeout(function () {
+                        $(document).trigger("animate:reset");
+                    }, 500);
+                }, 2500);
+            }
+        );
 });
