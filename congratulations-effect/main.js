@@ -93,4 +93,16 @@ $(function () {
                 }, 2500);
             }
         );
+
+    $(document).on("animate:reset", function () {
+        $(".el").each(function () {
+            $(this)
+                .addClass("d-none")
+                .removeClass($(this).data("in"))
+                .removeClass($(this).data("out"))
+                .removeAttr("style");
+        });
+        text.removeClass("txt-ind");
+        btn.fadeIn(200);
+    });
 });
