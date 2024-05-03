@@ -11,6 +11,7 @@
     --clr-accent: #40826d;
     --clr-light: #fafafa;
     --clr-dark: #333;
+    --clr-yellow: #fff33a;
 
     --clr-grey-0: #f8f8f8;
     --clr-grey-1: #dbe1e8;
@@ -2088,17 +2089,17 @@ body {
 
 @-webkit-keyframes shineIn {
     to {
-        background-color: #fff33a;
+        background-color: var(--clr-yellow);
         filter: blur(35px);
-        box-shadow: 0 0 35px #fff33a;
+        box-shadow: 0 0 35px var(--clr-yellow);
     }
 }
 
 @keyframes shineIn {
     to {
-        background-color: #fff33a;
+        background-color: var(--clr-yellow);
         filter: blur(35px);
-        box-shadow: 0 0 35px #fff33a;
+        box-shadow: 0 0 35px var(--clr-yellow);
     }
 }
 
