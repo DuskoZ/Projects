@@ -70,3 +70,27 @@ body {
     box-shadow: 0px 2px 17px -1px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
+
+.share-btn #share-icon {
+    display: block;
+}
+
+.share-btn #close-icon {
+    display: none;
+}
+
+.share-btn.active #share-icon {
+    display: none;
+}
+
+.share-btn.active #close-icon {
+    display: block;
+}
+
+ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
