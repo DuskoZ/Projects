@@ -121,3 +121,40 @@ ul.active li:nth-child(1) {
     left: 100%;
     transition-delay: 0s;
 }
+
+ul.active li:nth-child(2) {
+    top: 100%;
+    left: 0%;
+    transition-delay: 0.2s;
+}
+
+ul.active li:nth-child(3) {
+    top: 100%;
+    left: -100%;
+    transition-delay: 0.4s;
+}
+
+ul.active li:nth-child(4) {
+    top: 0%;
+    left: -100%;
+    transition-delay: 0.6s;
+}
+
+ul.active li:nth-child(5) {
+    top: -100%;
+    left: -100%;
+    transition-delay: 0.8s;
+}
+
+ion-icon {
+    font-size: 18px;
+    transform: rotate(-45deg);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
