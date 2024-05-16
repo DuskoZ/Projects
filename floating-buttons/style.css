@@ -152,6 +152,10 @@ ion-icon {
     transform: rotate(-45deg);
 }
 
+ul li ion-icon {
+    fill: var(--clr-accent);
+}
+
 .hide {
     display: none;
 }
