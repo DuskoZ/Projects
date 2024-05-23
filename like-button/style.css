@@ -123,3 +123,36 @@ body {
 .btn--liked-big .btn__fill {
     fill: var(--clr-light);
 }
+
+.btn--liked-small .btn__fill {
+    fill: var(--clr-light);
+}
+
+.btn--liked-small .btn {
+    background-color: transparent;
+    transition: all 0s;
+}
+
+.btn--liked-small .btn__text {
+    visibility: hidden;
+    transition: all 0s;
+}
+
+.btn--liked-small .btn__text {
+    visibility: hidden;
+}
+
+.btn--liked-small .btn:hover .btn__text {
+    visibility: hidden;
+}
+
+.btn--liked-small .btn:hover {
+    padding: 10px;
+}
+
+.btn--liked-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
