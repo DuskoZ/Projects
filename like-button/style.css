@@ -64,7 +64,7 @@ body {
     padding: 10px;
     background-color: var(--clr-primary);
     display: inline-block;
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
     border-radius: 1.875rem;
     transition: var(--transition);
@@ -76,8 +76,9 @@ body {
     margin-left: 0.5rem;
     font-weight: 400;
     position: absolute;
-    top: 1rem;
+    top: 50%;
     right: -1.875rem;
+    transform: translateY(-50%);
     visibility: hidden;
     transition: var(--transition);
 }
