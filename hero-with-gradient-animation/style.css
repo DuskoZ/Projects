@@ -32,11 +32,7 @@
 body {
     font-family: "Poppins", sans-serif;
     color: var(--clr-light);
-    background-color: var(--clr-dark);
     min-height: 100vh;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
 }
 
 .hero {
@@ -50,7 +46,7 @@ body {
                 rgba(52, 219, 216, 0.7)
             )
             0 0 / 1000% no-repeat,
-        url(https://picsum.photos/g/2000/1200?image=443) 0 0 / cover no-repeat;
+        url(./bg.jpg) no-repeat center center / cover;
     -webkit-animation: gradientAnimation 40s ease infinite;
     animation: gradientAnimation 40s ease infinite;
 }
