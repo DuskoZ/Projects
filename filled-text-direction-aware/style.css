@@ -76,3 +76,39 @@ body {
     clip-path: none;
     z-index: 2;
 }
+
+.wrapper a:nth-child(1):hover ~ .fill-text:before {
+    --fill-from: circle(0% at 50% 0%);
+    --fill-to: circle(150% at 0% 50%);
+    animation: fill-text 3s forwards;
+}
+
+.wrapper a:nth-child(1):hover ~ .fill-text:after {
+    --hover-text: "You hovered me from top";
+}
+
+.wrapper a:nth-child(2):hover ~ .fill-text:before {
+    --fill-from: circle(0% at 150% 50%);
+    --fill-to: circle(100% at 50% 50%);
+    animation: fill-text 3s forwards;
+}
+
+.wrapper a:nth-child(2):hover ~ .fill-text:after {
+    --hover-text: "You hovered me from right";
+}
+
+.wrapper a:nth-child(3):hover ~ .fill-text:before {
+    --fill-from: circle(0% at 50% 100%);
+    --fill-to: circle(150% at 0% 50%);
+    animation: fill-text 3s forwards;
+}
+
+.wrapper a:nth-child(3):hover ~ .fill-text:after {
+    --hover-text: "You hovered me from bottom";
+}
+
+.wrapper a:nth-child(4):hover ~ .fill-text:before {
+    --fill-from: circle(0% at 0% 50%);
+    --fill-to: circle(150% at 0% 50%);
+    animation: fill-text 3s forwards;
+}
