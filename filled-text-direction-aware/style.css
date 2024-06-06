@@ -112,3 +112,44 @@ body {
     --fill-to: circle(150% at 0% 50%);
     animation: fill-text 3s forwards;
 }
+
+.wrapper a:nth-child(4):hover ~ .fill-text:after {
+    --hover-text: "You hovered me from left";
+}
+
+@keyframes fill-text {
+    0% {
+        clip-path: var(--fill-from);
+    }
+    100% {
+        clip-path: var(--fill-to);
+        color: var(--text-color);
+    }
+}
+
+.fill-text {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-color);
+    text-stroke: 1px var(--text-color);
+    font-size: 20vw;
+    font-family: "cardo", serif;
+}
+
+.fill-text:before {
+    content: attr(data-text);
+    position: absolute;
+}
+
+.fill-text:after {
+    --hover-text: "You hovered me from xxxx";
+    content: var(--hover-text);
+    -webkit-text-stroke: initial;
+    text-stroke: initial;
+    font: 2vw/1.5 verdana;
+    color: #999;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    white-space: nowrap;
+}
