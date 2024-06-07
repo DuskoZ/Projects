@@ -30,7 +30,7 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Rancho", sans-serif;
     color: var(--clr-light);
     background-color: var(--clr-dark);
     min-height: 100vh;
@@ -40,7 +40,6 @@ body {
 }
 
 .wrapper {
-    --text-color: #fff;
     position: relative;
 }
 
@@ -123,16 +122,15 @@ body {
     }
     100% {
         clip-path: var(--fill-to);
-        color: var(--text-color);
+        color: var(--clr-accent);
     }
 }
 
 .fill-text {
     color: transparent;
-    -webkit-text-stroke: 1px var(--text-color);
-    text-stroke: 1px var(--text-color);
-    font-size: 20vw;
-    font-family: "cardo", serif;
+    -webkit-text-stroke: 1px var(--clr-accent);
+    text-stroke: 4px var(--clr-light);
+    font-size: 25vw;
 }
 
 .fill-text:before {
@@ -145,7 +143,7 @@ body {
     content: var(--hover-text);
     -webkit-text-stroke: initial;
     text-stroke: initial;
-    font: 2vw/1.5 verdana;
+    font: 2vw/1.5 sans-serif;
     color: #999;
     position: absolute;
     bottom: 0;
