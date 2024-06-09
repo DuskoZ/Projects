@@ -128,8 +128,8 @@ body {
 
 .fill-text {
     color: transparent;
-    -webkit-text-stroke: 1px var(--clr-accent);
-    text-stroke: 4px var(--clr-light);
+    -webkit-text-stroke: 3px var(--clr-accent);
+    text-stroke: 3px var(--clr-accent);
     font-size: 25vw;
 }
 
@@ -144,7 +144,7 @@ body {
     -webkit-text-stroke: initial;
     text-stroke: initial;
     font: 2vw/1.5 sans-serif;
-    color: #999;
+    color: var(--clr-light);
     position: absolute;
     bottom: 0;
     left: 50%;
