@@ -10,15 +10,7 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #fafafa;
-    --clr-dark: #333;
-
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
+    --clr-dark: #111;
 
     --padding: 2rem;
     --radius: 0.25rem;
@@ -37,4 +29,33 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 80vw;
+    min-height: 80vh;
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+#section-1,
+#section-2 {
+    display: flex;
+    width: 80vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
