@@ -46,6 +46,16 @@ body {
     position: relative;
 }
 
+.content-wrapper h1 {
+    font-size: 3rem;
+    margin-bottom: 0.375em;
+}
+
+.content-wrapper p {
+    margin-bottom: 1.75em;
+    text-align: center;
+}
+
 input {
     display: none;
 }
@@ -95,6 +105,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 6em 4em;
 }
 
 #section-2 .image-container {
