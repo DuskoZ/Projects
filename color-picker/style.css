@@ -79,3 +79,42 @@ body {
 .refresh:hover {
     transform: rotate(180deg);
 }
+
+.generate-gradient {
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.125rem;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    outline: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.generate-gradient:hover {
+    transform: rotate(180deg);
+}
+
+.copied {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    border-radius: 50px;
+    padding: 15px 40px;
+    min-width: 340px;
+    text-align: center;
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .color {
+        flex: 100%;
+    }
+}
