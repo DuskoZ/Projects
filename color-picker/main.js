@@ -18,3 +18,15 @@ function generateGradient() {
             .text(colorNames[gradientColor.toUpperCase()] || "Unknown");
     });
 }
+
+function interpolateColor(color1, color2, factor) {
+    if (color1.length !== 7 || color2.length !== 7) return null; // Invalid color format
+    var result = "#";
+    for (var i = 1; i <= 6; i += 2) {
+        var c1 = parseInt(color1.substr(i, 2), 16);
+        var c2 = parseInt(color2.substr(i, 2), 16);
+        var interpolated = Math.round(c1 + factor * (c2 - c1));
+        result += ("0" + interpolated.toString(16)).slice(-2);
+    }
+    return result;
+}
