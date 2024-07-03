@@ -30,3 +30,30 @@ function interpolateColor(color1, color2, factor) {
     }
     return result;
 }
+
+$(".refresh")
+    .click(function () {
+        $(".color").each(function () {
+            var rColor = "#" + Math.random().toString(16).substr(2, 6);
+            $(this).css("background-color", rColor);
+            $(this).children(".color-hex").text(rColor);
+            $(this)
+                .children(".color-name")
+                .text(colorNames[rColor.toUpperCase()] || "Unknown");
+        });
+    })
+    .trigger("click");
+
+$(".generate-gradient").click(function () {
+    generateGradient();
+});
+
+$(".color").click(function () {
+    var input = $("<input>");
+    var color = $(this).children(".color-hex").text();
+    $("body").append(input);
+    input.val(color).select();
+    document.execCommand("copy");
+    input.remove();
+    $(".copied").fadeIn().delay(2000).fadeOut();
+});
