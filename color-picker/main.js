@@ -35,6 +35,7 @@ $(".refresh")
     .click(function () {
         $(".color").each(function () {
             var rColor = "#" + Math.random().toString(16).substr(2, 6);
+
             $(this).css("background-color", rColor);
             $(this).children(".color-hex").text(rColor);
             $(this)
@@ -51,9 +52,10 @@ $(".generate-gradient").click(function () {
 $(".color").click(function () {
     var input = $("<input>");
     var color = $(this).children(".color-hex").text();
+
     $("body").append(input);
     input.val(color).select();
     document.execCommand("copy");
     input.remove();
-    $(".copied").fadeIn().delay(2000).fadeOut();
+    $(".copied").fadeIn().delay(1500).fadeOut();
 });
