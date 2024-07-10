@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #191d2b;
+    --clr-accent: #40826d;
+    --clr-light: #fafafa;
+    --clr-dark: #131313;
+
+    --clr-grey-0: #f8f8f8;
+    --clr-grey-1: #dbe1e8;
+    --clr-grey-2: #b2becd;
+    --clr-grey-3: #6c7983;
+    --clr-grey-4: #454e56;
+    --clr-grey-5: #2a2e35;
+    --clr-grey-6: #12181b;
+
+    --padding: 2rem;
+    --radius: 0.25rem;
+    --max-width: 75rem;
+    --transition: all 0.5s ease-in-out;
+
+    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    position: relative;
+    width: 22rem;
+    height: 22rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    transition-delay: 0.5s;
+}
+
+.card:hover {
+    width: 38rem;
+    transition-delay: 0.5s;
+}
+
+.card .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .circle::before {
+    content: "";
+    position: absolute;
+    top: 30;
+    left: 2;
+    right: 2;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    background: var(--clr-dark);
+    border: 0.5rem solid var(--clr);
+    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+    transition: 0.5s, background 0.5s;
+    transition-delay: 0.75s, 1s;
+}
