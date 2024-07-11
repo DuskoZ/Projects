@@ -70,9 +70,9 @@ body {
 .card .circle::before {
     content: "";
     position: absolute;
-    top: 30;
-    left: 2;
-    right: 2;
+    top: 30px;
+    left: 2px;
+    right: 2px;
     width: 30rem;
     height: 30rem;
     border-radius: 50%;
@@ -81,4 +81,24 @@ body {
     filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
     transition: 0.5s, background 0.5s;
     transition-delay: 0.75s, 1s;
+}
+
+.card:hover .circle::before {
+    transition-delay: 0.5s;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: var(--clr);
+}
+
+.card .circle .logo {
+    position: relative;
+    width: 15.625rem;
+    transition: var(--transition);
+    transition-delay: 0.5s;
+}
+
+.card:hover .circle .logo {
+    transform: scale(0);
+    transition-delay: 0s;
 }
