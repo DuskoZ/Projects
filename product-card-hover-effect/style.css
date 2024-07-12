@@ -102,3 +102,30 @@ body {
     transform: scale(0);
     transition-delay: 0s;
 }
+
+.card .product_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(315deg);
+    height: 18.75rem;
+    transition: var(--transition);
+}
+
+.card:hover .product_img {
+    transition-delay: 0.75s;
+    top: 55%;
+    left: 82%;
+    height: 20rem;
+    transform: translate(-50%, -50%) scale(1) rotate(15deg);
+}
+
+.card .content {
+    position: absolute;
+    width: 60%;
+    left: 10%;
+    padding: 1.25rem;
+    opacity: 0;
+    transition: var(--transition);
+    visibility: hidden;
+}
