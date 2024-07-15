@@ -129,3 +129,34 @@ body {
     transition: var(--transition);
     visibility: hidden;
 }
+
+.card:hover .content {
+    transition-delay: 0.75s;
+    opacity: 1;
+    visibility: visible;
+    left: 3px;
+    margin-top: 1em;
+}
+
+.card .content h2 {
+    color: var(--clr-light);
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1.3em;
+}
+
+.card .content p {
+    color: var(--clr-light);
+}
+
+.card .content a {
+    position: relative;
+    color: var(--clr-light);
+    background: var(--clr-dark);
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1em;
+}
