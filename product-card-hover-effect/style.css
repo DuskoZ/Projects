@@ -41,8 +41,8 @@ body {
 
 .card {
     position: relative;
-    width: 22rem;
-    height: 22rem;
+    width: 350px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@ body {
 }
 
 .card:hover {
-    width: 38rem;
+    width: 600px;
     transition-delay: 0.5s;
 }
 
@@ -70,14 +70,14 @@ body {
 .card .circle::before {
     content: "";
     position: absolute;
-    top: 30px;
-    left: 2px;
-    right: 2px;
-    width: 30rem;
-    height: 30rem;
+    top: 30;
+    left: 2;
+    right: 2;
+    width: 470px;
+    height: 470px;
     border-radius: 50%;
     background: var(--clr-dark);
-    border: 0.5rem solid var(--clr);
+    border: 8px solid var(--clr);
     filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
     transition: 0.5s, background 0.5s;
     transition-delay: 0.75s, 1s;
@@ -91,19 +91,19 @@ body {
     background: var(--clr);
 }
 
-.card .circle .logo {
+.card .circle .product {
     position: relative;
     width: 15.625rem;
     transition: var(--transition);
     transition-delay: 0.5s;
 }
 
-.card:hover .circle .logo {
+.card:hover .circle .product {
     transform: scale(0);
     transition-delay: 0s;
 }
 
-.card .product_img {
+.card .product-img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,7 +112,7 @@ body {
     transition: var(--transition);
 }
 
-.card:hover .product_img {
+.card:hover .product-img {
     transition-delay: 0.75s;
     top: 55%;
     left: 82%;
@@ -134,7 +134,7 @@ body {
     transition-delay: 0.75s;
     opacity: 1;
     visibility: visible;
-    left: 3px;
+    left: 20px;
     margin-top: 1em;
 }
 
