@@ -93,7 +93,7 @@ body {
 
 .card .circle .product {
     position: relative;
-    width: 15.625rem;
+    width: 400px;
     transition: var(--transition);
     transition-delay: 0.5s;
 }
@@ -159,4 +159,11 @@ body {
     text-decoration: none;
     font-weight: 600;
     margin-top: 1em;
+    transition: var(--transition);
+    margin-top: 0.5rem;
+}
+
+.card .content a:hover {
+    background: var(--clr-light);
+    color: var(--clr-dark);
 }
