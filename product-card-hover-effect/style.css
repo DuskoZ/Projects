@@ -106,9 +106,9 @@ body {
 .card .product-img {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%) scale(0) rotate(315deg);
-    height: 18.75rem;
+    height: 18.5rem;
     transition: var(--transition);
 }
 
@@ -147,6 +147,7 @@ body {
 
 .card .content p {
     color: var(--clr-light);
+    margin: 0.75em 0;
 }
 
 .card .content a {
