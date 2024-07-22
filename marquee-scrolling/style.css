@@ -9,8 +9,8 @@
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
-    --clr-light: #fafafa;
-    --clr-dark: #333;
+    --clr-light: #eee;
+    --clr-dark: #111;
 
     --clr-grey-0: #f8f8f8;
     --clr-grey-1: #dbe1e8;
@@ -25,16 +25,51 @@
     --max-width: 75rem;
     --transition: all 0.5s ease-in-out;
 
-    --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
-    --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
+    --marquee-width: 80vw;
+    --marquee-height: 20vh;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(
+        var(--marquee-width) / var(--marquee-elements-displayed)
+    );
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
     min-height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee:before,
+.marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.marquee:before {
+    left: 0;
+    background: linear-gradient(to right, var(--clr-dark) 0%, transparent 100%);
+}
+
+.marquee:after {
+    right: 0;
+    background: linear-gradient(to left, var(--clr-dark) 0%, transparent 100%);
 }
