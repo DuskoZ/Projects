@@ -25,10 +25,10 @@
     --max-width: 75rem;
     --transition: all 0.5s ease-in-out;
 
-    --marquee-width: 80vw;
+    --marquee-width: 100vw;
     --marquee-height: 20vh;
     /* --marquee-elements: 12; */ /* defined with JavaScript */
-    --marquee-elements-displayed: 5;
+    --marquee-elements-displayed: 6;
     --marquee-element-width: calc(
         var(--marquee-width) / var(--marquee-elements-displayed)
     );
@@ -36,9 +36,8 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: var(--clr-dark);
-    background-color: var(--clr-light);
+    font-family: sans-serif;
+    background-color: var(--clr-dark);
     min-height: 100vh;
     overflow: hidden;
     display: grid;
@@ -81,9 +80,9 @@ body {
     animation: scrolling var(--marquee-animation-duration) linear infinite;
 }
 
-/* .marquee-content:hover {
-  animation-play-state: paused;
-} */
+.marquee-content:hover {
+    animation-play-state: paused;
+}
 
 @keyframes scrolling {
     0% {
