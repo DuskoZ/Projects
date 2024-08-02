@@ -11,12 +11,13 @@
     --clr-accent: #40826d;
     --clr-light: #edf2f4;
     --clr-dark: #222;
+    --clr-grey: #7f7f7f;
     --body-pad-top: 4.375rem;
 
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
+    --transition: all 0.3s ease-in-out;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
@@ -57,4 +58,35 @@ nav ul {
 
 nav li > ul {
     padding-left: 30px;
+}
+
+nav a {
+    display: inline-block;
+    color: var(--clr-grey);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+nav li.visible > a {
+    color: var(--clr-dark);
+    transform: translate(5px);
+}
+
+nav svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+nav path {
+    transition: var(--transition);
+    fill: transparent;
+    stroke: var(--clr-accent);
+    stroke-width: 3px;
+    stroke-dasharray: 0 0 0 1000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
