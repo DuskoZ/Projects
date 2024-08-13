@@ -80,3 +80,28 @@ function syncPath() {
     lastPathStart = pathStart;
     lastPathEnd = pathEnd;
 }
+
+function markVisibleSection(observedEls) {
+    observedEls.forEach((observedEl) => {
+        const id = observedEl.target.getAttribute("id"),
+            anchor = document.querySelector(`nav li a[href="#${id}"]`);
+
+        if (!anchor) return false;
+
+        const listItem = anchor.parentElement;
+
+        if (observedEl.isIntersecting) {
+            listItem.classList.add(visibleClass);
+        } else {
+            listItem.classList.remove(visibleClass);
+        }
+        syncPath();
+    });
+}
+
+// === Draw path and observe ===
+
+drawPath();
+
+const observer = new IntersectionObserver(markVisibleSection);
+elementsToObserve.forEach((thisEl) => observer.observe(thisEl));
