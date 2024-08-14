@@ -23,6 +23,10 @@
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: grid;
     margin: 0;
@@ -92,7 +96,8 @@ nav path {
 }
 
 section[id] {
-    margin: 25px 0;
+    /* margin: 25px 0; */
+    margin: 0;
     padding: 25px 0;
 }
 
@@ -107,14 +112,26 @@ h2 {
     padding-left: 10px;
     border-left: 4px solid var(--clr-accent);
     font-size: 1.5rem;
+    margin-bottom: 1em;
+    color: var(--clr-accent);
 }
 
 h1 span,
 .subheading {
     display: block;
-    color: var(--clr-grey);
+    color: var(--clr-accent);
     font-size: 1.25rem;
     font-weight: 700;
+    margin-bottom: 0.75em;
+}
+
+p {
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+p:last-child {
+    margin: 0;
 }
 
 article a {
