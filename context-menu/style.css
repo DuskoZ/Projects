@@ -12,17 +12,6 @@
     --clr-light: #fafafa;
     --clr-dark: #333;
 
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
-
-    --padding: 2rem;
-    --radius: 0.25rem;
-    --max-width: 75rem;
     --transition: all 0.5s ease-in-out;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -37,4 +26,28 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+.menu {
+    width: 8rem;
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: var(--clr-light);
+    display: none;
+}
+
+.menu-options {
+    list-style-type: none;
+    padding: 0.625rem 0;
+}
+
+.menu-option {
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.625rem 2.5rem 0.625rem 1.25rem;
+    cursor: pointer;
+}
+
+.menu-option:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
