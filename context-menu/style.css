@@ -18,14 +18,12 @@
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
+html,
 body {
     font-family: "Poppins", sans-serif;
     color: var(--clr-light);
     background-color: var(--clr-dark);
-    min-height: 100vh;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
+    height: 100%;
 }
 
 .menu {
