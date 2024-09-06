@@ -9,7 +9,7 @@
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
-    --clr-light: #fafafa;
+    --clr-light: #fff;
     --clr-dark: #333;
 
     --clr-grey-0: #f8f8f8;
@@ -30,11 +30,36 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
-    min-height: 100vh;
+    margin: 0;
+    padding: 40px 30px;
+    height: 100vh;
+    background-color: #ffdb00;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
     overflow: hidden;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    overflow: hidden;
+}
+
+.logo--white path {
+    fill: var(--clr-light);
+}
+
+.logo svg {
+    max-width: 100%;
+    height: auto;
 }
