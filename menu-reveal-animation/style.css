@@ -138,7 +138,7 @@ footer svg {
 }
 
 .header__menu > .header__menu-item {
-    font-size: 10vh;
+    font-size: 8vh;
 }
 
 .header__menu > .header__menu-item:not(:last-of-type) {
@@ -149,8 +149,11 @@ footer svg {
     font-weight: bold;
     color: var(--clr-light);
     text-decoration: none;
+    padding-left: 0px;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .header__menu-item a:hover {
-    font-style: italic;
+    padding-left: 5vw;
+    color: var(--clr-accent);
 }
