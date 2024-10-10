@@ -23,7 +23,7 @@
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
+    --transition: all 0.5s ease-in;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
@@ -115,7 +115,7 @@ body {
     width: 100%;
     background-color: var(--clr-accent);
     clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
-    transition: 0.5s ease-in;
+    transition: var(--transition);
 }
 
 .top-right-slide-show {
@@ -138,9 +138,84 @@ body {
     width: 100%;
     background-color: var(--clr-accent);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transition: 0.5s ease-in;
+    transition: var(--transition);
 }
 
 .inner-container-top:hover::after {
     clip-path: polygon(0 0, 75% 0, 25% 100%, 0 100%);
+}
+
+.inner-container-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inner-container-middle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 20vh;
+    width: 100%;
+    background-color: var(--clr-primary);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: var(--transition);
+}
+
+.inner-container-middle:hover::after {
+    clip-path: polygon(0 0, 75% 0, 25% 100%, 0 100%);
+}
+
+.inner-container-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container-bottom::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 20vh;
+    width: 100%;
+    background-color: var(--clr-primary);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: var(--transition);
+}
+
+.inner-container-bottom:hover::after {
+    clip-path: polygon(0 0, 75% 0, 25% 100%, 0 100%);
+}
+
+.inner-container-left-top {
+    width: 100%;
+    min-height: 20vh;
+    transform: translateY(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container-left-top::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 20vh;
+    width: 100%;
+    background-color: var(--clr-accent);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: var(--transition);
+}
+
+.inner-container-left-top:hover::after {
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
 }
