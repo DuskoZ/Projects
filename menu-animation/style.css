@@ -219,3 +219,29 @@ body {
 .inner-container-left-top:hover::after {
     clip-path: polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
 }
+
+.inner-container-left-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 20vh;
+    transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container-left-bottom::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 20vh;
+    width: 100%;
+    background-color: var(--clr-accent);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: 0.5s ease-in;
+}
+
+.inner-container-left-bottom:hover::after {
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
+}
