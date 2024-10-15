@@ -239,7 +239,7 @@ body {
     width: 100%;
     background-color: var(--clr-accent);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transition: 0.5s ease-in;
+    transition: var(--transition);
 }
 
 .inner-container-left-bottom:hover::after {
@@ -253,7 +253,7 @@ body {
     width: 100%;
     background-color: var(--clr-primary);
     clip-path: polygon(100% 40%, 100% 40%, 100% 60%, 100% 60%);
-    transition: 0.5s ease-in;
+    transition: var(--transition);
 }
 
 .middle-right-slide-show {
@@ -267,7 +267,7 @@ body {
     width: 100%;
     background-color: var(--clr-accent);
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transition: 0.5s ease-in;
+    transition: var(--transition);
 }
 
 .bottom-right-slide-show {
@@ -281,9 +281,23 @@ body {
     width: 100%;
     background-color: #57dede;
     clip-path: polygon(0 20%, 0% 20%, 0% 40%, 0 40%);
-    transition: 0.5s ease-in;
+    transition: var(--transition);
 }
 
 .top-left-slide-show {
     clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%);
+}
+
+.bottom-left-slide {
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #57dede;
+    clip-path: polygon(0 60%, 0% 60%, 0% 80%, 0 80%);
+    transition: 0.5s ease-in;
+}
+
+.bottom-left-slide-show {
+    clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
 }
