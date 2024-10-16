@@ -301,3 +301,34 @@ body {
 .bottom-left-slide-show {
     clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
 }
+
+.nav-links {
+    text-decoration: none;
+    color: var(--clr-light);
+    font-size: 2.5rem;
+    position: absolute;
+    z-index: 4;
+    transition: 0.3s ease-in;
+    transform: translateY(10%);
+    padding-bottom: 5px;
+}
+
+.nav-links::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    height: 100%;
+    width: 0;
+    transition: 0.4s ease-in;
+}
+
+.nav-links::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    transition: 0.4s ease-in;
+}
