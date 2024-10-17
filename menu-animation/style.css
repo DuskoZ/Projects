@@ -332,3 +332,30 @@ body {
     width: 0;
     transition: 0.4s ease-in;
 }
+
+.nav-links:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    height: 100%;
+    width: 50%;
+    border-bottom: 3px solid var(--clr-light);
+}
+
+.nav-links:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    transition: 0.4s ease-in;
+    border-bottom: 3px solid var(--clr-light);
+}
+
+.nav-links:hover {
+    letter-spacing: 5px;
+    transform: translateY(0);
+    color: var(--clr-accent);
+}
