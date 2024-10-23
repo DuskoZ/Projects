@@ -23,5 +23,35 @@ menu.addEventListener("click", () => {
     const tl = gsap.timeline();
     const tlEksThree = gsap.timeline();
 
+    if (!isOpen) {
+        tl.to(".eks-one", {
+            y: isOpen ? 0 : 9,
+        }).to(".eks-one", {
+            rotate: isOpen ? 0 : 45,
+        });
+
+        tlEksThree
+            .to(".eks-three", {
+                y: isOpen ? 0 : -9,
+            })
+            .to(".eks-three", {
+                rotate: isOpen ? 0 : -45,
+            });
+    } else {
+        tl.to(".eks-one", {
+            rotate: isOpen ? 0 : 45,
+        }).to(".eks-one", {
+            y: isOpen ? 0 : 9,
+        });
+
+        tlEksThree
+            .to(".eks-three", {
+                rotate: isOpen ? 0 : -45,
+            })
+            .to(".eks-three", {
+                y: isOpen ? 0 : -9,
+            });
+    }
+
     isOpen = !isOpen;
 });
