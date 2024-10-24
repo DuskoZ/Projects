@@ -55,3 +55,22 @@ menu.addEventListener("click", () => {
 
     isOpen = !isOpen;
 });
+
+gsap.from(".simple", {
+    x: -100,
+    duration: 1,
+});
+
+gsap.from(".menu", {
+    x: -100,
+    duration: 1.2,
+    delay: 0.3,
+    opacity: 0,
+});
+
+gsap.from(".navi", {
+    y: -500,
+    duration: 2,
+    delay: 0.4,
+    opacity: 0,
+});
