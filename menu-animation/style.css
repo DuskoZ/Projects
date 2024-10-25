@@ -136,7 +136,7 @@ body {
     top: 0;
     height: 20vh;
     width: 100%;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-primary);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: var(--transition);
 }
@@ -357,5 +357,5 @@ body {
 .nav-links:hover {
     letter-spacing: 5px;
     transform: translateY(0);
-    color: var(--clr-accent);
+    /* color: var(--clr-accent); */
 }
