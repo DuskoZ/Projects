@@ -20,6 +20,9 @@
     --clr-grey-5: #2a2e35;
     --clr-grey-6: #12181b;
 
+    --polygon1: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+    --polygon2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
@@ -114,7 +117,7 @@ body {
     min-height: 100vh;
     width: 100%;
     background-color: var(--clr-accent);
-    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+    clip-path: var(--polygon1);
     transition: var(--transition);
 }
 
@@ -137,7 +140,7 @@ body {
     height: 20vh;
     width: 100%;
     background-color: var(--clr-primary);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: var(--polygon2);
     transition: var(--transition);
 }
 
@@ -163,7 +166,7 @@ body {
     height: 20vh;
     width: 100%;
     background-color: var(--clr-primary);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: var(--polygon2);
     transition: var(--transition);
 }
 
@@ -188,7 +191,7 @@ body {
     height: 20vh;
     width: 100%;
     background-color: var(--clr-primary);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: var(--polygon2);
     transition: var(--transition);
 }
 
@@ -212,7 +215,7 @@ body {
     height: 20vh;
     width: 100%;
     background-color: var(--clr-accent);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: var(--polygon2);
     transition: var(--transition);
 }
 
@@ -238,7 +241,7 @@ body {
     height: 20vh;
     width: 100%;
     background-color: var(--clr-accent);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: var(--polygon2);
     transition: var(--transition);
 }
 
@@ -357,5 +360,4 @@ body {
 .nav-links:hover {
     letter-spacing: 5px;
     transform: translateY(0);
-    /* color: var(--clr-accent); */
 }
