@@ -55,3 +55,40 @@ body {
 .full-page-menu.active {
     top: -100%;
 }
+
+.full-page-menu .banner {
+    position: relative;
+    width: 40rem;
+    height: 100%;
+}
+
+.full-page-menu .banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-page-menu .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.full-page-menu .nav ul {
+    position: relative;
+}
+
+.full-page-menu .nav ul li {
+    position: relative;
+    list-style: none;
+    padding: 0 20px;
+    margin: 5px 0;
+    overflow: hidden;
+    display: table;
+}
