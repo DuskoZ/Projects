@@ -131,3 +131,34 @@ body {
     left: 0;
     color: var(--clr-light);
 }
+
+.full-page-menu .nav ul li:hover a {
+    transform: translateY(-100%);
+    color: var(--clr-light);
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--clr-light) url(https://i.postimg.cc/k4rb3zpp/pngwave.png);
+    background-size: 40px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+.menu-icon.active {
+    background: var(--clr-light) url(https://i.postimg.cc/25t1dMY5/pngegg-1.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+@media (max-width: 991px) {
+    .banner {
+        display: none;
+    }
+}
