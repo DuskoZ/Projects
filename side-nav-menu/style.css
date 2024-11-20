@@ -214,3 +214,18 @@ header .logo {
 .menu ul li a:hover {
     color: var(--clr-accent);
 }
+
+@media (max-width: 991px) {
+    .showcase,
+    .showcase header {
+        padding: 2.5rem;
+    }
+
+    .text h2 {
+        font-size: 3rem;
+    }
+
+    .text h3 {
+        font-size: 2rem;
+    }
+}
