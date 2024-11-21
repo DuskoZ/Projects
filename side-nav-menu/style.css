@@ -23,7 +23,7 @@
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
+    --transition: all 0.3s ease-in-out;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
@@ -52,7 +52,7 @@ header {
 }
 
 header .logo {
-    color: var(--clr-light);
+    color: var(--clr-accent);
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -120,9 +120,10 @@ header .logo {
 }
 
 .text h2 {
+    font-family: "Rancho", "Poppins", sans-serif;
     font-size: 5rem;
     font-weight: 700;
-    color: var(--clr-light);
+    color: var(--clr-accent);
     line-height: 1em;
     text-transform: uppercase;
 }
@@ -147,6 +148,7 @@ header .logo {
     display: inline-block;
     font-size: 1rem;
     background: var(--clr-light);
+    border-radius: 0.25rem;
     padding: 0.625rem 1.875rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -154,39 +156,57 @@ header .logo {
     margin-top: 0.625rem;
     color: var(--clr-dark);
     letter-spacing: 2px;
-    transition: 0.2s;
+    transition: var(--transition);
 }
 
 .text a:hover {
-    letter-spacing: 6px;
+    background: var(--clr-accent);
+    color: var(--clr-light);
 }
 
 .social {
     position: absolute;
     z-index: 10;
-    bottom: 20px;
+    bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .social li {
     list-style: none;
+    width: 100%;
+    min-width: 32px;
+    max-width: 32px;
+    height: 32px;
+    min-height: 32px;
+    max-height: 32px;
 }
 
 .social li a {
     display: inline-block;
     margin-right: 1.25rem;
-    filter: invert(1);
-    transform: scale(0.5);
+    transform: scale(0.75);
     transition: var(--transition);
 }
 
 .social li a:hover {
-    transform: scale(0.5) translateY(-15px);
+    transform: scale(1) translateY(-15px);
 }
 
-.menu {
+.social li a svg path,
+.social li a svg circle {
+    fill: var(--clr-light);
+    transition: var(--transition);
+}
+
+.social li:hover a svg path,
+.social li:hover a svg circle {
+    fill: var(--clr-accent);
+}
+
+.social li a svg .menu {
     position: absolute;
     top: 0;
     right: 0;
