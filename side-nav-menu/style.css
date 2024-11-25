@@ -206,7 +206,7 @@ header .logo {
     fill: var(--clr-accent);
 }
 
-.social li a svg .menu {
+.menu {
     position: absolute;
     top: 0;
     right: 0;
@@ -215,6 +215,7 @@ header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--clr-light);
 }
 
 .menu ul {
@@ -228,11 +229,32 @@ header .logo {
 .menu ul li a {
     text-decoration: none;
     font-size: 1.5rem;
+    margin-bottom: 1em;
     color: var(--clr-dark);
+    display: block;
+    transition: var(--transition);
+    position: relative;
+    width: max-content;
 }
 
 .menu ul li a:hover {
     color: var(--clr-accent);
+}
+
+.menu ul li a::before {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    transition: var(--transition);
+    transform: scaleX(0);
+    transform-origin: center;
+    background-color: var(--clr-accent);
+}
+
+.menu ul li a:hover::before {
+    transform: scaleX(1);
 }
 
 @media (max-width: 991px) {
