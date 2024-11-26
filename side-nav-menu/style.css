@@ -53,8 +53,11 @@ header {
 
 header .logo {
     color: var(--clr-accent);
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
     cursor: pointer;
+    font-family: "Yellowtail", "Poppins", sans-serif;
 }
 
 .toggle {
@@ -120,12 +123,12 @@ header .logo {
 }
 
 .text h2 {
-    font-family: "Rancho", "Poppins", sans-serif;
+    font-family: "Yellowtail", "Poppins", sans-serif;
     font-size: 5rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--clr-accent);
     line-height: 1em;
-    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .text h3 {
