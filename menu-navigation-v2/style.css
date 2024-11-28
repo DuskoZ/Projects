@@ -4,21 +4,23 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    position: relative;
+    font-weight: 400;
+    list-style-type: none;
+    font-style: normal;
 }
 
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
-    --clr-light: #fafafa;
+    --clr-light: #cfd8dc;
     --clr-dark: #333;
 
-    --clr-grey-0: #f8f8f8;
-    --clr-grey-1: #dbe1e8;
-    --clr-grey-2: #b2becd;
-    --clr-grey-3: #6c7983;
-    --clr-grey-4: #454e56;
-    --clr-grey-5: #2a2e35;
-    --clr-grey-6: #12181b;
+    --clr-grey: #4d4d4c;
+    --clr-yellow: #efc371;
+    --clr-purple: #ae94c0;
+    --clr-green: #b5bc67;
+    --clr-orange: #dd925f;
 
     --padding: 2rem;
     --radius: 0.25rem;
@@ -37,4 +39,35 @@ body {
     overflow: hidden;
     display: grid;
     place-items: center;
+}
+
+body {
+    background: linear-gradient(to right, #c04848, #480048);
+    height: 100vh;
+    height: 100dvh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    line-height: 1.4;
+    font-family: "Poppins", monospace;
+    background: #1d1f20;
+    padding: 1.5rem 1.25rem;
+    width: 300px;
+    top: calc(50vh - 247px);
+    left: calc(50vw - 150px);
+    position: fixed;
+    border-radius: 1rem;
+    box-shadow: 0 0 60px var(-15px --clr-dark);
+    transform: scale(0) rotate(360deg);
+    transition: var(--transition);
+    font-size: 1.125rem;
+}
+
+nav.menu_active {
+    transform: scale(1) rotate(0deg);
 }
