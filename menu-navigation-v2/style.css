@@ -71,3 +71,27 @@ nav {
 nav.menu_active {
     transform: scale(1) rotate(0deg);
 }
+
+nav > ol > li {
+    margin: 20px 0;
+    color: var(--clr-green);
+}
+
+nav > ol > li:first-of-type {
+    color: var(--clr-yellow);
+}
+
+nav > ol > li > ol {
+    margin: 10px 0 0 20px;
+    border-left: 1px solid var(--clr-grey);
+    color: var(--clr-purple);
+}
+
+nav > ol > li > ol > li {
+    margin: 7px 0;
+    padding-left: 20px;
+}
+
+nav a:hover {
+    color: var(--clr-orange);
+}
