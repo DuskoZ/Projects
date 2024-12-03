@@ -19,7 +19,7 @@
     --clr-grey: #4d4d4c;
     --clr-yellow: #efc371;
     --clr-purple: #ae94c0;
-    --clr-green: #b5bc67;
+    --clr-green: #40826d;
     --clr-orange: #dd925f;
 
     --padding: 2rem;
@@ -42,7 +42,7 @@ body {
 }
 
 body {
-    background: linear-gradient(to right, #c04848, #480048);
+    background: linear-gradient(to right, #40826d, #a16f01);
     height: 100vh;
     height: 100dvh;
 }
@@ -90,6 +90,10 @@ nav > ol > li > ol {
 nav > ol > li > ol > li {
     margin: 7px 0;
     padding-left: 20px;
+}
+
+nav a {
+    transition: var(--transition);
 }
 
 nav a:hover {
