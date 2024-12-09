@@ -73,3 +73,53 @@ body {
 .dropdown .button:hover .hamburger span {
     background: var(--clr-accent);
 }
+
+.dropdown .button:after,
+.dropdown .button:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 2px;
+    height: 100%;
+    width: 20px;
+    background: var(--clr-dark);
+    z-index: 0;
+}
+
+.dropdown .button:after {
+    left: 100%;
+    margin-left: 2px;
+    border-bottom-left-radius: 10px;
+}
+
+.dropdown .button:before {
+    right: 100%;
+    margin-right: 2px;
+    border-bottom-right-radius: 10px;
+}
+
+.dropdown .button .hamburger {
+    transition: var(--transition);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 15px;
+    height: 14px;
+    transform-origin: center;
+    z-index: -1;
+}
+
+.dropdown .button .hamburger span {
+    transition: var(--transition);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    width: 100%;
+    height: 2px;
+    background: var(--clr-light);
+    display: block;
+    left: 0;
+    transform-origin: center;
+}
