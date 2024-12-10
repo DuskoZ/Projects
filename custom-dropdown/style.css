@@ -123,3 +123,37 @@ body {
     left: 0;
     transform-origin: center;
 }
+
+.dropdown .button .hamburger span:first-child {
+    top: 0;
+    transform: none;
+}
+
+.dropdown .button .hamburger span:last-child {
+    top: auto;
+    bottom: 0;
+    transform: none;
+}
+
+.dropdown .button .hamburger:after {
+    transition: var(--transition);
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: -37px;
+    height: 0;
+    width: 199px;
+    left: auto;
+    z-index: -2;
+    background: var(--clr-dark);
+    opacity: 0;
+}
+
+.dropdown .button.open {
+    border-color: transparent;
+    background: var(--clr-dark);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: var(--clr-accent);
+}
