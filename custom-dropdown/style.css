@@ -157,3 +157,28 @@ body {
     border-bottom-right-radius: 0px;
     color: var(--clr-accent);
 }
+
+.dropdown .button.open .hamburger span {
+    background: var(--clr-accent);
+}
+
+.dropdown .button.open .hamburger span:first-child {
+    opacity: 0;
+}
+
+.dropdown .button.open .hamburger span:nth-child(2) {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.dropdown .button.open .hamburger span:nth-child(3) {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.dropdown .button.open .hamburger span:last-child {
+    opacity: 0;
+}
+
+.dropdown .button.open .hamburger:after {
+    height: 15px;
+    opacity: 1;
+}
