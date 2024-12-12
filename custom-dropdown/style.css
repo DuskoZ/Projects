@@ -182,3 +182,32 @@ body {
     height: 15px;
     opacity: 1;
 }
+
+.dropdown .list {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: var(--clr-dark);
+    float: left;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dropdown .list li {
+    display: block;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    box-sizing: border-box;
+}
+
+.dropdown .list li:last-child {
+    border: none;
+}
