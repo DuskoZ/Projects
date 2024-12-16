@@ -211,3 +211,19 @@ body {
 .dropdown .list li:last-child {
     border: none;
 }
+
+.dropdown .list li a {
+    transition: var(--transition);
+    padding: 15px;
+    float: left;
+    width: 100%;
+    text-decoration: none;
+    color: var(--clr-light);
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.dropdown .list li a:hover {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+}
