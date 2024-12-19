@@ -1,16 +1,16 @@
-$(".e-list").slideUp(function () {
-    $(".e-button").removeClass("open");
+$(".list").slideUp(function () {
+    $(".button").removeClass("open");
 });
 
-$(".e-button").on("click", function () {
+$(".button").on("click", function () {
     if ($(this).hasClass("open")) {
-        $(".e-list").slideUp(function () {
-            $(".e-button").removeClass("open");
+        $(".list").slideUp(function () {
+            $(".button").removeClass("open");
         });
     } else {
         $(this).addClass("open");
         setTimeout(function () {
-            $(".e-list").stop().slideDown();
+            $(".list").stop().slideDown();
         }, 200);
     }
 });
