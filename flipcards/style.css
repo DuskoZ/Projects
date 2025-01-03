@@ -9,7 +9,7 @@
 :root {
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
-    --clr-light: #f1ff1f1;
+    --clr-light: #f1f1f1;
     --clr-dark: #333;
 
     --clr-grey-0: #f8f8f8;
@@ -90,4 +90,27 @@ body {
     justify-content: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+.flip-card-front h2 {
+    color: var(--clr-light);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.625rem;
+}
+
+.flip-card-front p,
+.flip-card-back p {
+    padding: 0.625rem;
+    font-size: 1rem;
+    color: var(--clr-light);
+}
+
+.flip-card-front {
+    background-color: #18453b;
+}
+
+.flip-card-back {
+    background-color: #008183;
+    transform: rotateY(180deg);
 }
