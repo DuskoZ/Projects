@@ -39,13 +39,25 @@ body {
     place-items: center;
 }
 
+.content .main-heading,
+.content .heading {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.content .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
 .flip-card,
 .flip-card-click {
     display: inline-block;
     background-color: transparent;
     width: 300px;
     height: 300px;
-    margin-right: 0.75rem;
     margin-bottom: 0.75rem;
     border: 1px solid var(--clr-light);
     perspective: 1000px;
