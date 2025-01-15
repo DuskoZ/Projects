@@ -10,7 +10,7 @@
     --clr-primary: #191d2b;
     --clr-accent: #40826d;
     --clr-light: #f1f1f1;
-    --clr-dark: #333;
+    --clr-dark: #111;
 
     --clr-grey-0: #f8f8f8;
     --clr-grey-1: #dbe1e8;
@@ -43,6 +43,13 @@ body {
 .content .heading {
     text-align: center;
     margin: 1em 0;
+}
+
+.content > p {
+    max-width: 900px;
+    text-wrap: balance;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .content .card-container {
@@ -88,7 +95,7 @@ body {
 }
 
 .flip-card-inner:hover {
-    outline: 5px solid var(--clr-primary);
+    outline: 5px solid var(--clr-light);
     cursor: pointer;
 }
 
@@ -123,6 +130,6 @@ body {
 }
 
 .flip-card-back {
-    background-color: #008183;
+    background-color: var(--clr-accent);
     transform: rotateY(180deg);
 }
