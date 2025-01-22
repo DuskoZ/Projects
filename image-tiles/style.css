@@ -139,3 +139,35 @@ h2 {
 .grid__item:nth-child(24) {
     transform: translatey(calc(var(--grid-translate) * 2));
 }
+
+.grid__item:not(:nth-child(5)) {
+    opacity: var(--grid-opacity);
+}
+
+.band-center-text {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-light);
+    font-size: 1.3rem;
+    background-color: var(--clr-primary);
+}
+
+.content-cards-page {
+    display: flex;
+    height: 100vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: var(--clr-light);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+}
+
+.content-cards__item {
+    width: calc(100% / 4 - 3%);
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+}
