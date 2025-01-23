@@ -171,3 +171,10 @@ h2 {
     background-size: cover;
     background-position: center;
 }
+
+.content-cards__item:nth-child(1),
+.content-cards__item:nth-child(2),
+.content-cards__item:nth-child(3),
+.content-cards__item:nth-child(4) {
+    background-image: url(./1.jpg);
+}
