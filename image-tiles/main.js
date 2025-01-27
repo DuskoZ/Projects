@@ -22,3 +22,13 @@ SmoothScroll({
     fixedBackground: true,
     excluded: "",
 });
+
+const gridContent = document.querySelector(".content-grid");
+const gridTitle = gridContent.querySelector(".content-grid-title");
+const gridScroll = gridContent.querySelector(".content-grid__scroll");
+const items = gridContent.querySelectorAll(".grid__item");
+
+const initialValue = {
+    scale: 2,
+    translate: 5,
+};
