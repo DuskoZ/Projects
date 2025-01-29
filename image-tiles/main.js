@@ -32,3 +32,20 @@ const initialValue = {
     scale: 2,
     translate: 5,
 };
+
+const getScroll = (e) => {
+    const yNormalized = Math.min(window.scrollY / innerHeight, 1);
+
+    gridContent.style.setProperty("--gridOpacity", yNormalized);
+    gridContent.style.setProperty(
+        "--gridScale",
+        initialValue.scale - yNormalized
+    );
+    gridContent.style.setProperty(
+        "--gridTranslate",
+        5 - initialValue.translate * yNormalized + "vh"
+    );
+    gridTitle.style.setProperty("--gridOpactiy", yNormalized);
+};
+
+window.addEventListener("scroll", (e) => getScroll(e));
