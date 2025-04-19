@@ -8,16 +8,29 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 navigator.geolocation.watchPosition(success, error);
 
+let marker, circle, zoomed;
+
 function success(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     const accuracy = position.coords.accuracy;
 
-    let marker = L.marker([lat, lon]).addTo(map);
-    let circle = L.circle([lat, lon], { radius: accuracy }).addTo(map);
+    if (marker) {
+        map.removeLayer(marker);
+        map.removeLayer(circle);
+    }
+
+    marker = L.marker([lat, lon]).addTo(map);
+    circle = L.circle([lat, lon], { radius: accuracy }).addTo(map);
 
     // map.setView([lat, lon], 14);
-    map.flyTo([lat, lon], 14, { animate: true, duration: 1 });
+    // map.fitBounds(circle.getBounds(), { animate: true, duration: 1 });
+
+    if (!zoomed) {
+        zoomed = map.flyTo([lat, lon], 14, { animate: true, duration: 1 });
+    }
+
+    map.setView([lat, lon]);
     marker.bindPopup("You are here").openPopup();
 }
 
@@ -28,3 +41,9 @@ function error(err) {
         alert("Unable to retrieve your location.");
     }
 }
+
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
+map.on("click", onMapClick);
