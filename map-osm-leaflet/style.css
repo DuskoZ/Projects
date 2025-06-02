@@ -45,3 +45,22 @@ body {
     width: 100vw;
     width: 100dvw;
 }
+
+.color-theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    border: 1px solid var(--clr-grey-1);
+}
+
+#map.dark .leaflet-layer,
+#map.dark .leaflet-control-zoom-in,
+#map.dark .leaflet-control-zoom-out,
+#map.dark .leaflet-control-attribution {
+    filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
