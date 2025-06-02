@@ -1,3 +1,26 @@
+const colorTheme = localStorage.getItem("color-theme") || "light";
+const mapContainer = document.getElementById("map");
+const toggleThemeButton = document.getElementById("theme-toggle");
+let isChecked = false;
+
+toggleThemeButton.addEventListener("click", () => {
+    isChecked = toggleThemeButton.checked;
+
+    if (isChecked) {
+        mapContainer.classList.add("dark");
+        localStorage.setItem("color-theme", "dark");
+    } else {
+        mapContainer.classList.remove("dark");
+        localStorage.setItem("color-theme", "light");
+    }
+});
+
+if (colorTheme === "dark") {
+    mapContainer.classList.add("dark");
+} else {
+    mapContainer.classList.remove("dark");
+}
+
 var map = L.map("map").setView([44.816441, 20.460208], 14);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
