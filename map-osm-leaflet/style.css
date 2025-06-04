@@ -23,7 +23,7 @@
     --padding: 2rem;
     --radius: 0.25rem;
     --max-width: 75rem;
-    --transition: all 0.5s ease-in-out;
+    --transition: all 0.3s ease-in-out;
 
     --shadow-light: 0 0 15px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 0 15px rgba(0, 0, 0, 0.25);
@@ -56,6 +56,43 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 100px;
     border: 1px solid var(--clr-grey-1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-dark);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 100px;
+    box-shadow: var(--shadow-light);
+    background-color: var(--clr-grey-1);
+    border: 1px solid var(--clr-grey-2);
+}
+
+.switch #theme-toggle {
+    opacity: 0;
+    appearance: none;
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 2px;
+    left: 3px;
+    width: 26px;
+    height: 26px;
+    background-color: var(--clr-accent);
+    transition: var(--transition);
+    border-radius: 50%;
+}
+
+.switch #theme-toggle:checked + .slider {
+    transform: translateX(22px);
 }
 
 #map.dark .leaflet-layer,
